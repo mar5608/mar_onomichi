@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* =====================================================
+  「設定」ファイル 
+  サイト共通で必要になる設定値を変数で定義しておくファイルです。
+  ===================================================== */
+$font-family-jp1: "Noto Sans JP", serif;
+$font-family-jp2: "Kiwi Maru", serif;
+$font-family-en1: "Courgette", cursive;
+$font-family-en2: "Josefin Sans", sans-serif;
+
+$width-inner-pc: 1024px;
+$width-inner-sp: 335px;
+
+$font-size-base-pc: 16px;
+$font-size-base-sp: 12px;
+
+$line-height-base: 1.6;
+
+// $header-height-pc: 96px;
+$header-height: 64px;
+
+// $navGap: 8px; //仮
+// $listGap: 8px; //仮

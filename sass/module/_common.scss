@@ -1,0 +1,36 @@
+@use "../setting/config";
+@use "../setting/color";
+@use "../mixin/mixin";
+
+/*----------------------------------
+    共通
+-----------------------------------*/
+
+.body {
+  font-family: config.$font-family-jp1;
+  font-size: config.$font-size-base-sp;
+  line-height: config.$line-height-base;
+  color: color.$brown;
+  background: color.$white;
+  font-weight: 400;
+  @include mixin.mq(pc) {
+    font-size: config.$font-size-base-pc;
+  }
+}
+
+.img {
+  max-width: 100%;
+}
+
+.pc-hidden {
+  @include mixin.mq(pc) {
+    display: none;
+  }
+}
+
+.sp-hidden {
+  @include mixin.mq(sp) {
+    display: none;
+  }
+}
+

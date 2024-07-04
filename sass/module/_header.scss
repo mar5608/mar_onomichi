@@ -1,0 +1,179 @@
+@use "../setting/config";
+@use "../setting/color";
+@use "../mixin/mixin";
+
+$height-pc: 64px;
+$height-sp: 64px;
+$paddingSide-pc: 40px;
+$paddingSide-sp: 20px;
+$navGap: 20px;
+$listGap: 20px;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $height-sp;
+  @include mixin.mq(pc) {
+    height: $height-pc;
+  }
+}
+
+.header__inner {
+  padding-inline: $paddingSide-sp;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+  min-width: calc(375px - $paddingSide-sp * 2);
+  @include mixin.mq(pc) {
+    padding-inline: $paddingSide-pc;
+    max-width: calc(config.$width-inner-pc + paddingSide-pc * 2);
+  }
+}
+
+.header__logo {
+  padding-block: 18.5px;
+  a {
+    img {
+      width: 210px;
+      display: block;
+      @include mixin.mq(pc) {
+      }
+    }
+  }
+}
+.header__nav {
+  display: none;
+  @include mixin.mq(pc) {
+    display: flex;
+    align-items: center;
+    gap: $navGap;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: $listGap;
+}
+
+.header__link {
+  font-size: 12px;
+  transition: color 0.3s; /* hoverする前のクラスにつける*/
+
+  /* ホバー */
+  &:hover {
+    color: color.$d-blue;
+  }
+}
+
+.header__button {
+}
+.drawer-icon {
+  position: relative;
+  width: 32px;
+  height: 27px;
+  z-index: 51;
+  @include mixin.mq(pc) {
+    display: none;
+  }
+
+  &.is-checked {
+    .drawer-icon__bar {
+      &:nth-of-type(1) {
+        top: 10px;
+        transform: rotate(30deg);
+      }
+      &:nth-of-type(2) {
+        display: none;
+      }
+      &:nth-of-type(3) {
+        top: 10px;
+        transform: rotate(-30deg);
+      }
+    }
+  }
+}
+
+.drawer-icon__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  border-radius: 6px;
+  background: color.$brown;
+  transition: transform 0.3s linear, top 0.3x linear; //linear:一定速度
+
+  .drawer-icon__dot {
+    position: absolute;
+    width: 4.8px;
+    height: 3px;
+    top: 0;
+    left: 27.2px;
+    border-radius: 6px;
+    background: color.$brown;
+  }
+
+  &:nth-of-type(1) {
+    width: 25.6px;
+  }
+  &:nth-of-type(2) {
+    top: 12px;
+  }
+  &:nth-of-type(3) {
+    top: 24px;
+  }
+}
+
+.drawer-content {
+  width: 375px;
+  height: 100%;
+  position: fixed;
+  top: $height-sp;
+  right: 0;
+  background: color.$white;
+  z-index: 50;
+  // padding-block: 82px;
+  padding-inline: 114px;
+
+  transform: translateX(100%); //コンテンツ分が100%移動
+  transition: transform 0.3s linear;
+  &.is-checked {
+    transform: translateX(0);
+  }
+}
+
+.drawer-content__menu {
+}
+
+.drawer-content__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  padding-block: 20px;
+  font-size: 14px;
+  line-height: 1.6; /* 22.4px */
+}
+
+.drawer-contact__button {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  color: color.$brown;
+  font-weight: 700;
+  border-radius: 40px;
+  border: 2px solid color.$brown;
+  background: color.$white;
+  box-shadow: 0px 4px 0px 0px #4a3636;
+  display: flex;
+  padding: 6px 22px 6px 22px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="robots" content="noindex" />
+    <title>#見つけて尾道レトロキャンペーン!</title>
+    <meta name="description" content="XXXX" />
+    <!-- GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kiwi+Maru&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- swiper読み込み:cdn経由 -->
+
+    <!-- stylesheet読み込み -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- OGP設定 -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href=""
+            ><img src="./img/img_logo.png" alt="ロゴ SnapOnomichi"
+          /></a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="" class="header__link">キャンペーンについて</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__link">特典</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__link">おすすめスポット</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__link">よくある質問</a>
+            </li>
+            <!-- <li class="header__nav-item">
+              <a href="" class="header__link">応募してみる</a>
+            </li> -->
+          </ul>
+          <div class="header__button">
+            <a href="" class="button">応募してみる</a>
+          </div>
+        </nav>
+        <button js-drawer-icon class="drawer-icon pc-hidden">
+          <span class="drawer-icon__bar">
+            <span class="drawer-icon__dot"></span>
+          </span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+      </div>
+    </header>
+    <div id="js-drawer-content" class="drawer-content">
+      <nav class="drawer-content__menu">
+        <a href="#about" class="drawer-content__link">キャンペーンについて</a>
+        <a href="#features" class="drawer-content__link">キャンペーン特典</a>
+        <a href="#case" class="drawer-content__link">おすすめスポット</a>
+        <a href="#price" class="drawer-content__link">よくある質問</a>
+        <a href="#qa" class="drawer-content__link">参加要項</a>
+        <a href="#qa" class="drawer-content__link">お問い合わせ</a>
+        <div class="drawer-contact__button">
+          <a href="#contact" class="button">応募してみる</a>
+        </div>
+      </nav>
+    </div>
+    <div class="fv">
+      <div class="inner fv__inner">
+        <picture>
+          <source
+            srcset="./img/fv-bg_sp.png"
+            media="(max-width: 767px)"
+            type="image/png"
+          />
+          <img src="./img/fv-bg_pc.png.png" alt="海と山が見える尾道の風景" />å
+        </picture>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

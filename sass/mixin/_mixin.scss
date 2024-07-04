@@ -1,0 +1,42 @@
+/* =====================================================
+  メディアクエリ用のmixinを定義
+
+  // //使用例
+// .header {
+//   height: 100px; //ＰＣ用の表示
+
+//   @include mq(sp) {
+//     height: 60px; //スマホの時だけ高さを60pxに！
+//   }
+// }
+
+このように @media screen and (width: 767px) { } を書かなくても、
+PC用のcssを書きながらスマホ用の表示を書き足すことができます！
+===================================================== */
+@use "sass:map";
+
+//マップ型変数breakpointsを定義
+$breakpoints: (
+  //マップの名前:breakpoints
+  //キー　　:キーに対する値
+  //767px以下（スマホ）用の表示
+  // "sp": "screen and (max-width: 767px)",
+  //768px未満の表現に変更
+  "sp": "not screen and (min-width: 768px)",
+  //768px-1024px （タブレット）用の表示 :1024px -> iPadを横にした時の幅
+  //   "tb": "screen and (min-width: 768px) and (max-width: 1024px)",
+  //767px以上（PC・タブレット）用の表示
+  "pc": "screen and (min-width: 768px)"
+    //   "pc": "screen and (min-width: 1024px)"
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォルト値はsp
+//mixinは型なので引数を設定できる
+//mixin名はmq、引数breakpointを用意
+@mixin mq($breakpoint: pc) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map.get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
