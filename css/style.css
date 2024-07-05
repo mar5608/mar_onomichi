@@ -182,6 +182,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   left: 0;
   width: 100%;
   height: 64px;
+  z-index: 99;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -548,7 +549,9 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .about {
   background: #e9f6f8;
-  padding-top: 300px;
+  padding-top: 200px;
+  padding-bottom: 458px;
+  position: relative;
 }
 
 .inner {
@@ -560,10 +563,140 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 
+.about__decoration {
+  border: 1px solid red;
+}
+
+.about__decoration-bgl {
+  position: absolute;
+  top: 500px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.about__decoration-bgr {
+  position: absolute;
+  top: 300px;
+  right: -100px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.about__decoration-square {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .about__decoration-square {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    display: block;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.about__decoration-pawpads {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  width: 54px;
+  height: 120px;
+}
+@media screen and (min-width: 768px) {
+  .about__decoration-pawpads {
+    width: 100px;
+    height: 220px;
+  }
+}
+
+.about__decoration-goods {
+  position: absolute;
+  top: 1000px;
+  left: 200px;
+  width: 133px;
+  height: 65.003px;
+}
+
+.about__decoration-stone {
+  position: absolute;
+  top: 930px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+}
+
+.about__decoration-slope {
+  position: absolute;
+  top: 763px;
+  left: -58px;
+  width: 216px;
+  height: 433px;
+}
+
+.about__decoration-onomichi {
+  position: absolute;
+  top: 1130px;
+  left: 10px;
+  width: 354.642px;
+  height: 37.2px;
+}
+
 .about__contents {
   border-radius: 24px;
   background: #ffffff;
   padding: 40px 12px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .about__contents {
+    margin-inline: auto;
+    max-width: 848px;
+  }
+}
+.about__contents::before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -36px;
+  width: 100px;
+  height: 36px;
+  background-color: #cce1e4;
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
+  content: "";
+}
+
+.about__image1 {
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  width: 80px;
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .about__image1 {
+    width: 134px;
+    height: 100px;
+  }
+}
+
+.about__image2 {
+  position: absolute;
+  top: 3%;
+  left: 70%;
+  width: 80px;
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .about__image2 {
+    width: 134px;
+    height: 100px;
+  }
 }
 
 .title {
@@ -575,7 +708,16 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 6px;
+  position: relative;
+}
+
+.title-image {
+  width: 48px;
+  height: 48px;
 }
 
 .title-sub {
@@ -583,16 +725,23 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-family: "Courgette", cursive;
   line-height: 1.25; /* 20px */
 }
+@media screen and (min-width: 768px) {
+  .title-sub {
+    font-size: 20px;
+  }
+}
 
 .title-main {
-  color: var(--LP-Blown, #4a3636);
   text-align: center;
-  /* JP/Kiwi Maru 20px Medium */
-  font-family: "Kiwi Maru";
+  font-family: "Kiwi Maru", serif;
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 125%; /* 25px */
+  line-height: 1.25; /* 25px */
+}
+@media screen and (min-width: 768px) {
+  .title-main {
+    font-size: 32px;
+  }
 }
 .title-main span {
   display: inline-block;
@@ -627,14 +776,49 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-size: 14px;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .about__heading {
+    font-size: 16px;
+  }
+}
 
 .about__text {
   font-size: 12px;
 }
+@media screen and (min-width: 768px) {
+  .about__text {
+    font-size: 16px;
+  }
+}
 
 .about__text-last {
+  position: relative;
+}
+.about__text-last span {
   font-size: 14px;
   font-weight: 700;
+  display: inline-block;
+  display: inline-block;
+  position: relative;
+  padding: 0 0.4em 0.2em;
+}
+@media screen and (min-width: 768px) {
+  .about__text-last span {
+    font-size: 20px;
+  }
+}
+.about__text-last span::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-bottom: 2px dashed #9ed0e0;
+}
+
+.about__button {
+  margin-inline: auto;
 }
 
 .underline {
@@ -643,4 +827,14 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .bold {
   font-weight: 700;
+}
+
+/*----------------------------------
+    enter
+-----------------------------------*/
+.enter {
+  background: #e9f6f8;
+  padding-top: 64px;
+  padding-bottom: 20px;
+  position: relative;
 }

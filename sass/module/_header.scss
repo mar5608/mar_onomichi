@@ -15,6 +15,7 @@
   left: 0;
   width: 100%;
   height: config.$header-height-sp;
+  z-index: 99;
   @include mixin.mq(pc) {
     height: config.$header-height-pc;
   }
