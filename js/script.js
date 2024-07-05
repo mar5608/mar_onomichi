@@ -21,3 +21,30 @@ jQuery("#js-drawer-icon").on("click", function (e) {
 //     jQuery(this).next().slideDown();
 //   }
 // });
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  // direction: "vertical",
+  loop: true, //無限再生
+  slidesPerView: 3, // 一度に表示する枚数
+  // spaceBetween: 10, //横のカードとの間
+  breakpoints: {
+    // スライドの表示枚数：768px以上の場合
+    768: {
+      slidesPerView: 4,
+    },
+    // // スライドの表示枚数：1024px以上の場合
+    1024: {
+      slidesPerView: 5,
+    },
+    // スライドの表示枚数：1440px以上の場合
+    1440: {
+      slidesPerView: 6,
+    },
+  },
+  speed: 6000, // ループの時間
+  allowTouchMove: false, // スワイプ無効
+  autoplay: {
+    delay: 0, // 途切れなくループ
+  },
+});

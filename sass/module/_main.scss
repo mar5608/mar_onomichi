@@ -419,6 +419,42 @@
   font-weight: 700;
 }
 
+.about__slide {
+  margin-top: 140px;
+}
+
+//swiper
+.swiper {
+//   width: calc(375px - config.$paddingSide-sp * 2);
+  height: 300px;
+  border: 1px solid red;
+  @include mixin.mq(pc) {
+    // width: calc(1512px - config.$paddingSide-pc * 2);
+    height: 400px;
+  }
+}
+
+.about__swiper {
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+}
+
+.about__slide {
+}
+
+.record__slide-image {
+  width: 100px;
+  height: 100px;
+  @include mixin.mq(pc) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /*----------------------------------
     enter
 -----------------------------------*/
