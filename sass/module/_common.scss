@@ -40,6 +40,7 @@
   display: inline-block;
   color: color.$brown;
   font-weight: 700;
+  line-height: 1.6;
   border-radius: 40px;
   border: 2px solid color.$brown;
   background: color.$white;
@@ -48,6 +49,10 @@
   padding: 6px 22px 6px 22px;
   justify-content: center;
   align-items: center;
+  @include mixin.mq(pc) {
+    width: 132px;
+    padding: 6px 16px 6px 16px;
+  }
 
   &:hover {
     background: color.$yellow;

@@ -28,8 +28,8 @@
   margin-inline: auto;
   height: inherit;
   @include mixin.mq(pc) {
-    padding-inline: config.$paddingSide-pc;
-    max-width: calc(config.$width-inner-pc + config.$paddingSide-pc * 2);
+    padding-inline: 24px;
+    // max-width: calc(config.$width-inner-pc + config.$paddingSide-pc * 2);
   }
 }
 
@@ -40,6 +40,8 @@
       width: 210px;
       display: block;
       @include mixin.mq(pc) {
+        width: 183px;
+        // height: 24px;
       }
     }
   }
