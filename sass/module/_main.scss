@@ -195,6 +195,13 @@
   width: 200px;
   height: 200px;
   overflow: hidden;
+  z-index: 24;
+  @include mixin.mq(pc) {
+    top: 280px;
+    left: -400px;
+    width: 480px;
+    height: 480px;
+  }
 }
 
 .about__decoration-bgr {
@@ -204,13 +211,21 @@
   width: 200px;
   height: 200px;
   overflow: hidden;
+  z-index: 25;
+  @include mixin.mq(pc) {
+    top: 280px;
+    right: -300px;
+    width: 480px;
+    height: 480px;
+  }
 }
 .about__decoration-square {
   display: none;
   @include mixin.mq(pc) {
+    z-index: 21;
     position: absolute;
-    top: 10px;
-    left: 0px;
+    top: 180px;
+    left: -20px;
     display: block;
     width: 250px;
     height: 250px;
@@ -225,6 +240,9 @@
   width: 54px;
   height: 120px;
   @include mixin.mq(pc) {
+    top: 100px;
+    //   left: 600px;
+    right: 160px;
     width: 100px;
     height: 220px;
   }
@@ -236,6 +254,12 @@
   left: 200px;
   width: 133px;
   height: 65.003px;
+  @include mixin.mq(pc) {
+    width: 308px;
+    height: 150.604px;
+    top: 900px;
+    right: 200px;
+  }
 }
 .about__decoration-stone {
   position: absolute;
@@ -243,6 +267,12 @@
   right: 20px;
   width: 48px;
   height: 48px;
+  @include mixin.mq(pc) {
+    width: 101px;
+    height: 100.047px;
+    top: 800px;
+    right: 20px;
+  }
 }
 
 .about__decoration-slope {
@@ -251,6 +281,13 @@
   left: -58px;
   width: 216px;
   height: 433px;
+  z-index: 23;
+  @include mixin.mq(pc) {
+    width: 427px;
+    height: 817px;
+    top: 540px;
+    left: -58px;
+  }
 }
 
 .about__decoration-onomichi {
@@ -259,6 +296,12 @@
   left: 10px;
   width: 354.642px;
   height: 37.2px;
+  @include mixin.mq(pc) {
+    width: 891px;
+    height: 97px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .about__contents {
@@ -421,11 +464,12 @@
 
 .about__slide {
   margin-top: 140px;
+  z-index: 29;
 }
 
 //swiper
 .swiper {
-//   width: calc(375px - config.$paddingSide-sp * 2);
+  //   width: calc(375px - config.$paddingSide-sp * 2);
   height: 300px;
   border: 1px solid red;
   @include mixin.mq(pc) {
