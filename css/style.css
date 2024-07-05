@@ -552,6 +552,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   padding-top: 200px;
   padding-bottom: 458px;
   position: relative;
+  overflow: hidden;
 }
 
 .inner {
@@ -575,6 +576,14 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   height: 200px;
   overflow: hidden;
   z-index: 24;
+  /* デバッグ用に境界線を追加 */
+  border: 1px solid red;
+}
+.about__decoration-bgl img {
+  width: 100%; /* 画像の幅を親要素に合わせる */
+  height: 100%; /* 画像の高さを親要素に合わせる */
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像のアスペクト比を維持しながら要素を覆う */
 }
 @media screen and (min-width: 768px) {
   .about__decoration-bgl {
@@ -591,8 +600,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   right: -100px;
   width: 200px;
   height: 200px;
-  overflow: hidden;
   z-index: 25;
+  /* デバッグ用に境界線を追加 */
+  border: 1px solid red;
+}
+.about__decoration-bgr img {
+  width: 100%; /* 画像の幅を親要素に合わせる */
+  height: 100%; /* 画像の高さを親要素に合わせる */
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像のアスペクト比を維持しながら要素を覆う */
 }
 @media screen and (min-width: 768px) {
   .about__decoration-bgr {
@@ -705,6 +721,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   background: #ffffff;
   padding: 40px 12px;
   position: relative;
+  z-index: 30;
 }
 @media screen and (min-width: 768px) {
   .about__contents {

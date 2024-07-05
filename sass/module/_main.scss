@@ -175,6 +175,7 @@
   padding-top: 200px;
   padding-bottom: 458px;
   position: relative;
+  overflow: hidden; //親要素に
 }
 
 .inner {
@@ -195,7 +196,16 @@
   width: 200px;
   height: 200px;
   overflow: hidden;
+
   z-index: 24;
+  /* デバッグ用に境界線を追加 */
+  border: 1px solid red;
+  img {
+    width: 100%; /* 画像の幅を親要素に合わせる */
+    height: 100%; /* 画像の高さを親要素に合わせる */
+    object-fit: cover; /* 画像のアスペクト比を維持しながら要素を覆う */
+  }
+
   @include mixin.mq(pc) {
     top: 280px;
     left: -400px;
@@ -208,10 +218,21 @@
   position: absolute;
   top: 300px;
   right: -100px;
+  // left: 250px;
   width: 200px;
   height: 200px;
-  overflow: hidden;
+
+  // overflow-x: clip;
   z-index: 25;
+  img {
+    width: 100%; /* 画像の幅を親要素に合わせる */
+    height: 100%; /* 画像の高さを親要素に合わせる */
+    object-fit: cover; /* 画像のアスペクト比を維持しながら要素を覆う */
+  }
+
+  /* デバッグ用に境界線を追加 */
+  border: 1px solid red;
+
   @include mixin.mq(pc) {
     top: 280px;
     right: -300px;
@@ -309,6 +330,7 @@
   background: color.$white;
   padding: 40px 12px;
   position: relative;
+  z-index: 30;
   @include mixin.mq(pc) {
     margin-inline: auto;
     max-width: calc(620px + 114px * 2);
