@@ -98,11 +98,19 @@
               alt="尾道ギフトを100名様にプレゼント"
             />
           </div>
-          <div class="fv__smartphone">
-            <img
-              src="./img/device=SP.png"
-              alt="#見つけて尾道レトロのInstagram画面が表示されているスマートフォン"
-            />
+          <div class="fv__smartphone-image">
+            <!-- 768pxまではsrcのsrcset画像PC版を表示する-->
+            <picture class="fv__smartphone">
+              <source
+                media="(min-width: 768px)"
+                srcset="./img/img_smartphone_SP.png"
+              />
+              <img
+                src="./img/img_smartphone_SP.png"
+                alt="#見つけて尾道レトロのInstagram画面が表示されているスマートフォン"
+                decoding="async"
+              />
+            </picture>
           </div>
           <div class="fv__food">
             <img src="./img/img_food.png" alt="モナカとアイスコーヒー" />
@@ -117,9 +125,7 @@
       </div>
     </div>
     <section class="about">
-      <div class="inner about__inner">
-        
-      </div>
+      <div class="inner about__inner"></div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>

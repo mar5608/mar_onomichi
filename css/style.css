@@ -193,8 +193,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-inline: auto;
   height: inherit;
-  min-width: 335px;
 }
 @media screen and (min-width: 768px) {
   .header__inner {
@@ -355,6 +355,13 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   background: url("../../img/fv-bg_sp.png") no-repeat center center/contain;
   height: 554px;
 }
+@media screen and (min-width: 768px) {
+  .fv {
+    background: url("../../img/fv-bg_pc.png") no-repeat center center/cover;
+    height: 740px;
+  }
+}
+
 .fv__head {
   position: relative;
 }
@@ -369,24 +376,45 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   line-height: 1.25; /* 17.5px */
   padding-top: 17px;
 }
+@media screen and (min-width: 768px) {
+  .fv__head-sub {
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 35px;
+  }
+}
 
 .fv__title1 {
   position: absolute;
-  top: 137px;
+  top: 74px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 335px;
   height: 53px;
 }
+@media screen and (min-width: 768px) {
+  .fv__title1 {
+    top: 183px;
+    width: 520px;
+    height: 82px;
+  }
+}
 .fv__title2 {
   position: absolute;
-  top: 203px;
+  top: 139px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 240px;
   height: 40px;
+}
+@media screen and (min-width: 768px) {
+  .fv__title2 {
+    top: 281px;
+    width: 356px;
+    height: 60px;
+  }
 }
 .fv__image-items {
   position: relative;
@@ -394,64 +422,113 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .fv__fukidashi {
   position: absolute;
-  top: 203px;
-  left: 25%;
+  top: 143px;
+  left: 24%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 142px;
   height: 80px;
 }
+@media screen and (min-width: 768px) {
+  .fv__fukidashi {
+    top: 207px;
+    left: 32%;
+    width: 244px;
+    height: 130px;
+  }
+}
 
 .fv__present {
   position: absolute;
-  top: 203px;
-  left: 80%;
+  top: 136px;
+  left: 73%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 110px;
   height: 110px;
 }
+@media screen and (min-width: 768px) {
+  .fv__present {
+    top: 270px;
+    left: 64%;
+    width: 180px;
+    height: 180px;
+  }
+}
 
-.fv__smartphone {
+.fv__smartphone-image {
   position: absolute;
-  top: 324px;
+  top: 240px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 10;
+  width: 200px;
+  height: 408px;
+}
+@media screen and (min-width: 768px) {
+  .fv__smartphone-image {
+    top: 264px;
+    width: 250px;
+    height: 510px;
+  }
 }
 
 .fv__food {
   position: absolute;
-  top: 564px;
-  left: 15%;
+  top: 523px;
+  left: 17%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 86px;
   height: 141px;
   z-index: 11;
 }
+@media screen and (min-width: 768px) {
+  .fv__food {
+    top: 464px;
+    left: 30%;
+    width: 202px;
+    height: 332px;
+  }
+}
 
 .fv__cat1 {
   position: absolute;
-  top: 664px;
-  left: 80%;
+  top: 585px;
+  left: 79%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 98px;
   height: 72px;
   z-index: 13;
 }
+@media screen and (min-width: 768px) {
+  .fv__cat1 {
+    top: 664px;
+    left: 70%;
+    width: 233px;
+    height: 174px;
+  }
+}
 
 .fv__cat2 {
   position: absolute;
-  top: 604px;
-  left: 85%;
+  top: 530px;
+  left: 86%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 62px;
   height: 69px;
   z-index: 12;
+}
+@media screen and (min-width: 768px) {
+  .fv__cat2 {
+    top: 514px;
+    left: 70%;
+    width: 170px;
+    height: 190px;
+  }
 }
 
 /*----------------------------------

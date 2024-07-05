@@ -25,8 +25,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-inline: auto;
   height: inherit;
-  min-width: calc(375px - config.$paddingSide-sp * 2);
   @include mixin.mq(pc) {
     padding-inline: config.$paddingSide-pc;
     max-width: calc(config.$width-inner-pc + config.$paddingSide-pc * 2);
@@ -163,5 +163,3 @@
   margin-top: 16px;
   text-align: center;
 }
-
-

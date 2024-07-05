@@ -11,6 +11,8 @@
   background: url("../../img/fv-bg_sp.png") no-repeat center center / contain;
   height: 554px;
   @include mixin.mq(pc) {
+    background: url("../../img/fv-bg_pc.png") no-repeat center center / cover;
+    height: 740px;
   }
 }
 
@@ -32,26 +34,41 @@
   font-weight: 400;
   line-height: 1.25; /* 17.5px */
   padding-top: 17px;
+  @include mixin.mq(pc) {
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 35px;
+  }
 }
 
 .fv__title1 {
   position: absolute;
-  top: calc(config.$header-height-sp + 73px);
+  top: calc(config.$header-height-sp + 10px);
   left: 50%;
   transform: translateX(-50%);
   width: 335px;
   height: 53px;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 119px);
+    width: 520px;
+    height: 82px;
+  }
   img {
   }
 }
 
 .fv__title2 {
   position: absolute;
-  top: calc(config.$header-height-sp + 73px + 53px + 13px);
+  top: calc(config.$header-height-sp + 10px + 53px + 12px);
   left: 50%;
   transform: translateX(-50%);
   width: 240px;
   height: 40px;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 119px + 82px + 16px);
+    width: 356px;
+    height: 60px;
+  }
   img {
   }
 }
@@ -62,59 +79,96 @@
 
 .fv__fukidashi {
   position: absolute;
-  top: calc(config.$header-height-sp + 73px + 53px + 13px);
-  left: 25%;
+  top: calc(config.$header-height-sp + 79px); //143px
+  left: 24%;
   transform: translateX(-50%);
   width: 142px;
   height: 80px;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 10px + 53px + 80px);
+    left: 32%;
+    width: 244px;
+    height: 130px;
+  }
 }
 
 .fv__present {
   position: absolute;
-  top: calc(config.$header-height-sp + 73px + 53px + 13px);
-  left: 80%;
+  top: calc(config.$header-height-sp + 72px); //136px
+  left: 73%;
   transform: translateX(-50%);
   width: 110px;
   height: 110px;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 73px + 53px + 80px);
+    left: 64%;
+    width: 180px;
+    height: 180px;
+  }
 }
 
-.fv__smartphone {
+.fv__smartphone-image {
   position: absolute;
   //   top: calc(config.$header-height-sp + 73px + 53px + 13px);
-  top: calc(config.$header-height-sp + 260px);
+  top: 240px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  width: 200px;
+  height: 408px;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 200px);
+    width: 250px;
+    height: 510px;
+  }
 }
 
 .fv__food {
   position: absolute;
-  top: calc(config.$header-height-sp + 500px);
-  left: 15%;
+  top: 523px;
+  left: 17%;
   transform: translateX(-50%);
   width: 86px;
   height: 141px;
   z-index: 11;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 400px);
+    left: 30%;
+    width: 202px;
+    height: 332px;
+  }
 }
 
 .fv__cat1 {
   position: absolute;
-  top: calc(config.$header-height-sp + 600px);
-  left: 80%;
+  top: 585px;
+  left: 79%;
   transform: translateX(-50%);
   width: 98px;
   height: 72px;
   z-index: 13;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 600px);
+    left: 70%;
+    width: 233px;
+    height: 174px;
+  }
 }
 
 .fv__cat2 {
   position: absolute;
-  top: calc(config.$header-height-sp + 540px);
-  left: 85%;
+  top: 530px;
+  left: 86%;
   transform: translateX(-50%);
   width: 62px;
   height: 69px;
   z-index: 12;
+  @include mixin.mq(pc) {
+    top: calc(config.$header-height-pc + 450px);
+    left: 70%;
+    width: 170px;
+    height: 190px;
+  }
 }
 
 /*----------------------------------
