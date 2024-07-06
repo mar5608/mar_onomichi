@@ -7,13 +7,21 @@
     fv
 -----------------------------------*/
 .fv {
+  background: color.$l-blue;
   margin-top: config.$header-height-sp;
-  background: url("../../img/fv-bg_sp.png") no-repeat center center / contain;
+  // background: url("../../img/fv-bg_sp.png") no-repeat center center / contain;
   height: 554px;
+  position: relative;
   @include mixin.mq(pc) {
-    background: url("../../img/fv-bg_pc.png") no-repeat center center / cover;
+    // background: url("../../img/fv-bg_pc.png") no-repeat center center / contain;
     height: 740px;
   }
+}
+
+.fv__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .fv__head {
@@ -172,8 +180,8 @@
 
 .about {
   background: color.$l-blue;
-  padding-top: 200px;
-  padding-bottom: 458px;
+  padding-top: 176px;
+  padding-bottom: 0px;
   position: relative;
   overflow: hidden; //親要素に
 }
@@ -186,7 +194,6 @@
 }
 
 .about__decoration {
-  border: 1px solid red;
 }
 
 .about__decoration-bgl {
@@ -199,7 +206,7 @@
 
   z-index: 24;
   /* デバッグ用に境界線を追加 */
-  border: 1px solid red;
+  // border: 1px solid red;
   img {
     width: 100%; /* 画像の幅を親要素に合わせる */
     height: 100%; /* 画像の高さを親要素に合わせる */
@@ -231,7 +238,7 @@
   }
 
   /* デバッグ用に境界線を追加 */
-  border: 1px solid red;
+  // border: 1px solid red;
 
   @include mixin.mq(pc) {
     top: 280px;
@@ -485,8 +492,6 @@
 }
 
 .about__slide {
-  margin-top: 140px;
-  z-index: 29;
 }
 
 //swiper
@@ -494,7 +499,8 @@
 }
 
 .about__swiper {
-  border: 1px solid red;
+  margin-top: 300px;
+  z-index: 99;
   @include mixin.mq(pc) {
     // height: auto;
   }
@@ -531,7 +537,7 @@
 
 .enter {
   background: color.$l-blue;
-  padding-top: 64px;
+  padding-top: 120px;
   padding-bottom: 20px;
   position: relative;
 }

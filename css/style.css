@@ -364,15 +364,21 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
     fv
 -----------------------------------*/
 .fv {
+  background: #e9f6f8;
   margin-top: 64px;
-  background: url("../../img/fv-bg_sp.png") no-repeat center center/contain;
   height: 554px;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .fv {
-    background: url("../../img/fv-bg_pc.png") no-repeat center center/cover;
     height: 740px;
   }
+}
+
+.fv__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .fv__head {
@@ -549,8 +555,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .about {
   background: #e9f6f8;
-  padding-top: 200px;
-  padding-bottom: 458px;
+  padding-top: 176px;
+  padding-bottom: 0px;
   position: relative;
   overflow: hidden;
 }
@@ -564,10 +570,6 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 
-.about__decoration {
-  border: 1px solid red;
-}
-
 .about__decoration-bgl {
   position: absolute;
   top: 500px;
@@ -577,7 +579,6 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   overflow: hidden;
   z-index: 24;
   /* デバッグ用に境界線を追加 */
-  border: 1px solid red;
 }
 .about__decoration-bgl img {
   width: 100%; /* 画像の幅を親要素に合わせる */
@@ -602,7 +603,6 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   height: 200px;
   z-index: 25;
   /* デバッグ用に境界線を追加 */
-  border: 1px solid red;
 }
 .about__decoration-bgr img {
   width: 100%; /* 画像の幅を親要素に合わせる */
@@ -901,13 +901,9 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-weight: 700;
 }
 
-.about__slide {
-  margin-top: 140px;
-  z-index: 29;
-}
-
 .about__swiper {
-  border: 1px solid red;
+  margin-top: 300px;
+  z-index: 99;
 }
 .swiper-wrapper {
   /* スライドの動き等速 */
@@ -939,7 +935,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .enter {
   background: #e9f6f8;
-  padding-top: 64px;
+  padding-top: 120px;
   padding-bottom: 20px;
   position: relative;
 }
