@@ -491,25 +491,29 @@
 
 //swiper
 .swiper {
-  //   width: calc(375px - config.$paddingSide-sp * 2);
-  height: 300px;
-  border: 1px solid red;
-  @include mixin.mq(pc) {
-    // width: calc(1512px - config.$paddingSide-pc * 2);
-    height: 400px;
-  }
 }
 
 .about__swiper {
+  border: 1px solid red;
+  @include mixin.mq(pc) {
+    // height: auto;
+  }
 }
 
 .swiper-wrapper {
+  /* スライドの動き等速 */
+  transition-timing-function: linear;
 }
 
 .swiper-slide {
 }
 
 .about__slide {
+  /* 画像のサイズ調整 */
+  img {
+    height: auto;
+    width: 100%;
+  }
 }
 
 .record__slide-image {

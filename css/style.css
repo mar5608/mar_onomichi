@@ -906,14 +906,21 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   z-index: 29;
 }
 
-.swiper {
-  height: 300px;
+.about__swiper {
   border: 1px solid red;
 }
-@media screen and (min-width: 768px) {
-  .swiper {
-    height: 400px;
-  }
+.swiper-wrapper {
+  /* スライドの動き等速 */
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.about__slide {
+  /* 画像のサイズ調整 */
+}
+.about__slide img {
+  height: auto;
+  width: 100%;
 }
 
 .record__slide-image {
