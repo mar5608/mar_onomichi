@@ -442,7 +442,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__fukidashi {
   position: absolute;
   top: 143px;
-  left: 24%;
+  left: 21%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 142px;
@@ -460,7 +460,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__present {
   position: absolute;
   top: 136px;
-  left: 73%;
+  left: 76%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 110px;
@@ -496,7 +496,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__food {
   position: absolute;
   top: 523px;
-  left: 17%;
+  left: 13%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 86px;
@@ -515,7 +515,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__cat1 {
   position: absolute;
   top: 585px;
-  left: 79%;
+  left: 83%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 98px;
@@ -534,7 +534,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__cat2 {
   position: absolute;
   top: 530px;
-  left: 86%;
+  left: 91%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 62px;
@@ -555,10 +555,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .about {
   background: #e9f6f8;
-  padding-top: 176px;
+  padding-top: 189px;
   padding-bottom: 0px;
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    padding-top: 176px;
+  }
 }
 
 .inner {
@@ -572,8 +577,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__decoration-bgl {
   position: absolute;
-  top: 500px;
-  left: -100px;
+  top: 583px;
+  left: -129px;
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -597,8 +602,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__decoration-bgr {
   position: absolute;
-  top: 300px;
-  right: -100px;
+  top: 462px;
+  right: -140px;
   width: 200px;
   height: 200px;
   z-index: 25;
@@ -636,7 +641,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__decoration-pawpads {
   position: absolute;
-  top: 200px;
+  top: 178px;
   right: 0;
   width: 54px;
   height: 120px;
@@ -652,8 +657,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__decoration-goods {
   position: absolute;
-  top: 1000px;
-  left: 200px;
+  top: 950px;
+  left: 185px;
   width: 133px;
   height: 65.003px;
 }
@@ -668,7 +673,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__decoration-stone {
   position: absolute;
-  top: 930px;
+  top: 908px;
   right: 20px;
   width: 48px;
   height: 48px;
@@ -684,8 +689,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__decoration-slope {
   position: absolute;
-  top: 763px;
-  left: -58px;
+  top: 748px;
+  left: -56px;
   width: 216px;
   height: 433px;
   z-index: 23;
@@ -701,8 +706,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__decoration-onomichi {
   position: absolute;
-  top: 1130px;
-  left: 10px;
+  top: 1035px;
+  left: 12px;
   width: 354.642px;
   height: 37.2px;
 }
@@ -719,7 +724,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .about__contents {
   border-radius: 24px;
   background: #ffffff;
-  padding: 40px 12px;
+  padding: 30px 12px 40px;
   position: relative;
   z-index: 30;
 }
@@ -745,7 +750,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__image1 {
   position: absolute;
-  top: 3%;
+  top: 4%;
   left: 10%;
   width: 80px;
   height: 60px;
@@ -759,7 +764,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__image2 {
   position: absolute;
-  top: 3%;
+  top: 4%;
   left: 70%;
   width: 80px;
   height: 60px;
@@ -791,6 +796,9 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   width: 48px;
   height: 48px;
 }
+.title-image img {
+  max-width: 100%;
+}
 
 .title-sub {
   text-align: center;
@@ -818,15 +826,14 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .title-main span {
   display: inline-block;
   position: relative;
-  padding: 0 0.4em 0.2em;
 }
 .title-main span::before {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -10px;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 6px;
   background-color: #ffee56;
 }
 
@@ -841,9 +848,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
-  margin-top: 24px;
+  margin-top: 37px;
 }
-
 .about__heading {
   font-size: 14px;
   font-weight: 700;
@@ -854,8 +860,20 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 
+.about__text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18.5px;
+}
+
 .about__text {
   font-size: 12px;
+  line-height: 1.6;
 }
 @media screen and (min-width: 768px) {
   .about__text {
@@ -864,15 +882,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .about__text-last {
+  margin-top: 6px;
+  letter-spacing: -0.025em;
   position: relative;
 }
 .about__text-last span {
   font-size: 14px;
   font-weight: 700;
   display: inline-block;
-  display: inline-block;
   position: relative;
-  padding: 0 0.4em 0.2em;
 }
 @media screen and (min-width: 768px) {
   .about__text-last span {
@@ -882,7 +900,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .about__text-last span::before {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: -8px;
   left: 0;
   width: 100%;
   height: 3px;
@@ -891,6 +909,10 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__button {
   margin-inline: auto;
+  margin-top: 8px;
+}
+.about__button .button {
+  padding: 4px 21px;
 }
 
 .underline {
@@ -902,7 +924,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .about__swiper {
-  margin-top: 300px;
+  margin-top: 178px;
   z-index: 99;
 }
 .swiper-wrapper {

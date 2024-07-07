@@ -83,7 +83,7 @@
 .fv__fukidashi {
   position: absolute;
   top: calc(config.$header-height-sp + 79px); //143px
-  left: 24%;
+  left: 21%;
   transform: translateX(-50%);
   width: 142px;
   height: 80px;
@@ -98,7 +98,7 @@
 .fv__present {
   position: absolute;
   top: calc(config.$header-height-sp + 72px); //136px
-  left: 73%;
+  left: 76%;
   transform: translateX(-50%);
   width: 110px;
   height: 110px;
@@ -129,7 +129,7 @@
 .fv__food {
   position: absolute;
   top: 523px;
-  left: 17%;
+  left: 13%;
   transform: translateX(-50%);
   width: 86px;
   height: 141px;
@@ -145,7 +145,7 @@
 .fv__cat1 {
   position: absolute;
   top: 585px;
-  left: 79%;
+  left: 83%;
   transform: translateX(-50%);
   width: 98px;
   height: 72px;
@@ -161,7 +161,7 @@
 .fv__cat2 {
   position: absolute;
   top: 530px;
-  left: 86%;
+  left: 91%;
   transform: translateX(-50%);
   width: 62px;
   height: 69px;
@@ -180,10 +180,13 @@
 
 .about {
   background: color.$l-blue;
-  padding-top: 176px;
+  padding-top: 189px;
   padding-bottom: 0px;
   position: relative;
   overflow: hidden; //親要素に
+  @include mixin.mq(pc) {
+    padding-top: 176px;
+  }
 }
 
 .inner {
@@ -198,8 +201,8 @@
 
 .about__decoration-bgl {
   position: absolute;
-  top: 500px;
-  left: -100px;
+  top: 583px;
+  left: -129px;
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -223,8 +226,8 @@
 
 .about__decoration-bgr {
   position: absolute;
-  top: 300px;
-  right: -100px;
+  top: 462px;
+  right: -140px;
   // left: 250px;
   width: 200px;
   height: 200px;
@@ -262,7 +265,7 @@
 
 .about__decoration-pawpads {
   position: absolute;
-  top: 200px;
+  top: 178px;
   //   left: 600px;
   right: 0;
   width: 54px;
@@ -278,8 +281,8 @@
 
 .about__decoration-goods {
   position: absolute;
-  top: 1000px;
-  left: 200px;
+  top: 950px;
+  left: 185px;
   width: 133px;
   height: 65.003px;
   @include mixin.mq(pc) {
@@ -291,7 +294,7 @@
 }
 .about__decoration-stone {
   position: absolute;
-  top: 930px;
+  top: 908px;
   right: 20px;
   width: 48px;
   height: 48px;
@@ -305,8 +308,8 @@
 
 .about__decoration-slope {
   position: absolute;
-  top: 763px;
-  left: -58px;
+  top: 748px;
+  left: -56px;
   width: 216px;
   height: 433px;
   z-index: 23;
@@ -320,8 +323,8 @@
 
 .about__decoration-onomichi {
   position: absolute;
-  top: 1130px;
-  left: 10px;
+  top: 1035px;
+  left: 12px;
   width: 354.642px;
   height: 37.2px;
   @include mixin.mq(pc) {
@@ -335,7 +338,7 @@
 .about__contents {
   border-radius: 24px;
   background: color.$white;
-  padding: 40px 12px;
+  padding: 30px 12px 40px;
   position: relative;
   z-index: 30;
   @include mixin.mq(pc) {
@@ -357,7 +360,7 @@
 
 .about__image1 {
   position: absolute;
-  top: 3%;
+  top: 4%;
   left: 10%;
   width: 80px;
   height: 60px;
@@ -368,7 +371,7 @@
 }
 .about__image2 {
   position: absolute;
-  top: 3%;
+  top: 4%;
   left: 70%;
   width: 80px;
   height: 60px;
@@ -390,6 +393,9 @@
 .title-image {
   width: 48px;
   height: 48px;
+  img {
+    max-width: 100%;
+  }
   //   position: absolute;
   //   top: 0;
   //   left: 50%;
@@ -417,14 +423,14 @@
   span {
     display: inline-block;
     position: relative;
-    padding: 0 0.4em 0.2em;
+    // padding: 0 0.4em 0.2em;
     &::before {
       content: "";
       position: absolute;
-      bottom: -3px;
+      bottom: -10px;
       left: 0;
       width: 100%;
-      height: 3px;
+      height: 6px;
       background-color: #ffee56;
     }
   }
@@ -436,7 +442,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 24px;
+  margin-top: 37px;
+  @include mixin.mq(pc) {
+  }
 }
 
 .about__heading {
@@ -447,30 +455,36 @@
     font-size: 16px;
   }
 }
+.about__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18.5px;
+}
 
 .about__text {
   font-size: 12px;
+  line-height: 1.6;
   @include mixin.mq(pc) {
     font-size: 16px;
   }
 }
 
 .about__text-last {
+  margin-top: 6px;
+  letter-spacing: -0.025em;
   position: relative;
   span {
     font-size: 14px;
     font-weight: 700;
     display: inline-block;
-    display: inline-block;
     position: relative;
-    padding: 0 0.4em 0.2em;
     @include mixin.mq(pc) {
       font-size: 20px;
     }
     &::before {
       content: "";
       position: absolute;
-      bottom: -3px;
+      bottom: -8px;
       left: 0;
       width: 100%;
       height: 3px;
@@ -481,6 +495,10 @@
 
 .about__button {
   margin-inline: auto;
+  margin-top: 8px;
+  .button {
+    padding: calc(7px - 3px) calc(24px - 3px);
+  }
 }
 
 .underline {
@@ -499,7 +517,7 @@
 }
 
 .about__swiper {
-  margin-top: 300px;
+  margin-top: 178px;
   z-index: 99;
   @include mixin.mq(pc) {
     // height: auto;
