@@ -58,3 +58,12 @@
     background: color.$yellow;
   }
 }
+
+.button-lg {
+  @include mixin.mq(pc) {
+    width: calc(-3px * 2 + 40px * 2 + 182px);
+    height: calc(-3px * 2 + 10px * 2 + 40px);
+    padding: 10px 40px 12px 40px;
+    font-size: 20px;
+  }
+}

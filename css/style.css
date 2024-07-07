@@ -176,6 +176,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   background: #ffee56;
 }
 
+@media screen and (min-width: 768px) {
+  .button-lg {
+    width: 256px;
+    height: 54px;
+    padding: 10px 40px 12px 40px;
+    font-size: 20px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -593,8 +602,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 @media screen and (min-width: 768px) {
   .about__decoration-bgl {
-    top: 280px;
-    left: -400px;
+    top: 250px;
+    left: -338px;
     width: 480px;
     height: 480px;
   }
@@ -617,8 +626,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 @media screen and (min-width: 768px) {
   .about__decoration-bgr {
-    top: 280px;
-    right: -300px;
+    top: 250px;
+    right: -284px;
     width: 480px;
     height: 480px;
   }
@@ -631,7 +640,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   .about__decoration-square {
     z-index: 21;
     position: absolute;
-    top: 180px;
+    top: 156px;
     left: -20px;
     display: block;
     width: 250px;
@@ -666,8 +675,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   .about__decoration-goods {
     width: 308px;
     height: 150.604px;
-    top: 900px;
-    right: 200px;
+    right: 120px;
   }
 }
 
@@ -687,6 +695,34 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 
+.about__decoration-wave {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .about__decoration-wave {
+    z-index: 21;
+    position: absolute;
+    top: 700px;
+    right: 0px;
+    display: block;
+    width: 807px;
+    height: 12px;
+  }
+}
+
+.about__decoration-wave2 {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .about__decoration-wave2 {
+    z-index: 21;
+    position: absolute;
+    top: 750px;
+    right: -50px;
+    display: block;
+  }
+}
+
 .about__decoration-slope {
   position: absolute;
   top: 748px;
@@ -699,8 +735,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   .about__decoration-slope {
     width: 427px;
     height: 817px;
-    top: 540px;
-    left: -58px;
+    top: 498px;
+    left: -103px;
   }
 }
 
@@ -715,7 +751,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   .about__decoration-onomichi {
     width: 891px;
     height: 97px;
-    left: 50%;
+    top: 1172px;
+    left: 49.8%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
@@ -732,6 +769,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   .about__contents {
     margin-inline: auto;
     max-width: 848px;
+    border-radius: 40px;
+    padding: 40px 12px 40px;
   }
 }
 .about__contents::before {
@@ -746,6 +785,13 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
           clip-path: polygon(0 0, 100% 0, 50% 100%);
   content: "";
+}
+@media screen and (min-width: 768px) {
+  .about__contents::before {
+    width: 140px;
+    bottom: -50px;
+    height: 50px;
+  }
 }
 
 .about__image1 {
@@ -790,6 +836,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
           align-items: center;
   gap: 6px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .title {
+    gap: 8px;
+  }
 }
 
 .title-image {
@@ -836,6 +887,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   height: 6px;
   background-color: #ffee56;
 }
+@media screen and (min-width: 768px) {
+  .title-main span::before {
+    bottom: -15px;
+  }
+}
 
 .about__body {
   text-align: center;
@@ -850,6 +906,12 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   gap: 24px;
   margin-top: 37px;
 }
+@media screen and (min-width: 768px) {
+  .about__body {
+    margin-top: 50px;
+  }
+}
+
 .about__heading {
   font-size: 14px;
   font-weight: 700;
@@ -870,6 +932,12 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
           flex-direction: column;
   gap: 18.5px;
 }
+@media screen and (min-width: 768px) {
+  .about__text-container {
+    margin-top: 10px;
+    gap: 27.6px;
+  }
+}
 
 .about__text {
   font-size: 12px;
@@ -878,6 +946,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 @media screen and (min-width: 768px) {
   .about__text {
     font-size: 16px;
+    line-height: 1.6;
   }
 }
 
@@ -885,6 +954,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   margin-top: 6px;
   letter-spacing: -0.025em;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .about__text-last {
+    margin-top: 20px;
+  }
 }
 .about__text-last span {
   font-size: 14px;
@@ -914,6 +988,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .about__button .button {
   padding: 4px 21px;
 }
+@media screen and (min-width: 768px) {
+  .about__button {
+    margin-top: 20px;
+  }
+}
 
 .underline {
   text-decoration-line: underline;
@@ -927,6 +1006,12 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   margin-top: 178px;
   z-index: 99;
 }
+@media screen and (min-width: 768px) {
+  .about__swiper {
+    margin-top: 259px;
+  }
+}
+
 .swiper-wrapper {
   /* スライドの動き等速 */
   -webkit-transition-timing-function: linear;
