@@ -1320,3 +1320,50 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   background: #e9f6f8;
   padding-top: 120px;
 }
+
+.prize__heading {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.prize__card {
+  padding-top: 12px;
+  position: relative;
+}
+
+.prize__card-no {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #ce2073;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.prize__card-no-text {
+  font-size: 7.68px;
+  font-weight: 700;
+}
+
+.prize__card-no-number {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 23.04px;
+  font-style: normal;
+}

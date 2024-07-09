@@ -822,3 +822,61 @@
   background: color.$l-blue;
   padding-top: 120px;
 }
+
+.prize__title {
+}
+
+.prize__body {
+}
+
+.prize__heading {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.prize__cards {
+}
+
+.prize__card {
+  padding-top: 12px;
+  position: relative;
+}
+
+.prize__card-no {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%; //50%で正円にすることができる
+  color: color.$white;
+  background: #ce2073;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prize__card-no-text {
+  font-size: 7.68px;
+  font-weight: 700;
+}
+
+.prize__card-no-number {
+  font-family: config.$font-family-en2;
+  font-size: 23.04px;
+  font-style: normal;
+}
+
+.prize__card-img {
+}
+
+.prize__card-body {
+}
+
+.prize__card-title {
+}
+
+.prize__card-icon {
+}
