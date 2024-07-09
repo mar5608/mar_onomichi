@@ -386,7 +386,6 @@
       width: 140px;
       bottom: -50px;
       height: 50px;
-
     }
   }
 }
@@ -553,14 +552,6 @@
   }
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
-.bold {
-  font-weight: 700;
-}
-
 .about__slide {
 }
 
@@ -611,4 +602,223 @@
   padding-top: 120px;
   padding-bottom: 20px;
   position: relative;
+  overflow: hidden; //親要素に
+}
+.enter__decoration-map {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 94px;
+  height: 80px;
+}
+
+.enter__cat3 {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 149px;
+  height: 223px;
+}
+
+.enter__cat4 {
+  position: absolute;
+  top: 120px;
+  right: -50px;
+  width: 94px;
+  height: 80px;
+}
+
+.enter__decoration-pawpads {
+  position: absolute;
+  top: 300px;
+  //   left: 600px;
+  right: 0;
+  width: 55px;
+  height: 120px;
+  /* 画像を反転する */
+  transform: scale(-1, 1);
+  @include mixin.mq(pc) {
+    top: 100px;
+    //   left: 600px;
+    right: 160px;
+    width: 100px;
+    height: 220px;
+  }
+}
+
+.enter__decoration-pawpads-opt {
+  position: absolute;
+  top: 690px;
+  left: 10px;
+  // right: 0;
+  width: 54px;
+  height: 120px;
+  /* 画像を反転する */
+  transform: scale(1, -1);
+  @include mixin.mq(pc) {
+    top: 300px;
+    //   left: 600px;
+    right: 160px;
+    width: 100px;
+    height: 220px;
+  }
+}
+
+.enter__decoration-pawpads-opt2 {
+  position: absolute;
+  top: 1050px;
+  // left: 10px;
+  right: 15px;
+  width: 54px;
+  height: 120px;
+  /* 画像を反転する */
+  transform: scale(-1, -1);
+  @include mixin.mq(pc) {
+    top: 300px;
+    //   left: 600px;
+    right: 160px;
+    width: 100px;
+    height: 220px;
+  }
+}
+
+.enter__wrapper {
+}
+
+.enter__containaer {
+  position: relative;
+}
+
+.enter__card-line1,
+.enter__card-line2 {
+  position: absolute;
+  width: 34px;
+  height: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  img {
+    width: 100%;
+  }
+}
+
+.enter__card-line1 {
+  top: 430px;
+}
+
+.enter__card-line2 {
+  top: 856px;
+}
+
+.enter__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  @include mixin.mq(pc) {
+    flex-direction: row;
+    align-items: start;
+    margin-top: 40px;
+  }
+}
+.enter__card {
+  position: relative;
+  color: color.$brown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 16px;
+  @include mixin.mq(pc) {
+    width: 320px;
+  }
+  &:nth-child(2) {
+    margin-top: 34px;
+    @include mixin.mq(pc) {
+      margin-top: 69px;
+    }
+  }
+  &:nth-child(3) {
+    margin-top: 34px;
+    @include mixin.mq(pc) {
+      margin-top: 0;
+    }
+  }
+}
+
+.enter__card-img {
+  overflow: hidden;
+  // position: relative;
+  height: 210px;
+  width: 196px;
+  img {
+    // aspect-ratio: 196/210;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    transition: transform 0.8s;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .p-card:hover > a > figure > img {
+    transform: scale(1.2);
+    transition: transform 0.8s;
+  }
+}
+
+.enter__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.enter__card-title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.enter__card-text {
+  font-size: 12px;
+  text-align: center;
+}
+
+.enter__card-button {
+  text-align: center;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  background: color.$white;
+  button {
+    color: color.$brown;
+    font-weight: 700;
+  }
+}
+
+.enter__button {
+  margin-top: 40px;
+  @include mixin.mq(pc) {
+    width: 357px;
+  }
+  button {
+    padding: 6px 3px;
+    @include mixin.mq(pc) {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}
+
+/*----------------------------------
+    prize
+-----------------------------------*/
+
+.prize {
+  background: color.$l-blue;
+  padding-top: 120px;
 }
