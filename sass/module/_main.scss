@@ -821,62 +821,197 @@
 .prize {
   background: color.$l-blue;
   padding-top: 120px;
+  padding-bottom: 300px;
+  position: relative;
+}
+
+.prize__bg-sq {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  border-radius: 24px;
+  background: color.$white;
+  width: 375px;
+  height: 400px;
+  // z-index: 1;
+}
+
+.prize__bg-path {
+  position: absolute;
+  top: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prize_bg_photo {
+  position: absolute;
+  top: 660px;
+  left: 0;
 }
 
 .prize__title {
 }
 
 .prize__body {
+  z-index: 60;
 }
 
 .prize__heading {
   margin-top: 16px;
   font-size: 12px;
+  color: color.$brown;
 }
 
 .prize__cards {
+  margin-top: 40px;
 }
 
 .prize__card {
-  padding-top: 12px;
-  position: relative;
+  // overflow: hidden;
+  // position: relative;
+  background: color.$gray;
+  // border-radius: 8px 8px 0 0;//上だけ
+  width: 160px;
+  height: 196px;
 }
 
-.prize__card-no {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%; //50%で正円にすることができる
-  color: color.$white;
-  background: #ce2073;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.prize__card-no-text {
-  font-size: 7.68px;
-  font-weight: 700;
-}
-
-.prize__card-no-number {
-  font-family: config.$font-family-en2;
-  font-size: 23.04px;
-  font-style: normal;
-}
+// .prize__card-number {
+//   position: absolute;
+//   top: -24px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 48px;
+//   height: 48px;
+// }
 
 .prize__card-img {
+  // width: 160px;
+  // height: 140px;
+  img {
+    width: 100%;
+  }
 }
 
 .prize__card-body {
 }
 
 .prize__card-title {
+  // line-height: 160%; /* 19.2px */
+
+  span {
+    display: block;
+    color: color.$brown;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+  }
 }
 
 .prize__card-icon {
+}
+
+/*----------------------------------
+    spot
+-----------------------------------*/
+.spot {
+  padding-top: 40px;
+  padding-bottom: 64px;
+  background: color.$d-blue;
+}
+
+.spot__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.spot__head-img {
+  width: 28px;
+  height: 28px;
+  img {
+    width: 100%;
+  }
+}
+
+.spot__head-main {
+  color: color.$white;
+  text-align: center;
+  font-family: config.$font-family-jp2;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25; /* 35px */
+}
+
+.spot__card {
+  position: relative;
+  color: color.$brown;
+  background: color.$white;
+  border-radius: 12px;
+  width: 240px;
+  height: 402px;
+}
+
+.spot__card-img {
+  top: 0;
+  left: 0;
+  overflow: hidden; /* 内容がはみ出さないようにする */
+  width: 100%; /* カード全体の幅に合わせる */
+
+  &::after {
+    content: "";
+    display: block;
+    padding-top: 75%; /* 16:9のアスペクト比に設定 (240px / 180px = 4 / 3 = 75%) */
+  }
+
+  img {
+    position: absolute; /* 絶対位置に設定 */
+    // aspect-ratio: 240/180;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%; /* 親要素の幅に合わせる */
+    object-fit: cover; /* 画像の表示方法を設定 */
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+// @media screen and (min-width: 769px) {
+//   .p-card:hover > a > figure > img {
+//     transform: scale(1.2);
+//     transition: transform 0.8s;
+//   }
+// }
+
+.spot__card-body {
+  padding-inline: 24px;
+}
+
+.spot__card-title {
+  margin-top: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.spot__card-text {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+/*----------------------------------
+    qa
+-----------------------------------*/
+
+.qa {
+  padding-top: 40px;
+}
+
+.qa__inner {
+}
+
+.qa__contents {
+}
+
+.qa__title {
 }

@@ -1319,51 +1319,158 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .prize {
   background: #e9f6f8;
   padding-top: 120px;
-}
-
-.prize__heading {
-  margin-top: 16px;
-  font-size: 12px;
-}
-
-.prize__card {
-  padding-top: 12px;
+  padding-bottom: 300px;
   position: relative;
 }
 
-.prize__card-no {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #ce2073;
+.prize__bg-sq {
   position: absolute;
-  top: 0;
+  top: 180px;
+  left: 0;
+  border-radius: 24px;
+  background: #ffffff;
+  width: 375px;
+  height: 400px;
+}
+
+.prize__bg-path {
+  position: absolute;
+  top: 97px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-.prize__card-no-text {
-  font-size: 7.68px;
+.prize_bg_photo {
+  position: absolute;
+  top: 660px;
+  left: 0;
+}
+
+.prize__body {
+  z-index: 60;
+}
+
+.prize__heading {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #4a3636;
+}
+
+.prize__cards {
+  margin-top: 40px;
+}
+
+.prize__card {
+  background: #f5f5f5;
+  width: 160px;
+  height: 196px;
+}
+
+.prize__card-img img {
+  width: 100%;
+}
+
+.prize__card-title span {
+  display: block;
+  color: #4a3636;
+  text-align: center;
+  font-size: 12px;
   font-weight: 700;
 }
 
-.prize__card-no-number {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 23.04px;
-  font-style: normal;
+/*----------------------------------
+    spot
+-----------------------------------*/
+.spot {
+  padding-top: 40px;
+  padding-bottom: 64px;
+  background: #67b0c7;
+}
+
+.spot__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.spot__head-img {
+  width: 28px;
+  height: 28px;
+}
+.spot__head-img img {
+  width: 100%;
+}
+
+.spot__head-main {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Kiwi Maru", serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.25; /* 35px */
+}
+
+.spot__card {
+  position: relative;
+  color: #4a3636;
+  background: #ffffff;
+  border-radius: 12px;
+  width: 240px;
+  height: 402px;
+}
+
+.spot__card-img {
+  top: 0;
+  left: 0;
+  overflow: hidden; /* 内容がはみ出さないようにする */
+  width: 100%; /* カード全体の幅に合わせる */
+}
+.spot__card-img::after {
+  content: "";
+  display: block;
+  padding-top: 75%; /* 16:9のアスペクト比に設定 (240px / 180px = 4 / 3 = 75%) */
+}
+.spot__card-img img {
+  position: absolute; /* 絶対位置に設定 */
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%; /* 親要素の幅に合わせる */
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像の表示方法を設定 */
+  border-radius: 12px 12px 0 0;
+}
+
+.spot__card-body {
+  padding-inline: 24px;
+}
+
+.spot__card-title {
+  margin-top: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.spot__card-text {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+/*----------------------------------
+    qa
+-----------------------------------*/
+.qa {
+  padding-top: 40px;
 }
