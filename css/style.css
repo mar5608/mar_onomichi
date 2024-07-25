@@ -1002,6 +1002,12 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 
+.swiper-wrapper {
+  /* スライドの動き等速 */
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
 .about__swiper {
   margin-top: 178px;
   z-index: 99;
@@ -1010,12 +1016,6 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   .about__swiper {
     margin-top: 259px;
   }
-}
-
-.swiper-wrapper {
-  /* スライドの動き等速 */
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
 }
 
 .about__slide {
@@ -1468,9 +1468,640 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-size: 12px;
 }
 
+.spot__swiper {
+  margin-top: 24px;
+  z-index: 99;
+}
+@media screen and (min-width: 768px) {
+  .spot__swiper {
+    margin-top: 80px;
+  }
+}
+
+.spot__slide {
+  /* 画像のサイズ調整 */
+}
+
 /*----------------------------------
     qa
 -----------------------------------*/
 .qa {
   padding-top: 40px;
+  padding-bottom: 30px;
+  background: #e9f6f8;
+}
+
+.qa__boxes {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.qa-box {
+  border-radius: 12px;
+  border: 3px solid #4a3636;
+  background: #ffffff;
+}
+.qa-box.is-open .qa-box__head::after {
+  background: url("/img/icon-qa_open.png") no-repeat center center/contain;
+}
+
+.qa-box__head {
+  padding: 9px 37px 9px 13px;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.qa-box__head::after {
+  content: "";
+  position: absolute;
+  top: 33%;
+  right: 16px;
+  width: 24.04px;
+  height: 24.04px;
+  background: url("/img/icon-qa_close.png") no-repeat center center/contain;
+}
+
+.qa-box__head-icon {
+  font-family: "Josefin Sans", sans-serif;
+  color: #9ed0e0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  display: grid;
+  place-items: center;
+}
+
+.qa-box__head-text {
+  display: block;
+  text-align: left;
+  color: #4a3636;
+  font-weight: 700;
+  line-height: 1.6;
+  padding-left: 12px;
+}
+
+.qa-box__body {
+  padding: 13px 14px 17px 12px;
+  display: none;
+  background: #f5f5f5;
+  border-radius: 0 0 12px 12px;
+}
+
+.qa-box__a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+
+.qa-box__a-icon {
+  display: grid;
+  place-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #9ed0e0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.qa-box__a-text {
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 16px;
+  color: #4a3636;
+}
+
+/*----------------------------------
+
+-----------------------------------*/
+.requirement {
+  background: #e9f6f8;
+}
+
+.requirement__contents {
+  border: 8px solid #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+  padding-inline: 16px;
+}
+
+.requirement__list {
+  margin-block: 24px;
+}
+
+.requirement-list__item {
+  margin-top: 12px;
+  color: #4a3636;
+  border-bottom: 1px solid #cccccc;
+}
+.requirement-list__item:last-child {
+  border-bottom: none;
+}
+.requirement-list__item p {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.requirement-list__item::before {
+  content: ""; /* カスタムのリストスタイルを設定 */
+  background-color: #9ed0e0; /* 色を青に設定 */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block; /* インラインブロックにして位置を調整 */
+  margin-right: 8px;
+}
+
+.requirement-list__head {
+  font-weight: 700;
+}
+
+.requirement-list__item-note {
+  list-style-type: disc;
+  margin-top: 8px;
+  margin-left: 24px;
+}
+
+.requirement__bg {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+/*----------------------------------
+    contact
+-----------------------------------*/
+.contact {
+  margin-block: 120px;
+}
+
+.contact__body {
+  margin-top: 24px;
+  color: #4a3636;
+}
+
+.contact__head {
+  text-align: center;
+}
+
+.contact__contents {
+  padding: 60px 20px;
+}
+
+.contact__fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+
+.contact__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .form-field {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 32px;
+  }
+}
+
+.form-field__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .form-field__head {
+    width: 180px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.form-field__label {
+  font-weight: 700;
+  line-height: 1.4375;
+}
+
+.form-field__tag {
+  display: inline-block;
+  border-radius: 4px;
+  background: #ce2073;
+  padding: 4px 8px 4px 8px;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 1.98px;
+}
+
+.form-field__item {
+  margin-top: 14px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.form-text {
+  width: 100%;
+  border-radius: 8px;
+  background: #f5f5f5;
+  border: none;
+  padding: 12px 13px 11px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.form-text::-webkit-input-placeholder {
+  color: #cccccc;
+}
+.form-text::-moz-placeholder {
+  color: #cccccc;
+}
+.form-text:-ms-input-placeholder {
+  color: #cccccc;
+}
+.form-text::-ms-input-placeholder {
+  color: #cccccc;
+}
+.form-text::placeholder {
+  color: #cccccc;
+}
+.form-text:hover, .form-text:focus {
+  border-color: #e9f6f8;
+  outline: none; /* デフォルトの青いラインを消す */
+}
+
+.form-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /*標準のアイコンを消す*/
+  width: 100%;
+  border-radius: 8px;
+  background: #f5f5f5;
+  border: none;
+  padding: 12px 43px 11px 13px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.form-select:hover, .form-select:focus {
+  border-color: #e9f6f8;
+  outline: none; /* デフォルトの青いラインを消す */
+}
+
+.form-radio {
+  line-height: 1.4375;
+}
+.form-radio:hover {
+  /* hoverが当たるところ */
+}
+.form-radio:hover .form-radio__text::before {
+  /*切り替わるところ*/
+  border-color: #e9f6f8;
+}
+
+.form-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.form-radio__input::after {
+  width: 52px;
+  height: 55px;
+  padding: 16px 1px 16px 0px;
+  background: var(--LP-Blue, #9ed0e0);
+}
+.form-radio__input:checked + .form-radio__text::after {
+  opacity: 1;
+}
+.form-radio__input:focus + .form-radio__text::before {
+  /*切り替わるところ*/
+  border-color: #e9f6f8;
+}
+
+.form-radio__text {
+  padding-left: 28px;
+  position: relative;
+}
+.form-radio__text::before, .form-radio__text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+.form-radio__text::before {
+  width: 24px;
+  height: 24px;
+  background: #f5f5f5;
+  border: none;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s; /*hover時 ○はbeforeで作成されているのでここ*/
+}
+.form-radio__text::after {
+  width: 10px;
+  height: 10px;
+  background: #9ed0e0;
+  left: 7px;
+  opacity: 0;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  border: none;
+  padding: 13px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.form-textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+.form-textarea::-moz-placeholder {
+  color: #cccccc;
+}
+.form-textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+.form-textarea::-ms-input-placeholder {
+  color: #cccccc;
+}
+.form-textarea::placeholder {
+  color: #cccccc;
+}
+.form-textarea:hover, .form-textarea:focus {
+  border-color: #e9f6f8;
+  outline: none; /* デフォルトの青いラインを消す */
+}
+
+.contact__privacy {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.form-checkbox:hover .form-checkbox__text::before {
+  border-color: #e9f6f8;
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.form-checkbox__input:checked + .form-checkbox__text::after {
+  opacity: 1;
+}
+.form-checkbox__input:focus + .form-checkbox__text::before {
+  border-color: #e9f6f8;
+}
+
+.form-checkbox__text {
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 170%; /* 23.8px */
+}
+.form-checkbox__text a {
+  text-decoration-line: underline;
+  font-weight: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.form-checkbox__text a:hover {
+  color: #e9f6f8;
+}
+.form-checkbox__text::before, .form-checkbox__text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 50%;
+}
+.form-checkbox__text::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 1px;
+  border: 1px solid #111;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.form-checkbox__text::after {
+  width: 23px;
+  height: 17.53px;
+  left: -1px;
+  margin-top: -1.2px;
+  background: url(../../img/check-icon.png) no-repeat center center/contain;
+  opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .form-checkbox__text::after {
+    margin-top: 2px;
+  }
+}
+
+.contact__button {
+  text-align: center;
+  margin-top: 24px;
+  margin-inline: auto;
+}
+
+/*----------------------------------
+    footer
+-----------------------------------*/
+.footer {
+  padding-top: 40px;
+  padding-bottom: 200px;
+  background: #e9f6f8;
+}
+
+.footer__sns-head {
+  text-align: center;
+}
+
+.footer__sns-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__info {
+  margin-bottom: 126px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 16px;
+  background: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .footer__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.footer__ifram-map {
+  text-align: center;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .footer__ifram-map {
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    width: 512px;
+  }
+}
+.footer__ifram-map iframe {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 512/400;
+  vertical-align: top;
+}
+@media screen and (min-width: 768px) {
+  .footer__ifram-map iframe {
+    aspect-ratio: 512/400;
+  }
+}
+
+.footer__info-body {
+  margin-top: 300px;
+}
+@media screen and (min-width: 768px) {
+  .footer__info-body {
+    margin-top: 24px;
+  }
+}
+
+.footer__info-logo {
+  width: 153px;
+  height: 20px;
+  margin-inline: auto;
+}
+.footer__info-logo img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footer__info-logo {
+    margin-inline: 0;
+    text-align: left;
+  }
+}
+
+.footer__info-list {
+  margin-top: 24px;
+}
+
+.footer-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; /* 行が長くなった場合に折り返し */
+  padding: 20px;
+  color: #4a3636;
+  font-size: 12px;
+  line-height: 1.6; /* 19.2px */
+}
+.footer-table dt,
+.footer-table dd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* 中央揃え */
+  margin-bottom: 10px; /* 行間の設定 */
+}
+.footer-table dt {
+  width: 30%; /* 用語の幅 */
+  font-weight: 700;
+}
+.footer-table dt::before {
+  content: ""; /* カスタムのリストスタイルを設定 */
+  background-color: #9ed0e0; /* 色を青に設定 */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block; /* インラインブロックにして位置を調整 */
+  margin-right: 8px;
+}
+.footer-table dd {
+  width: 70%; /* 定義の幅 */
+  margin: 0;
+  padding: 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .footer-table {
+    font-size: 16px;
+  }
+}
+
+.copyright {
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 1.6; /* 16px */
+  text-align: center;
 }

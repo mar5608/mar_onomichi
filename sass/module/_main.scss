@@ -552,11 +552,16 @@
   }
 }
 
-.about__slide {
-}
-
 //swiper
 .swiper {
+}
+
+.swiper-wrapper {
+  /* スライドの動き等速 */
+  transition-timing-function: linear;
+}
+
+.swiper-slide {
 }
 
 .about__swiper {
@@ -566,14 +571,6 @@
     // height: auto;
     margin-top: 259px;
   }
-}
-
-.swiper-wrapper {
-  /* スライドの動き等速 */
-  transition-timing-function: linear;
-}
-
-.swiper-slide {
 }
 
 .about__slide {
@@ -999,12 +996,40 @@
   font-size: 12px;
 }
 
+.spot__swiper {
+  margin-top: 24px;
+  z-index: 99;
+  @include mixin.mq(pc) {
+    // height: auto;
+    margin-top: 80px;
+  }
+}
+
+.spot__slide {
+  /* 画像のサイズ調整 */
+  // img {
+  //   height: auto;
+  //   width: 100%;
+  // }
+}
+
+.spot__slide-card {
+  // width: 100px;
+  // height: 100px;
+  // @include mixin.mq(pc) {
+  //   // width: 200px;
+  //   // height: 200px;
+  // }
+}
+
 /*----------------------------------
     qa
 -----------------------------------*/
 
 .qa {
   padding-top: 40px;
+  padding-bottom: 30px;
+  background: color.$l-blue;
 }
 
 .qa__inner {
@@ -1014,4 +1039,711 @@
 }
 
 .qa__title {
+}
+
+.qa__boxes {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.qa-box {
+  border-radius: 12px;
+  border: 3px solid color.$brown;
+  background: color.$white;
+
+  &.is-open {
+    .qa-box__head {
+      &::after {
+        // transform: rotate(0deg);
+        background: url("/img/icon-qa_open.png") no-repeat center center /
+          contain;
+      }
+    }
+  }
+}
+
+.qa-box__head {
+  padding: calc(12px - 3px) calc(40px - 3px) calc(12px - 3px) calc(16px - 3px);
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  &::after {
+    content: "";
+    position: absolute;
+    // top: 50%;
+    top: 33%;
+    right: 16px;
+    //アイコンを入れるエリア
+    width: calc(3.27px * 2 + 17.5px);
+    height: calc(3.27px * 2 + 17.5px);
+    background: url("/img/icon-qa_close.png") no-repeat center center / contain;
+    // transform: rotate(180deg);
+  }
+}
+
+.qa-box__head-icon {
+  //Q
+  font-family: config.$font-family-en2;
+  color: color.$blue;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  display: grid;
+  place-items: center;
+  // width: 44px;
+  // height: 44px;
+  // border-radius: 22px;
+  // border: 3px solid color.$brown;
+  // background: #f5810e;
+
+  // display: flex;
+  // flex-direction: row;
+
+  // position: absolute;
+  // left: 0px;
+  // top: 50%;
+  // transform: translateY(-50%);
+}
+
+.qa-box__head-text {
+  display: block;
+  text-align: left;
+  color: color.$brown;
+  font-weight: 700;
+  line-height: 1.6;
+  padding-left: 12px;
+}
+
+.qa-box__body {
+  padding: calc(10px + 3px) calc(17px - 3px) calc(20px - 3px) calc(15px - 3px);
+  display: none;
+  background: color.$gray;
+  border-radius: 0 0 12px 12px;
+}
+
+.qa-box__a {
+  display: flex;
+  gap: 8px;
+}
+
+.qa-box__a-icon {
+  // border-radius: 22px;
+  // border: 3px solid color.$brown;
+  // background: #fabe00;
+  // color: color.$blue;
+  display: grid;
+  place-items: center;
+  // flex-shrink: 0;
+  font-family: config.$font-family-en2;
+  color: color.$blue;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.qa-box__a-text {
+  text-align: left;
+  flex-grow: 1;
+  padding-top: 16px;
+  color: color.$brown;
+}
+
+/*----------------------------------
+    
+-----------------------------------*/
+.requirement {
+  background: color.$l-blue;
+}
+
+.inner {
+}
+
+.requirement__inner {
+}
+
+.requirement__contents {
+  border: 8px solid color.$white;
+  background: rgba(255, 255, 255, 0.5);
+  padding-inline: 16px;
+}
+
+.requirement__title {
+}
+
+.requirement__list {
+  margin-block: 24px;
+}
+
+.requirement-list {
+}
+
+.requirement-list__item {
+  margin-top: 12px;
+  color: color.$brown;
+  border-bottom: 1px solid color.$d-gray;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  p {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+  &::before {
+    content: ""; /* カスタムのリストスタイルを設定 */
+    background-color: color.$blue; /* 色を青に設定 */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    // font-size: 20px; /* 大きさを調整 */
+    display: inline-block; /* インラインブロックにして位置を調整 */
+    // width: 1em; /* 左側のマージンを確保 */
+    // margin-left: -1em; /* 左にずらして位置を調整 */
+    margin-right: 8px;
+  }
+}
+
+.requirement-list__head {
+  font-weight: 700;
+}
+
+.requirement-list__item-note {
+  list-style-type: disc;
+  margin-top: 8px;
+  margin-left: 24px;
+  // padding-left: 8px; /* インデント */
+}
+
+.requirement__bg {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+/*----------------------------------
+    contact
+-----------------------------------*/
+
+.contact {
+  margin-block: 120px;
+}
+
+.contact__inner {
+}
+
+.contact__title {
+}
+
+.contact__body {
+  margin-top: 24px;
+  color: color.$brown;
+}
+
+.contact__head {
+  text-align: center;
+}
+
+.contact__contents {
+  padding: 60px 20px;
+}
+
+.contact__form {
+}
+
+.contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; //縦並びのflexで縦の余白はgapで設定
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; //縦並びのflexで縦の余白はgapで設定
+}
+
+.form-field {
+  @include mixin.mq(pc) {
+    display: flex; //横並び
+    gap: 32px; //フォームの左の余白
+  }
+}
+
+.form-field__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include mixin.mq(pc) {
+    width: calc(212px - 32px);
+    flex-shrink: 0; //これ以上縮めないで　＊flexが自動で縮めることがあるので明示しておく
+    justify-content: flex-end;
+  }
+}
+
+.form-field__label {
+  font-weight: 700;
+  line-height: calc(23 / 16); //23px
+}
+
+.form-field__tag {
+  display: inline-block;
+  border-radius: 4px;
+  background: color.$red;
+  padding: 4px 8px 4px 8px;
+  color: #fff;
+  font-size: 11px;
+  // font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.98px;
+}
+
+.form-field__item {
+  margin-top: 14px;
+  flex-grow: 1; //残りの幅全てに当てててください
+}
+
+.form-text {
+  width: 100%;
+  border-radius: 8px;
+  background: color.$gray;
+  border: none;
+  padding: calc(15px - 3px) calc(16px - 3px) calc(14px - 3px);
+  transition: border-color 0.3s;
+
+  &::placeholder {
+    color: color.$d-gray;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: color.$l-blue;
+    outline: none; /* デフォルトの青いラインを消す */
+  }
+}
+
+.is-option {
+}
+
+.form-select {
+  appearance: none; /*標準のアイコンを消す*/
+  width: 100%;
+  border-radius: 8px;
+  background: color.$gray;
+  border: none;
+  // font-weight: 700;
+  // padding: 15px 46px 14px 16px;
+  padding: calc(15px - 3px) calc(46px - 3px) calc(14px - 3px) calc(16px - 3px);
+
+  //select要素では擬似要素が使えないので背景画像として利用する
+  // background: url(../../img/select-arrow.png) no-repeat center right 14px/13.217px
+  // 10.182px;
+
+  transition: border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: color.$l-blue;
+    outline: none; /* デフォルトの青いラインを消す */
+  }
+}
+
+.form-filed__radios {
+}
+
+.form-field__radio {
+}
+
+.form-radio {
+  line-height: calc(23 / 16); //23px
+  &:hover {
+    /* hoverが当たるところ */
+    .form-radio__text {
+      &::before {
+        /*切り替わるところ*/
+        border-color: color.$l-blue;
+      }
+    }
+  }
+}
+
+.form-radio__input {
+  width: 1px;
+  height: 1px;
+  position: absolute; //浮かせてレイアウトとは関係ないようにする
+  clip: rect(0, 0, 0, 0); //見えないようにする
+  overflow: hidden;
+  //display:noneにすると標準の機能が消えるので消さない
+  &::after {
+    width: 52px;
+    height: 55px;
+    padding: 16px 1px 16px 0px;
+    background: var(--LP-Blue, #9ed0e0);
+  }
+
+  //radioボタンにチェックがついた時にafterの透過度を0->1にする
+  //checkedとform-field_radio-textは階層が同じなので+をつける
+  &:checked {
+    + .form-radio__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    + .form-radio__text {
+      &::before {
+        /*切り替わるところ*/
+        border-color: color.$l-blue;
+      }
+    }
+  }
+}
+
+.form-radio__text {
+  // font-weight: 700;
+  padding-left: 28px; //24+4px
+  position: relative;
+
+  //form-field_radio-textを起点にして擬似要素を作っていく
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 24px;
+    height: 24px;
+    // border-radius: 8px;
+    background: color.$gray;
+    border: none;
+    // left: 0;
+    transition: border-color 0.3s; /*hover時 ○はbeforeで作成されているのでここ*/
+  }
+
+  //after 中のオレンジの丸
+  &::after {
+    width: 10px;
+    height: 10px;
+    background: color.$blue;
+    left: 7px;
+    opacity: 0;
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  background: color.$gray;
+  border: none;
+  padding: calc(16px - 3px);
+  transition: border-color 0.3s;
+
+  &::placeholder {
+    color: color.$d-gray;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: color.$l-blue;
+    outline: none; /* デフォルトの青いラインを消す */
+  }
+}
+
+.contact__privacy {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.form-checkbox {
+  &:hover {
+    .form-checkbox__text {
+      &::before {
+        border-color: color.$l-blue;
+      }
+    }
+  }
+}
+
+.form-checkbox__input {
+  width: 1px;
+  height: 1px;
+  position: absolute; //浮かせてレイアウトとは関係ないようにする
+  clip: rect(0, 0, 0, 0); //見えないようにする
+  overflow: hidden;
+  //display:noneにすると標準の機能が消えるので消さない
+
+  //チェックがついた時にafterの透過度を0->1にする
+  //checkedとform-checkbox__textは階層が同じなので+をつける
+  &:checked {
+    + .form-checkbox__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:focus {
+    + .form-checkbox__text {
+      &::before {
+        border-color: color.$l-blue;
+      }
+    }
+  }
+}
+
+.form-checkbox__text {
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 170%; /* 23.8px */
+
+  a {
+    text-decoration-line: underline;
+    font-weight: inherit; //子要素のCSSの値を親要素と同じにしたい場合は、継承を表す「inherit」
+    transition: color 0.3s;
+
+    &:hover {
+      color: color.$l-blue;
+    }
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  // 四角の部分
+  &::before {
+    width: 20px;
+    height: 20px;
+    border-radius: 1px;
+    border: 1px solid #111;
+
+    transition: border-color 0.3s;
+  }
+
+  //after 中のチェックマーク
+  &::after {
+    width: 23px;
+    height: 17.53px;
+    left: -1px;
+    margin-top: -1.2px;
+    background: url(../../img/check-icon.png) no-repeat center center / contain; //contain:縦横比保ったまま
+    opacity: 0;
+    @include mixin.mq(pc) {
+      margin-top: 2px;
+    }
+  }
+}
+
+.contact__button {
+  text-align: center;
+  margin-top: 24px;
+  margin-inline: auto;
+}
+
+/*----------------------------------
+    footer
+-----------------------------------*/
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 200px;
+  background: color.$l-blue;
+}
+
+.inner {
+}
+
+.footer__inner {
+}
+
+.footer__sns {
+}
+
+.footer__sns-head {
+  text-align: center;
+}
+
+.footer__sns-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__sns-youtube {
+}
+
+.footer__sns-instagram {
+}
+
+.footer__sns-x {
+}
+
+.footer__info {
+  margin-bottom: 126px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: color.$white;
+  @include mixin.mq(pc) {
+    flex-direction: row-reverse;
+  }
+}
+
+.footer__ifram-map {
+  // margin-top: 30px;
+  text-align: center;
+  // position: absolute;
+  position: relative;
+  // top: 200px;
+
+  @include mixin.mq(pc) {
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    width: 512px;
+    // width: 52.8%;
+  }
+  iframe {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    height: auto;
+    // aspect-ratio: 608/440; //縦横比を設定
+    aspect-ratio: 512/400; //縦横比を設定
+    vertical-align: top;
+    @include mixin.mq(pc) {
+      aspect-ratio: 512/400;
+    }
+  }
+}
+
+.footer__info-body {
+  margin-top: 300px;
+  // text-align: center;
+  @include mixin.mq(pc) {
+    margin-top: 24px;
+  }
+}
+
+.footer__info-logo {
+  width: 153px;
+  height: 20px;
+  margin-inline: auto;
+  img {
+    width: 100%;
+  }
+  @include mixin.mq(pc) {
+    margin-inline: 0;
+    text-align: left;
+  }
+}
+
+.footer__info-list {
+  margin-top: 24px;
+}
+
+.footer-table {
+  display: flex;
+  flex-wrap: wrap; /* 行が長くなった場合に折り返し */
+  // background-color: #f9f9f9;
+  // border: 1px solid #ddd;
+  padding: 20px;
+  color: color.$brown;
+  font-size: 12px;
+  line-height: 1.6; /* 19.2px */
+  dt,
+  dd {
+    display: flex;
+    align-items: center; /* 中央揃え */
+    margin-bottom: 10px; /* 行間の設定 */
+  }
+  dt {
+    width: 30%; /* 用語の幅 */
+    font-weight: 700;
+    &::before {
+      content: ""; /* カスタムのリストスタイルを設定 */
+      background-color: color.$blue; /* 色を青に設定 */
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      // font-size: 20px; /* 大きさを調整 */
+      display: inline-block; /* インラインブロックにして位置を調整 */
+      // width: 1em; /* 左側のマージンを確保 */
+      // margin-left: -1em; /* 左にずらして位置を調整 */
+      margin-right: 8px;
+    }
+  }
+  dd {
+    width: 70%; /* 定義の幅 */
+    margin: 0;
+    padding: 0 10px;
+  }
+  @include mixin.mq(pc) {
+    font-size: 16px;
+  }
+}
+
+.footer-table__company-head {
+}
+
+.footer-table__company {
+}
+
+.footer-table__address-head {
+}
+
+.footer-table__address {
+}
+
+.footer-table__business-hours-head {
+}
+
+.footer-table__business-hours {
+}
+
+.footer-table__tel-head {
+}
+
+.footer-table__tel {
+}
+
+.copyright {
+}
+
+.footer__info-company {
+}
+
+.footer__info-adress {
+}
+
+.footer__info-business-hours {
+}
+
+.footer__info-tel {
+}
+
+.copyright {
+  color: color.$white;
+  font-size: 10px;
+  line-height: 1.6; /* 16px */
+  text-align: center;
 }
