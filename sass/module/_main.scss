@@ -189,13 +189,6 @@
   }
 }
 
-.inner {
-  padding-inline: config.$paddingSide-sp;
-  @include mixin.mq(pc) {
-    padding-inline: config.$paddingSide-pc;
-  }
-}
-
 .about__decoration {
 }
 
@@ -829,8 +822,8 @@
   border-radius: 24px;
   background: color.$white;
   width: 375px;
-  height: 400px;
-  z-index: -1;
+  height: 800px;
+  z-index: 0;
 }
 
 .prize__bg-path {
@@ -838,6 +831,10 @@
   top: 97px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.prize__inner {
+  z-index: 10;
 }
 
 .prize__title {
@@ -860,7 +857,7 @@
 .prize__card-2grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: (15px / 2);
+  column-gap: calc(15px / 2);
   row-gap: 15px;
 }
 .prize__card-1grid {
@@ -912,23 +909,16 @@
 }
 
 .prize__card-body {
-  // position: relative;
 }
 
 .prize__card-title {
-  // line-height: 160%; /* 19.2px */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+
   span {
     color: color.$brown;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    display: block;
     font-size: 12px;
     font-weight: 700;
-    // top: 50%;
-    // transform: translateY(-50%);
   }
 }
 
@@ -943,6 +933,10 @@
   position: absolute;
   top: 1200px;
   left: 0;
+}
+
+.prize__button {
+  z-index: 20;
 }
 
 /*----------------------------------
@@ -1190,13 +1184,10 @@
 }
 
 /*----------------------------------
-    
+    requirement
 -----------------------------------*/
 .requirement {
   background: color.$l-blue;
-}
-
-.inner {
 }
 
 .requirement__inner {
