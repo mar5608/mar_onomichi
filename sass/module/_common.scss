@@ -19,11 +19,11 @@
 }
 
 .inner {
-  max-width: config.$width-inner-sp;
+  max-width: calc(config.$width-inner-sp + config.$paddingSide-sp * 2);
   margin-inline: auto;
   padding-inline: config.$paddingSide-sp;
   @include mixin.mq(pc) {
-    max-width: config.$width-inner-pc;
+    max-width: calc(config.$width-inner-pc + config.$paddingSide-pc);
     padding-inline: config.$paddingSide-pc;
   }
 }
