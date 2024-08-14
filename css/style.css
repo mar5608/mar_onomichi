@@ -120,7 +120,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-size: 12px;
   line-height: 1.6;
   color: #4a3636;
-  background: #ffffff;
+  background: #e9f6f8;
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
@@ -176,7 +176,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-shadow: 0px 4px 0px 0px #4a3636;
           box-shadow: 0px 4px 0px 0px #4a3636;
   height: 40px;
-  padding: 6px 24px 6px 24px;
+  padding: 6px 20px 6px 20px;
   font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1322,31 +1322,46 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .prize {
   background: #e9f6f8;
-  padding-top: 120px;
-  padding-bottom: 300px;
-  position: relative;
+  padding-top: 30px;
 }
 
-.prize__bg-sq {
-  position: absolute;
+.prize__contents {
+  position: relative;
+  padding: 30px 20px 30px 20px;
+}
+.prize__contents::before {
+  content: "";
+  position: absolute; /* 擬似要素の位置を決めるために追加 */
+  width: 238px;
+  height: 83px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url(../../img/deco_prizes1_sp.svg) no-repeat center center/cover;
+  z-index: 2;
+}
+.prize__contents::after {
+  content: "";
+  position: absolute; /* 擬似要素の位置を決めるために追加 */
   bottom: 0;
   left: 0;
   border-radius: 24px;
   background: #ffffff;
-  width: 375px;
-  height: calc(100% - 50px);
-  z-index: 0;
-}
-
-.prize__bg-path {
-  position: absolute;
-  top: 97px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 100%;
+  height: calc(100% - 82px);
+  z-index: 2;
 }
 
 .prize__inner {
+  padding: 0;
+}
+
+.prize__title {
+  z-index: 10;
+}
+
+.prize__body {
   position: relative;
   z-index: 10;
 }
@@ -1359,21 +1374,18 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .prize__cards {
   margin-top: 40px;
-}
-
-.prize__card-2grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 7.5px;
-     -moz-column-gap: 7.5px;
-          column-gap: 7.5px;
-  row-gap: 15px;
-}
-
-.prize__card-1grid {
-  display: grid;
-  place-content: center;
-  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 40px;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .prize__card {
@@ -1381,7 +1393,10 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   background: #f5f5f5;
   width: 160px;
   height: 196px;
-  border-radius: 30px;
+  border-radius: 10px;
+}
+.prize__card figure {
+  display: block;
 }
 .prize__card::after {
   content: "";
@@ -1406,23 +1421,30 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .prize__card-img {
-  display: block;
   width: 160px;
   height: 140px;
   border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
 }
 .prize__card-img img {
   width: 100%;
 }
 
 .prize__card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-}
-.prize__card-title span {
   color: #4a3636;
-  display: block;
   font-size: 12px;
   font-weight: 700;
+  min-height: 55px;
 }
 
 .prize__card-icon {
@@ -1433,13 +1455,20 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .prize_bg_photo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .prize__button {
   z-index: 20;
+  margin-top: 20px;
 }
 
 /*----------------------------------

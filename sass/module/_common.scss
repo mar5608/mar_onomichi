@@ -11,7 +11,7 @@
   font-size: config.$font-size-base-sp;
   line-height: config.$line-height-base;
   color: color.$brown;
-  background: color.$white;
+  background: color.$l-blue;
   font-weight: 400;
   @include mixin.mq(pc) {
     font-size: config.$font-size-base-pc;
@@ -64,7 +64,7 @@
   background: color.$white;
   box-shadow: 0px 4px 0px 0px #4a3636;
   height: 40px;
-  padding: 6px 24px 6px 24px;
+  padding: 6px 20px 6px 20px;
   font-size: 16px;
   display: flex;
   justify-content: center;

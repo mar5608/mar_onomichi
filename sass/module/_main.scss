@@ -811,40 +811,52 @@
 
 .prize {
   background: color.$l-blue;
-  padding-top: 120px;
-  padding-bottom: 300px;
+  padding-top: 30px;
+}
+
+.prize__contents {
   position: relative;
-}
+  padding: 30px 20px 30px 20px;
+  // z-index: 10;
+  &::before {
+    content: "";
+    position: absolute; /* 擬似要素の位置を決めるために追加 */
+    width: 238px;
+    height: 83px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../../img/deco_prizes1_sp.svg) no-repeat center center /
+      cover;
+    z-index: 2;
+  }
 
-.prize__bg-sq {
-  position: absolute;
-  // top: 180px;
-  bottom: 0;
-  left: 0;
-  border-radius: 24px;
-  background: color.$white;
-  width: 375px;
-  height: calc(100% - 50px);
-  z-index: 0;
-}
-
-.prize__bg-path {
-  position: absolute;
-  top: 97px;
-  left: 50%;
-  transform: translateX(-50%);
+  &::after {
+    content: "";
+    position: absolute; /* 擬似要素の位置を決めるために追加 */
+    bottom: 0;
+    left: 0;
+    border-radius: 24px;
+    background: color.$white;
+    // width: 375px;
+    width: 100%;
+    height: calc(100% - 82px);
+    z-index: 2;
+  }
 }
 
 .prize__inner {
-  position: relative;
-  z-index: 10;
+  padding: 0;
 }
 
 .prize__title {
+  z-index: 10;
 }
 
 .prize__body {
   // z-index: 60;
+  position: relative;
+  z-index: 10;
 }
 
 .prize__heading {
@@ -855,19 +867,11 @@
 
 .prize__cards {
   margin-top: 40px;
-}
-
-.prize__card-2grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: calc(15px / 2);
-  row-gap: 15px;
-}
-.prize__card-1grid {
-  display: grid;
-  // grid-template-columns: repeat(1, 1fr);
-  place-content: center;
-  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 15px;
+  justify-content: center;
 }
 
 .prize__card {
@@ -877,7 +881,11 @@
   // border-radius: 8px 8px 0 0;//上だけ
   width: 160px;
   height: 196px;
-  border-radius: 30px;
+  border-radius: 10px;
+
+  figure {
+    display: block;
+  }
 
   &::after {
     content: "";
@@ -902,10 +910,11 @@
 }
 
 .prize__card-img {
-  display: block;
+  // display: block;
   width: 160px;
   height: 140px;
   border-radius: 10px 10px 0px 0px; //左上、右上、右下、左下
+  overflow: hidden;
   img {
     width: 100%;
   }
@@ -915,14 +924,14 @@
 }
 
 .prize__card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-
-  span {
-    color: color.$brown;
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-  }
+  color: color.$brown;
+  font-size: 12px;
+  font-weight: 700;
+  min-height: 55px;
 }
 
 .prize__card-icon {
@@ -933,14 +942,18 @@
 }
 
 .prize_bg_photo {
-  position: absolute;
-  // top: 1200px;
-  bottom: 0;
-  left: 0;
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // margin-top: -43px;
 }
 
 .prize__button {
   z-index: 20;
+  margin-top: 20px;
 }
 
 /*----------------------------------
