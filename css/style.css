@@ -176,7 +176,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-shadow: 0px 4px 0px 0px #4a3636;
           box-shadow: 0px 4px 0px 0px #4a3636;
   height: 40px;
-  padding: 6px 20px 6px 20px;
+  padding: 6px 10px;
   font-size: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,6 +187,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap; /* 文字を改行させない */
+  width: auto;
 }
 @media screen and (min-width: 768px) {
   .button {
@@ -1475,9 +1477,29 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
     spot
 -----------------------------------*/
 .spot {
+  position: relative;
+  margin-top: 20px;
   padding-top: 40px;
-  padding-bottom: 64px;
+  padding-bottom: 40px;
   background: #67b0c7;
+}
+.spot::before {
+  content: "";
+  position: absolute;
+  top: -46px;
+  left: 0;
+  width: 100%;
+  height: 46px;
+  background: url("../../img/img_bg_wave-top.png") repeat-x top left/auto;
+}
+.spot::after {
+  content: "";
+  position: absolute;
+  bottom: -46px;
+  left: 0;
+  width: 100%;
+  height: 46px;
+  background: url("../../img/img_bg_wave-bottom.png") repeat-x top left/auto;
 }
 
 .spot__head {
@@ -1572,6 +1594,29 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .spot__slide {
   /* 画像のサイズ調整 */
+}
+
+.spot__content {
+  width: 255px;
+  height: 55px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 10;
+}
+.spot__content img {
+  width: 100%;
+}
+
+.spot__text {
+  margin-top: 16px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+}
+
+.spot__button {
+  z-index: 20;
+  margin-top: 24px;
 }
 
 /*----------------------------------

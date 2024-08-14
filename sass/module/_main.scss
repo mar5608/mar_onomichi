@@ -960,9 +960,32 @@
     spot
 -----------------------------------*/
 .spot {
+  position: relative;
+  margin-top: 20px;
   padding-top: 40px;
-  padding-bottom: 64px;
+  padding-bottom: 40px;
+  // padding-bottom: 64px;
   background: color.$d-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -46px;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    background: url("../../img/img_bg_wave-top.png") repeat-x top left / auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -46px;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    background: url("../../img/img_bg_wave-bottom.png") repeat-x top left / auto;
+  }
 }
 
 .spot__head {
@@ -1069,6 +1092,32 @@
   //   // width: 200px;
   //   // height: 200px;
   // }
+}
+
+.spot__content {
+  width: 255px;
+  height: 55px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 10;
+  img {
+    width: 100%;
+  }
+}
+
+.spot__content-img {
+}
+
+.spot__text {
+  margin-top: 16px;
+  color: color.$white;
+  text-align: center;
+  font-size: 12px;
+}
+
+.spot__button {
+  z-index: 20;
+  margin-top: 24px;
 }
 
 /*----------------------------------
