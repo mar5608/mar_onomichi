@@ -473,7 +473,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__fukidashi {
   position: absolute;
   top: 143px;
-  left: 18%;
+  left: 21%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 142px;
@@ -491,7 +491,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__present {
   position: absolute;
   top: 136px;
-  left: 80%;
+  left: 76%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 110px;
@@ -527,7 +527,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__food {
   position: absolute;
   top: 523px;
-  left: 8%;
+  left: 12%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 86px;
@@ -546,7 +546,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__cat1 {
   position: absolute;
   top: 585px;
-  left: 87%;
+  left: 83%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 98px;
@@ -565,7 +565,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .fv__cat2 {
   position: absolute;
   top: 530px;
-  left: 96%;
+  left: 91%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 62px;
@@ -1014,8 +1014,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
           transition-timing-function: linear;
 }
 
+.about__slide {
+  margin-top: 87px;
+}
+
 .about__swiper {
-  margin-top: 178px;
   z-index: 99;
 }
 @media screen and (min-width: 768px) {
@@ -1048,7 +1051,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .enter {
   background: #e9f6f8;
-  padding-top: 120px;
+  padding-top: 66px;
   padding-bottom: 20px;
   position: relative;
   overflow: hidden;
@@ -1479,27 +1482,25 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .spot {
   position: relative;
   margin-top: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 46px;
+  padding-bottom: 24px;
   background: #67b0c7;
+  z-index: 99;
+}
+.spot::before, .spot::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 46px;
 }
 .spot::before {
-  content: "";
-  position: absolute;
   top: -46px;
-  left: 0;
-  width: 100%;
-  height: 46px;
-  background: url("../../img/img_bg_wave-top.png") repeat-x top left/auto;
+  background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px center/contain;
 }
 .spot::after {
-  content: "";
-  position: absolute;
   bottom: -46px;
-  left: 0;
-  width: 100%;
-  height: 46px;
-  background: url("../../img/img_bg_wave-bottom.png") repeat-x top left/auto;
+  background: url("../../img/img_bg_wave-bottom.png") transparent repeat-x left -3px center/contain;
 }
 
 .spot__head {
@@ -1597,13 +1598,16 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .spot__content {
-  width: 255px;
-  height: 55px;
-  margin-inline: auto;
   position: relative;
   z-index: 10;
 }
-.spot__content img {
+
+.spot__content-img {
+  width: 255px;
+  height: 55px;
+  margin-inline: auto;
+}
+.spot__content-img img {
   width: 100%;
 }
 
@@ -1623,7 +1627,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
     qa
 -----------------------------------*/
 .qa {
-  padding-top: 40px;
+  padding-top: 80px;
   padding-bottom: 30px;
   background: #e9f6f8;
 }
@@ -1642,15 +1646,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .qa-box {
   border-radius: 12px;
-  border: 3px solid #4a3636;
+  border: 2px solid #4a3636;
   background: #ffffff;
 }
 .qa-box.is-open .qa-box__head::after {
-  background: url("/img/icon-qa_open.png") no-repeat center center/contain;
+  background: url("/img/icon-qa_close.png") no-repeat center center/contain;
 }
 
 .qa-box__head {
-  padding: 9px 37px 9px 13px;
+  padding: 10px 38px 10px 14px;
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -1668,7 +1672,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   right: 16px;
   width: 24.04px;
   height: 24.04px;
-  background: url("/img/icon-qa_close.png") no-repeat center center/contain;
+  background: url("/img/icon-qa_open.png") no-repeat center center/contain;
 }
 
 .qa-box__head-icon {
@@ -1685,13 +1689,14 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   display: block;
   text-align: left;
   color: #4a3636;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.6;
   padding-left: 12px;
 }
 
 .qa-box__body {
-  padding: 13px 14px 17px 12px;
+  padding: 12px 15px 18px 13px;
   display: none;
   background: #f5f5f5;
   border-radius: 0 0 12px 12px;
@@ -1721,6 +1726,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
           flex-grow: 1;
   padding-top: 16px;
   color: #4a3636;
+  font-size: 14px;
 }
 
 /*----------------------------------
@@ -1733,7 +1739,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .requirement__contents {
   border: 8px solid #ffffff;
   background: rgba(255, 255, 255, 0.5);
-  padding-inline: 16px;
+  padding-inline: 15px;
 }
 
 .requirement__list {
@@ -1751,6 +1757,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .requirement-list__item p {
   margin-top: 8px;
   margin-bottom: 16px;
+  font-size: 12px;
 }
 .requirement-list__item::before {
   content: ""; /* カスタムのリストスタイルを設定 */
@@ -1763,6 +1770,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .requirement-list__head {
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -1770,6 +1778,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   list-style-type: disc;
   margin-top: 8px;
   margin-left: 24px;
+  font-size: 12px;
 }
 
 .requirement__bg {
@@ -1781,7 +1790,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
     contact
 -----------------------------------*/
 .contact {
-  margin-block: 120px;
+  margin-block: 40px;
 }
 
 .contact__body {
@@ -1790,11 +1799,12 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .contact__head {
+  font-size: 12px;
   text-align: center;
 }
 
 .contact__contents {
-  padding: 60px 20px;
+  padding-block: 24px;
 }
 
 .contact__fields {
@@ -2275,4 +2285,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
           align-items: center;
   -ms-flex-item-align: stretch;
       align-self: stretch;
+  margin-top: 46px;
+  position: relative;
+}
+.copyright::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 46px;
+  top: -46px;
+  background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px center/contain;
 }
