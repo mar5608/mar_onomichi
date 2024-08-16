@@ -847,22 +847,14 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 6px;
+  gap: 4px;
   position: relative;
+  padding-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .title {
     gap: 8px;
   }
-}
-
-.title-image {
-  width: 48px;
-  height: 48px;
-  display: block;
-}
-.title-image img {
-  max-width: 100%;
 }
 
 .title-sub {
@@ -907,6 +899,16 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 
+.about__title::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon_about.svg");
+  z-index: 10;
+}
+
 .about__body {
   text-align: center;
   color: #4a3636;
@@ -929,6 +931,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .about__heading {
   font-size: 14px;
   font-weight: 700;
+  line-height: 1.6;
 }
 @media screen and (min-width: 768px) {
   .about__heading {
@@ -988,7 +991,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .about__text-last span::before {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 3px;
@@ -997,7 +1000,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .about__button {
   margin-inline: auto;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .about__button .button {
   padding: 4px 21px;
@@ -1015,7 +1018,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .about__slide {
-  margin-top: 87px;
+  margin-top: 88px;
 }
 
 .about__swiper {
@@ -1051,7 +1054,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .enter {
   background: #e9f6f8;
-  padding-top: 66px;
+  padding-top: 56px;
   padding-bottom: 20px;
   position: relative;
   overflow: hidden;
@@ -1136,6 +1139,16 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
     width: 100px;
     height: 220px;
   }
+}
+
+.enter__title::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon_enter.svg");
+  z-index: 10;
 }
 
 .enter__containaer {
