@@ -1062,32 +1062,38 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .enter__decoration-map {
   position: absolute;
-  top: 100px;
-  left: 0;
-  width: 94px;
-  height: 80px;
-}
-
-.enter__cat3 {
-  position: absolute;
-  top: 100px;
-  right: 0;
+  top: 66px;
+  left: 0px;
   width: 149px;
   height: 223px;
 }
 
+.enter__cat3 {
+  position: absolute;
+  top: 66px;
+  right: 24px;
+  width: 105px;
+  height: 63px;
+}
+@media screen and (min-width: 768px) {
+  .enter__cat3 {
+    width: 149px;
+    height: 223px;
+  }
+}
+
 .enter__cat4 {
   position: absolute;
-  top: 120px;
-  right: -50px;
+  top: 70px;
+  right: -30px;
   width: 94px;
   height: 80px;
 }
 
 .enter__decoration-pawpads {
   position: absolute;
-  top: 300px;
-  right: 0;
+  top: 140px;
+  right: 20px;
   width: 55px;
   height: 120px;
   /* 画像を反転する */
@@ -1191,7 +1197,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 32px;
+  margin-top: 29px;
 }
 @media screen and (min-width: 768px) {
   .enter__cards {
@@ -1222,7 +1228,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 16px;
+  gap: 1px;
   padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
@@ -1281,7 +1287,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 16px;
+  gap: 19px;
 }
 
 .enter__card-title {
@@ -1295,25 +1301,26 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .enter__card-button {
-  text-align: center;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
   padding: 8px 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 8px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  padding-left: 30px;
   background: #ffffff;
-}
-.enter__card-button button {
   color: #4a3636;
   font-weight: 700;
+}
+.enter__card-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 12px;
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon_instagram.svg") no-repeat;
+  z-index: 10;
 }
 
 .enter__button {
