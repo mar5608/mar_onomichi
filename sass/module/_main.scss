@@ -609,7 +609,7 @@
 .enter {
   background: color.$l-blue;
   padding-top: 56px;
-  padding-bottom: 20px;
+  padding-bottom: 37px;
   position: relative;
   overflow: hidden; //親要素に
 }
@@ -719,7 +719,7 @@
   position: absolute;
   width: 34px;
   height: 7px;
-  left: 50%;
+  left: 54%;
   transform: translateX(-50%);
   img {
     width: 100%;
@@ -727,11 +727,11 @@
 }
 
 .enter__card-line1 {
-  top: 430px;
+  top: 410px;
 }
 
 .enter__card-line2 {
-  top: 856px;
+  top: 804px;
 }
 
 .enter__cards {
@@ -759,13 +759,13 @@
     width: 320px;
   }
   &:nth-child(2) {
-    margin-top: 34px;
+    margin-top: 19px;
     @include mixin.mq(pc) {
       margin-top: 69px;
     }
   }
   &:nth-child(3) {
-    margin-top: 34px;
+    margin-top: 20px;
     @include mixin.mq(pc) {
       margin-top: 0;
     }
@@ -796,7 +796,7 @@
 .enter__card-body {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  // gap: 19px;
 }
 
 .enter__card-title {
@@ -807,37 +807,42 @@
 .enter__card-text {
   font-size: 12px;
   text-align: center;
+  margin-top: 19px;
 }
 
 .enter__card-button {
+  margin-top: 17px;
+  text-align: center;
+}
+
+.link-button {
   display: inline-block;
   position: relative;
   font-size: 14px;
-  padding: 8px 12px;
-  padding-left: 30px;
-  // display: flex;
-  // flex-direction: row;
-  // gap: 8px;
-  // align-items: center;
-  // text-align: center;
+  padding-block: 7px;
+  padding-right: 11px;
+  padding-left: 39px;
+  text-align: center;
   background: color.$white;
   color: color.$brown;
   font-weight: 700;
+  border: solid 1px transparent;
   &::before {
     content: "";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 12px;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     background: url("../../img/icon_instagram.svg") no-repeat;
     z-index: 10;
   }
 }
 
 .enter__button {
-  margin-top: 40px;
+  margin-top: 2px;
+
   @include mixin.mq(pc) {
     width: 357px;
   }
@@ -857,12 +862,12 @@
 
 .prize {
   background: color.$l-blue;
-  padding-top: 30px;
+  // padding-top: 30px;
 }
 
 .prize__contents {
   position: relative;
-  padding: 30px 20px 30px 20px;
+  padding: 10px 20px 30px 20px;
   // z-index: 10;
   &::before {
     content: "";
@@ -886,7 +891,7 @@
     background: color.$white;
     // width: 375px;
     width: 100%;
-    height: calc(100% - 82px);
+    height: calc(100% - 83px);
     z-index: 2;
   }
 }
@@ -897,6 +902,15 @@
 
 .prize__title {
   z-index: 10;
+  &::before {
+    content: "";
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: url("../../img/icon_prize.svg");
+  }
 }
 
 .prize__body {
@@ -906,13 +920,16 @@
 }
 
 .prize__heading {
-  margin-top: 16px;
+  margin-top: 30px;
   font-size: 12px;
   color: color.$brown;
+  // line-height: 1.6;
+  text-align: center;
+  // letter-spacing: -0.1em;
 }
 
 .prize__cards {
-  margin-top: 40px;
+  margin-top: 48px;
   display: flex;
   flex-wrap: wrap;
   row-gap: 40px;
@@ -948,7 +965,7 @@
 
 .prize__card-number {
   position: absolute;
-  top: -10%;
+  top: -11%;
   left: 50%;
   transform: translateX(-50%);
   width: 48px;
@@ -977,7 +994,7 @@
   color: color.$brown;
   font-size: 12px;
   font-weight: 700;
-  min-height: 55px;
+  min-height: 60px;
 }
 
 .prize__card-icon {
@@ -994,12 +1011,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // margin-top: -43px;
+  margin-top: -40px;
+
+  width: 580px;
+  height: 260px;
+  margin-left: -104px;
+
 }
 
 .prize__button {
   z-index: 20;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 /*----------------------------------

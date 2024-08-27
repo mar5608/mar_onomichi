@@ -1055,7 +1055,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .enter {
   background: #e9f6f8;
   padding-top: 56px;
-  padding-bottom: 20px;
+  padding-bottom: 37px;
   position: relative;
   overflow: hidden;
 }
@@ -1166,7 +1166,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   position: absolute;
   width: 34px;
   height: 7px;
-  left: 50%;
+  left: 54%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1176,11 +1176,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .enter__card-line1 {
-  top: 430px;
+  top: 410px;
 }
 
 .enter__card-line2 {
-  top: 856px;
+  top: 804px;
 }
 
 .enter__cards {
@@ -1237,7 +1237,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 .enter__card:nth-child(2) {
-  margin-top: 34px;
+  margin-top: 19px;
 }
 @media screen and (min-width: 768px) {
   .enter__card:nth-child(2) {
@@ -1245,7 +1245,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 .enter__card:nth-child(3) {
-  margin-top: 34px;
+  margin-top: 20px;
 }
 @media screen and (min-width: 768px) {
   .enter__card:nth-child(3) {
@@ -1287,7 +1287,6 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 19px;
 }
 
 .enter__card-title {
@@ -1298,33 +1297,42 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .enter__card-text {
   font-size: 12px;
   text-align: center;
+  margin-top: 19px;
 }
 
 .enter__card-button {
+  margin-top: 17px;
+  text-align: center;
+}
+
+.link-button {
   display: inline-block;
   position: relative;
   font-size: 14px;
-  padding: 8px 12px;
-  padding-left: 30px;
+  padding-block: 7px;
+  padding-right: 11px;
+  padding-left: 39px;
+  text-align: center;
   background: #ffffff;
   color: #4a3636;
   font-weight: 700;
+  border: solid 1px transparent;
 }
-.enter__card-button::before {
+.link-button::before {
   content: "";
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 12px;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   background: url("../../img/icon_instagram.svg") no-repeat;
   z-index: 10;
 }
 
 .enter__button {
-  margin-top: 40px;
+  margin-top: 2px;
 }
 @media screen and (min-width: 768px) {
   .enter__button {
@@ -1347,12 +1355,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .prize {
   background: #e9f6f8;
-  padding-top: 30px;
 }
 
 .prize__contents {
   position: relative;
-  padding: 30px 20px 30px 20px;
+  padding: 10px 20px 30px 20px;
 }
 .prize__contents::before {
   content: "";
@@ -1374,7 +1381,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   border-radius: 24px;
   background: #ffffff;
   width: 100%;
-  height: calc(100% - 82px);
+  height: calc(100% - 83px);
   z-index: 2;
 }
 
@@ -1385,6 +1392,14 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .prize__title {
   z-index: 10;
 }
+.prize__title::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon_prize.svg");
+}
 
 .prize__body {
   position: relative;
@@ -1392,13 +1407,14 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .prize__heading {
-  margin-top: 16px;
+  margin-top: 30px;
   font-size: 12px;
   color: #4a3636;
+  text-align: center;
 }
 
 .prize__cards {
-  margin-top: 40px;
+  margin-top: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1437,7 +1453,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .prize__card-number {
   position: absolute;
-  top: -10%;
+  top: -11%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1469,7 +1485,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   color: #4a3636;
   font-size: 12px;
   font-weight: 700;
-  min-height: 55px;
+  min-height: 60px;
 }
 
 .prize__card-icon {
@@ -1489,11 +1505,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: -40px;
+  width: 580px;
+  height: 260px;
+  margin-left: -104px;
 }
 
 .prize__button {
   z-index: 20;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 /*----------------------------------
