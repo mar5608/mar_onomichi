@@ -5,8 +5,7 @@
 /*----------------------------------
     共通
 -----------------------------------*/
-
-.body {
+body {
   font-family: config.$font-family-jp1;
   font-size: config.$font-size-base-sp;
   line-height: config.$line-height-base;
@@ -96,5 +95,61 @@
     // width: calc(-3px * 2 + 40px * 2 + 182px);
 
     // padding: 10px 40px 12px 40px;
+  }
+}
+
+.title {
+  color: color.$brown;
+  font-size: 16px;
+  text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // gap: 4px;
+  position: relative;
+  padding-top: 30px;
+  @include mixin.mq(pc) {
+    // gap: 8px;
+  }
+}
+
+.title-eng {
+  text-align: center;
+  font-family: config.$font-family-en1;
+  line-height: 1.25; /* 20px */
+  // padding-top: 6px;
+  margin-top: 14px;
+  @include mixin.mq(pc) {
+    font-size: 20px;
+  }
+}
+
+.title-main {
+  text-align: center;
+  font-family: config.$font-family-jp2;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25; /* 25px */
+  margin-top: 8px;
+  @include mixin.mq(pc) {
+    font-size: 32px;
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+    // padding: 0 0.4em 0.2em;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: #ffee56;
+      @include mixin.mq(pc) {
+        bottom: -15px;
+      }
+    }
   }
 }

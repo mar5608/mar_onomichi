@@ -115,7 +115,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 /*----------------------------------
     共通
 -----------------------------------*/
-.body {
+body {
   font-family: "Noto Sans JP", serif;
   font-size: 12px;
   line-height: 1.6;
@@ -124,7 +124,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-weight: 400;
 }
 @media screen and (min-width: 768px) {
-  .body {
+  body {
     font-size: 16px;
   }
 }
@@ -207,6 +207,57 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   height: 70px;
   font-size: 20px;
 }
+.title {
+  color: #4a3636;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  padding-top: 30px;
+}
+.title-eng {
+  text-align: center;
+  font-family: "Courgette", cursive;
+  line-height: 1.25; /* 20px */
+  margin-top: 14px;
+}
+@media screen and (min-width: 768px) {
+  .title-eng {
+    font-size: 20px;
+  }
+}
+
+.title-main {
+  text-align: center;
+  font-family: "Kiwi Maru", serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25; /* 25px */
+  margin-top: 8px;
+}
+@media screen and (min-width: 768px) {
+  .title-main {
+    font-size: 32px;
+  }
+}
+.title-main span {
+  display: inline-block;
+  position: relative;
+}
+.title-main span::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #ffee56;
+}
+@media screen and (min-width: 768px) {
+  .title-main span::before {
+    bottom: -15px;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -774,7 +825,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .about__contents {
   border-radius: 24px;
   background: #ffffff;
-  padding: 30px 12px 40px;
+  padding: 38px 12px 40px;
   position: relative;
   z-index: 30;
 }
@@ -835,74 +886,13 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   }
 }
 
-.title {
-  color: #4a3636;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 4px;
-  position: relative;
-  padding-top: 10px;
-}
-@media screen and (min-width: 768px) {
-  .title {
-    gap: 8px;
-  }
-}
-
-.title-sub {
-  text-align: center;
-  font-family: "Courgette", cursive;
-  line-height: 1.25; /* 20px */
-}
-@media screen and (min-width: 768px) {
-  .title-sub {
-    font-size: 20px;
-  }
-}
-
-.title-main {
-  text-align: center;
-  font-family: "Kiwi Maru", serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.25; /* 25px */
-}
-@media screen and (min-width: 768px) {
-  .title-main {
-    font-size: 32px;
-  }
-}
-.title-main span {
-  display: inline-block;
-  position: relative;
-}
-.title-main span::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background-color: #ffee56;
-}
-@media screen and (min-width: 768px) {
-  .title-main span::before {
-    bottom: -15px;
-  }
-}
-
 .about__title::before {
   content: "";
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 40px;
   height: 40px;
   background: url("../../img/icon_about.svg");
@@ -920,7 +910,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
-  margin-top: 37px;
+  margin-top: 34px;
 }
 @media screen and (min-width: 768px) {
   .about__body {
@@ -991,16 +981,16 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .about__text-last span::before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -8px;
   left: 0;
   width: 100%;
   height: 3px;
-  border-bottom: 2px dashed #9ed0e0;
+  background: repeating-linear-gradient(to right, transparent, transparent 4px, #9ed0e0 4px, #9ed0e0 6px);
 }
 
 .about__button {
   margin-inline: auto;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 .about__button .button {
   padding: 4px 21px;
@@ -1054,7 +1044,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .enter {
   background: #e9f6f8;
-  padding-top: 56px;
+  padding-top: 64px;
   padding-bottom: 37px;
   position: relative;
   overflow: hidden;
@@ -1149,8 +1139,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .enter__title::before {
   content: "";
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 40px;
   height: 40px;
   background: url("../../img/icon_enter.svg");
@@ -1228,7 +1221,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1px;
+  gap: 8px;
   padding-bottom: 16px;
 }
 @media screen and (min-width: 768px) {
@@ -1290,6 +1283,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .enter__card-title {
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
 }
@@ -1297,7 +1291,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .enter__card-text {
   font-size: 12px;
   text-align: center;
-  margin-top: 19px;
+  margin-top: 14px;
 }
 
 .enter__card-button {
@@ -1331,9 +1325,6 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   z-index: 10;
 }
 
-.enter__button {
-  margin-top: 2px;
-}
 @media screen and (min-width: 768px) {
   .enter__button {
     width: 357px;
@@ -1359,7 +1350,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .prize__contents {
   position: relative;
-  padding: 10px 20px 30px 20px;
+  padding: 10px 20px 36px 20px;
 }
 .prize__contents::before {
   content: "";
@@ -1391,11 +1382,15 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 
 .prize__title {
   z-index: 10;
+  margin-top: 9px;
 }
 .prize__title::before {
   content: "";
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 40px;
   height: 40px;
   background: url("../../img/icon_prize.svg");
@@ -1407,20 +1402,20 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .prize__heading {
-  margin-top: 30px;
+  margin-top: 26px;
   font-size: 12px;
   color: #4a3636;
   text-align: center;
 }
 
 .prize__cards {
-  margin-top: 48px;
+  margin-top: 46px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  row-gap: 40px;
+  row-gap: 39px;
   -webkit-column-gap: 15px;
      -moz-column-gap: 15px;
           column-gap: 15px;
@@ -1505,10 +1500,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: -40px;
-  width: 580px;
-  height: 260px;
-  margin-left: -104px;
+  margin-top: -43px;
+  overflow: hidden;
+}
+.prize_bg_photo img {
+  min-width: 580px;
 }
 
 .prize__button {
@@ -1521,8 +1517,6 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .spot {
   position: relative;
-  margin-top: 20px;
-  padding-top: 46px;
   padding-bottom: 24px;
   background: #67b0c7;
   z-index: 99;
@@ -1539,7 +1533,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px center/contain;
 }
 .spot::after {
-  bottom: -46px;
+  bottom: -43px;
   background: url("../../img/img_bg_wave-bottom.png") transparent repeat-x left -3px center/contain;
 }
 
@@ -1655,7 +1649,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   margin-top: 16px;
   color: #ffffff;
   text-align: center;
-  font-size: 12px;
+  font-size: 11.5px;
 }
 
 .spot__button {
@@ -1670,10 +1664,24 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   padding-top: 80px;
   padding-bottom: 30px;
   background: #e9f6f8;
+  position: relative;
+}
+
+.qa__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon_qa.svg");
+  z-index: 10;
 }
 
 .qa__boxes {
-  margin-top: 30px;
+  margin-top: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1681,7 +1689,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 30px;
+  gap: 11px;
 }
 
 .qa-box {
@@ -1694,7 +1702,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .qa-box__head {
-  padding: 10px 38px 10px 14px;
+  padding: 10px 34px 10px 14px;
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -1708,8 +1716,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 .qa-box__head::after {
   content: "";
   position: absolute;
-  top: 33%;
-  right: 16px;
+  top: 30%;
+  right: 15px;
   width: 24.04px;
   height: 24.04px;
   background: url("/img/icon-qa_open.png") no-repeat center center/contain;
@@ -1723,6 +1731,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   line-height: 1.25;
   display: grid;
   place-items: center;
+  padding-top: 10px;
 }
 
 .qa-box__head-text {
@@ -1732,11 +1741,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-size: 14px;
   font-weight: 700;
   line-height: 1.6;
-  padding-left: 12px;
+  padding-inline: 12px;
 }
 
 .qa-box__body {
-  padding: 12px 15px 18px 13px;
+  padding: 12px 15px 14px 13px;
   display: none;
   background: #f5f5f5;
   border-radius: 0 0 12px 12px;
@@ -1746,7 +1755,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 18px;
 }
 
 .qa-box__a-icon {
@@ -1764,7 +1773,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding-top: 16px;
+  padding-top: 6px;
   color: #4a3636;
   font-size: 14px;
 }
@@ -1774,16 +1783,32 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 -----------------------------------*/
 .requirement {
   background: #e9f6f8;
+  position: relative;
+}
+
+.requirement__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon_requirement.svg");
+  z-index: 10;
 }
 
 .requirement__contents {
   border: 8px solid #ffffff;
   background: rgba(255, 255, 255, 0.5);
-  padding-inline: 15px;
+  padding-inline: 16px;
+  padding-top: 15px;
+  padding-bottom: 30px;
 }
 
 .requirement__list {
-  margin-block: 24px;
+  margin-top: 35px;
 }
 
 .requirement-list__item {
@@ -1796,7 +1821,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 .requirement-list__item p {
   margin-top: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-size: 12px;
 }
 .requirement-list__item::before {
@@ -1806,7 +1831,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   height: 8px;
   border-radius: 50%;
   display: inline-block; /* インラインブロックにして位置を調整 */
-  margin-right: 8px;
+  margin-right: 5px;
 }
 
 .requirement-list__head {
@@ -1814,27 +1839,53 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   font-weight: 700;
 }
 
-.requirement-list__item-note {
-  list-style-type: disc;
+.requirement-list__item-notes {
   margin-top: 8px;
-  margin-left: 24px;
+  line-height: 1.585;
+}
+
+.requirement-list__item-note {
+  list-style-type: none;
+  padding-left: 18px;
   font-size: 12px;
+  position: relative;
+}
+.requirement-list__item-note::before {
+  content: "・";
+  position: absolute;
+  top: 0;
+  left: 2px;
 }
 
 .requirement__bg {
   display: inline-block;
-  margin-top: 24px;
+  margin-top: 33px;
 }
 
 /*----------------------------------
     contact
 -----------------------------------*/
 .contact {
-  margin-block: 40px;
+  padding-block: 40px;
+  background: #ffffff;
+  position: relative;
+}
+
+.contact__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: url("../../img/icon_contact.svg");
+  z-index: 10;
 }
 
 .contact__body {
-  margin-top: 24px;
+  margin-top: 32px;
   color: #4a3636;
 }
 
@@ -1844,7 +1895,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
 }
 
 .contact__contents {
-  padding-block: 24px;
+  padding-block: 25px;
 }
 
 .contact__fields {
@@ -1855,18 +1906,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
-}
-
-.contact__field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 8px;
+  gap: 25px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1885,7 +1925,8 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  font-size: 14px;
+  gap: 12px;
 }
 @media screen and (min-width: 768px) {
   .form-field__head {
@@ -1907,15 +1948,16 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   display: inline-block;
   border-radius: 4px;
   background: #ce2073;
-  padding: 4px 8px 4px 8px;
+  padding: 7px 8px 7px 8px;
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: 1.98px;
 }
 
 .form-field__item {
-  margin-top: 14px;
+  margin-top: 10px;
+  font-size: 14px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1926,7 +1968,7 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
   border-radius: 8px;
   background: #f5f5f5;
   border: none;
-  padding: 12px 13px 11px;
+  padding: 16px 16px 16px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
@@ -1955,10 +1997,11 @@ PC用のcssを書きながらスマホ用の表示を書き足すことができ
      -moz-appearance: none;
           appearance: none; /*標準のアイコンを消す*/
   width: 100%;
+  font-size: 14px;
   border-radius: 8px;
   background: #f5f5f5;
   border: none;
-  padding: 12px 43px 11px 13px;
+  padding: 16px 43px 16px 16px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }

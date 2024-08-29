@@ -356,7 +356,7 @@
 .about__contents {
   border-radius: 24px;
   background: color.$white;
-  padding: 30px 12px 40px;
+  padding: 38px 12px 40px;
   position: relative;
   z-index: 30;
   @include mixin.mq(pc) {
@@ -406,76 +406,13 @@
   }
 }
 
-.title {
-  color: color.$brown;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  position: relative;
-  padding-top: 10px;
-  @include mixin.mq(pc) {
-    gap: 8px;
-  }
-}
-
-// .title-image {
-//   width: 40px;
-//   height: 40px;
-//   display: block;
-//   img {
-//     max-width: 100%;
-//   }
-//   position: absolute;
-//   top: 0;
-//   left: 50%;
-//   transform: translateX(-50%);
-// }
-
-.title-sub {
-  text-align: center;
-  font-family: config.$font-family-en1;
-  line-height: 1.25; /* 20px */
-  @include mixin.mq(pc) {
-    font-size: 20px;
-  }
-}
-
-.title-main {
-  text-align: center;
-  font-family: config.$font-family-jp2;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.25; /* 25px */
-  @include mixin.mq(pc) {
-    font-size: 32px;
-  }
-
-  span {
-    display: inline-block;
-    position: relative;
-    // padding: 0 0.4em 0.2em;
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 6px;
-      background-color: #ffee56;
-      @include mixin.mq(pc) {
-        bottom: -15px;
-      }
-    }
-  }
-}
-
 .about__title {
   &::before {
     content: "";
-    // position: absolute;
+    position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 40px;
     background: url("../../img/icon_about.svg");
@@ -489,7 +426,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-top: 37px;
+  margin-top: 34px;
   @include mixin.mq(pc) {
     margin-top: 50px;
   }
@@ -541,18 +478,25 @@
     &::before {
       content: "";
       position: absolute;
-      bottom: -5px;
+      bottom: -8px;
       left: 0;
       width: 100%;
       height: 3px;
-      border-bottom: 2px dashed color.$blue;
+      // border-bottom: 2px dashed color.$blue;
+      background: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 4px,
+        color.$blue 4px,
+        color.$blue 6px
+      );
     }
   }
 }
 
 .about__button {
   margin-inline: auto;
-  margin-top: 6px;
+  margin-top: 8px;
   .button {
     padding: calc(7px - 3px) calc(24px - 3px);
   }
@@ -608,7 +552,7 @@
 
 .enter {
   background: color.$l-blue;
-  padding-top: 56px;
+  padding-top: 64px;
   padding-bottom: 37px;
   position: relative;
   overflow: hidden; //親要素に
@@ -698,8 +642,10 @@
 .enter__title {
   &::before {
     content: "";
+    position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 40px;
     background: url("../../img/icon_enter.svg");
@@ -753,7 +699,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1px;
+  gap: 8px;
   padding-bottom: 16px;
   @include mixin.mq(pc) {
     width: 320px;
@@ -800,6 +746,7 @@
 }
 
 .enter__card-title {
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
 }
@@ -807,7 +754,7 @@
 .enter__card-text {
   font-size: 12px;
   text-align: center;
-  margin-top: 19px;
+  margin-top: 14px;
 }
 
 .enter__card-button {
@@ -841,7 +788,7 @@
 }
 
 .enter__button {
-  margin-top: 2px;
+  // margin-top: 2px;
 
   @include mixin.mq(pc) {
     width: 357px;
@@ -867,7 +814,7 @@
 
 .prize__contents {
   position: relative;
-  padding: 10px 20px 30px 20px;
+  padding: 10px 20px 36px 20px;
   // z-index: 10;
   &::before {
     content: "";
@@ -902,11 +849,13 @@
 
 .prize__title {
   z-index: 10;
+  margin-top: 9px;
   &::before {
     content: "";
-    // position: absolute;
+    position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 40px;
     background: url("../../img/icon_prize.svg");
@@ -920,7 +869,7 @@
 }
 
 .prize__heading {
-  margin-top: 30px;
+  margin-top: 26px;
   font-size: 12px;
   color: color.$brown;
   // line-height: 1.6;
@@ -929,10 +878,10 @@
 }
 
 .prize__cards {
-  margin-top: 48px;
+  margin-top: 46px;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 40px;
+  row-gap: 39px;
   column-gap: 15px;
   justify-content: center;
 }
@@ -1011,12 +960,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -40px;
+  margin-top: -43px;
 
-  width: 580px;
-  height: 260px;
-  margin-left: -104px;
-
+  // width: 580px;
+  // height: 260px;
+  // margin-left: -104px;
+  overflow: hidden;
+  img {
+    min-width: 580px;
+  }
 }
 
 .prize__button {
@@ -1029,8 +981,8 @@
 -----------------------------------*/
 .spot {
   position: relative;
-  margin-top: 20px;
-  padding-top: 46px;
+  // margin-top: 20px;
+  // padding-top: 46px;
   padding-bottom: 24px;
   // padding-bottom: 64px;
   background: color.$d-blue;
@@ -1051,7 +1003,7 @@
   }
 
   &::after {
-    bottom: -46px;
+    bottom: -43px;
     background: url("../../img/img_bg_wave-bottom.png") transparent repeat-x
       left -3px center / contain;
   }
@@ -1182,7 +1134,7 @@
   margin-top: 16px;
   color: color.$white;
   text-align: center;
-  font-size: 12px;
+  font-size: 11.5px;
   // white-space: nowrap; /* 文字を改行させない */
 }
 
@@ -1199,6 +1151,7 @@
   padding-top: 80px;
   padding-bottom: 30px;
   background: color.$l-blue;
+  position: relative;
 }
 
 .qa__inner {
@@ -1208,13 +1161,24 @@
 }
 
 .qa__title {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: url("../../img/icon_qa.svg");
+    z-index: 10;
+  }
 }
 
 .qa__boxes {
-  margin-top: 30px;
+  margin-top: 34px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 11px;
 }
 
 .qa-box {
@@ -1234,7 +1198,7 @@
 }
 
 .qa-box__head {
-  padding: calc(12px - 2px) calc(40px - 2px) calc(12px - 2px) calc(16px - 2px);
+  padding: calc(12px - 2px) calc(36px - 2px) calc(12px - 2px) calc(16px - 2px);
   position: relative;
   width: 100%;
   display: flex;
@@ -1243,8 +1207,8 @@
     content: "";
     position: absolute;
     // top: 50%;
-    top: 33%;
-    right: 16px;
+    top: 30%;
+    right: 15px;
     //アイコンを入れるエリア
     width: calc(3.27px * 2 + 17.5px);
     height: calc(3.27px * 2 + 17.5px);
@@ -1262,6 +1226,7 @@
   line-height: 1.25;
   display: grid;
   place-items: center;
+  padding-top: 10px;
   // width: 44px;
   // height: 44px;
   // border-radius: 22px;
@@ -1284,11 +1249,12 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 1.6;
-  padding-left: 12px;
+  // padding-left: 12px;
+  padding-inline: 12px;
 }
 
 .qa-box__body {
-  padding: calc(10px + 2px) calc(17px - 2px) calc(20px - 2px) calc(15px - 2px);
+  padding: calc(10px + 2px) calc(17px - 2px) calc(16px - 2px) calc(15px - 2px);
   display: none;
   background: color.$gray;
   border-radius: 0 0 12px 12px;
@@ -1296,7 +1262,7 @@
 
 .qa-box__a {
   display: flex;
-  gap: 8px;
+  gap: 18px;
 }
 
 .qa-box__a-icon {
@@ -1317,7 +1283,8 @@
 .qa-box__a-text {
   text-align: left;
   flex-grow: 1;
-  padding-top: 16px;
+  padding-top: 6px;
+  // padding-right: 16px;
   color: color.$brown;
   font-size: 14px;
 }
@@ -1327,22 +1294,39 @@
 -----------------------------------*/
 .requirement {
   background: color.$l-blue;
+  position: relative;
 }
 
 .requirement__inner {
 }
 
+.requirement__title {
+  // margin-top: 5px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: url("../../img/icon_requirement.svg");
+    z-index: 10;
+  }
+}
+
 .requirement__contents {
   border: 8px solid color.$white;
   background: rgba(255, 255, 255, 0.5);
-  padding-inline: 15px;
-}
-
-.requirement__title {
+  padding-inline: 16px;
+  // padding-block: 10px;
+  padding-top: 15px;
+  padding-bottom: 30px;
 }
 
 .requirement__list {
-  margin-block: 24px;
+  // margin-block: 36px;
+  margin-top: 35px;
 }
 
 .requirement-list {
@@ -1359,7 +1343,7 @@
 
   p {
     margin-top: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-size: 12px;
   }
   &::before {
@@ -1372,7 +1356,7 @@
     display: inline-block; /* インラインブロックにして位置を調整 */
     // width: 1em; /* 左側のマージンを確保 */
     // margin-left: -1em; /* 左にずらして位置を調整 */
-    margin-right: 8px;
+    margin-right: 5px;
   }
 }
 
@@ -1381,17 +1365,29 @@
   font-weight: 700;
 }
 
-.requirement-list__item-note {
-  list-style-type: disc;
+.requirement-list__item-notes {
   margin-top: 8px;
-  margin-left: 24px;
+  line-height: 1.585;
+}
+.requirement-list__item-note {
+  list-style-type: none;
+  // padding-top: 8px;
+  padding-left: 18px;
   font-size: 12px;
   // padding-left: 8px; /* インデント */
+  position: relative;
+
+  &::before {
+    content: "・";
+    position: absolute;
+    top: 0;
+    left: 2px;
+  }
 }
 
 .requirement__bg {
   display: inline-block;
-  margin-top: 24px;
+  margin-top: 33px;
 }
 
 /*----------------------------------
@@ -1399,17 +1395,30 @@
 -----------------------------------*/
 
 .contact {
-  margin-block: 40px;
+  padding-block: 40px;
+  background: color.$white;
+  position: relative;
 }
 
 .contact__inner {
 }
 
 .contact__title {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: url("../../img/icon_contact.svg");
+    z-index: 10;
+  }
 }
 
 .contact__body {
-  margin-top: 24px;
+  margin-top: 32px;
   color: color.$brown;
 }
 
@@ -1419,7 +1428,7 @@
 }
 
 .contact__contents {
-  padding-block: 24px;
+  padding-block: 25px;
 }
 
 .contact__form {
@@ -1428,13 +1437,7 @@
 .contact__fields {
   display: flex;
   flex-direction: column;
-  gap: 24px; //縦並びのflexで縦の余白はgapで設定
-}
-
-.contact__field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px; //縦並びのflexで縦の余白はgapで設定
+  gap: 25px; //縦並びのflexで縦の余白はgapで設定
 }
 
 .form-field {
@@ -1447,7 +1450,8 @@
 .form-field__head {
   display: flex;
   align-items: center;
-  gap: 10px;
+  font-size: 14px;
+  gap: 12px;
   @include mixin.mq(pc) {
     width: calc(212px - 32px);
     flex-shrink: 0; //これ以上縮めないで　＊flexが自動で縮めることがあるので明示しておく
@@ -1464,16 +1468,17 @@
   display: inline-block;
   border-radius: 4px;
   background: color.$red;
-  padding: 4px 8px 4px 8px;
+  padding: 7px 8px 7px 8px;
   color: #fff;
-  font-size: 11px;
-  // font-weight: 700;
+  font-size: 12px;
+  font-weight: 700;
   line-height: 1;
-  letter-spacing: 1.98px;
+  // letter-spacing: 1.98px;
 }
 
 .form-field__item {
-  margin-top: 14px;
+  margin-top: 10px;
+  font-size: 14px;
   flex-grow: 1; //残りの幅全てに当てててください
 }
 
@@ -1482,7 +1487,7 @@
   border-radius: 8px;
   background: color.$gray;
   border: none;
-  padding: calc(15px - 3px) calc(16px - 3px) calc(14px - 3px);
+  padding: calc(19px - 3px) calc(19px - 3px) calc(19px - 3px);
   transition: border-color 0.3s;
 
   &::placeholder {
@@ -1502,12 +1507,13 @@
 .form-select {
   appearance: none; /*標準のアイコンを消す*/
   width: 100%;
+  font-size: 14px;
   border-radius: 8px;
   background: color.$gray;
   border: none;
   // font-weight: 700;
   // padding: 15px 46px 14px 16px;
-  padding: calc(15px - 3px) calc(46px - 3px) calc(14px - 3px) calc(16px - 3px);
+  padding: calc(19px - 3px) calc(46px - 3px) calc(19px - 3px) calc(19px - 3px);
 
   //select要素では擬似要素が使えないので背景画像として利用する
   // background: url(../../img/select-arrow.png) no-repeat center right 14px/13.217px
