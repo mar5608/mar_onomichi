@@ -85,6 +85,8 @@ body {
   height: calc(-3px * 2 + 10px * 2 + 32px);
   font-size: 14px;
   @include mixin.mq(pc) {
+    // height: calc(-3px * 2 + 10px * 2 + 14px);
+    height: 37px;
   }
 }
 
@@ -92,9 +94,10 @@ body {
   height: calc(-3px * 2 + 10px * 2 + 56px);
   font-size: 20px;
   @include mixin.mq(pc) {
+    height: calc(-3px * 2 + 56px);
     // width: calc(-3px * 2 + 40px * 2 + 182px);
 
-    // padding: 10px 40px 12px 40px;
+    // padding: 4px 36px;
   }
 }
 
@@ -110,6 +113,7 @@ body {
   padding-top: 30px;
   @include mixin.mq(pc) {
     // gap: 8px;
+    padding-top: 45px;
   }
 }
 

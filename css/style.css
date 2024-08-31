@@ -203,10 +203,22 @@ body {
   height: 46px;
   font-size: 14px;
 }
+@media screen and (min-width: 768px) {
+  .button-sm {
+    height: 37px;
+  }
+}
+
 .button-lg {
   height: 70px;
   font-size: 20px;
 }
+@media screen and (min-width: 768px) {
+  .button-lg {
+    height: 50px;
+  }
+}
+
 .title {
   color: #4a3636;
   font-size: 16px;
@@ -214,6 +226,12 @@ body {
   position: relative;
   padding-top: 30px;
 }
+@media screen and (min-width: 768px) {
+  .title {
+    padding-top: 45px;
+  }
+}
+
 .title-eng {
   text-align: center;
   font-family: "Courgette", cursive;
@@ -533,7 +551,7 @@ body {
 @media screen and (min-width: 768px) {
   .fv__fukidashi {
     top: 180px;
-    left: 32.6%;
+    left: 23%;
     width: 244px;
     height: 130px;
   }
@@ -551,7 +569,7 @@ body {
 @media screen and (min-width: 768px) {
   .fv__present {
     top: 197px;
-    left: 63.8%;
+    left: 70.8%;
     width: 180px;
     height: 180px;
   }
@@ -587,8 +605,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .fv__food {
-    top: 423px;
-    left: 29%;
+    top: 410px;
+    left: 18%;
     width: 202px;
     height: 332px;
   }
@@ -607,7 +625,7 @@ body {
 @media screen and (min-width: 768px) {
   .fv__cat1 {
     top: 615px;
-    left: 70.5%;
+    left: 81%;
     width: 233px;
     height: 174px;
   }
@@ -626,7 +644,7 @@ body {
 @media screen and (min-width: 768px) {
   .fv__cat2 {
     top: 490px;
-    left: 68.5%;
+    left: 78%;
     width: 170px;
     height: 190px;
   }
@@ -721,8 +739,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__decoration-pawpads {
-    top: 100px;
-    right: 160px;
+    top: 96px;
+    right: 164px;
     width: 100px;
     height: 220px;
   }
@@ -739,7 +757,8 @@ body {
   .about__decoration-goods {
     width: 308px;
     height: 150.604px;
-    right: 120px;
+    left: 75%;
+    top: 933px;
   }
 }
 
@@ -752,10 +771,10 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__decoration-stone {
+    top: 780px;
+    right: 10%;
     width: 101px;
     height: 100.047px;
-    top: 800px;
-    right: 20px;
   }
 }
 
@@ -766,8 +785,8 @@ body {
   .about__decoration-wave {
     z-index: 21;
     position: absolute;
-    top: 700px;
-    right: 0px;
+    top: 775px;
+    right: 36px;
     display: block;
     width: 807px;
     height: 12px;
@@ -781,8 +800,8 @@ body {
   .about__decoration-wave2 {
     z-index: 21;
     position: absolute;
-    top: 750px;
-    right: -50px;
+    top: 810px;
+    right: -33px;
     display: block;
   }
 }
@@ -834,7 +853,6 @@ body {
     margin-inline: auto;
     max-width: 848px;
     border-radius: 40px;
-    padding: 40px 12px 40px;
   }
 }
 .about__contents::before {
@@ -895,8 +913,14 @@ body {
           transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  background: url("../../img/icon_about.svg");
+  background: url("../../img/icon_about.svg") no-repeat center center/contain;
   z-index: 10;
+}
+@media screen and (min-width: 768px) {
+  .about__title::before {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .about__body {
@@ -914,7 +938,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__body {
-    margin-top: 50px;
+    margin-top: 47px;
   }
 }
 
@@ -996,6 +1020,11 @@ body {
   padding: 4px 21px;
 }
 @media screen and (min-width: 768px) {
+  .about__button .button {
+    padding: 4px 40px;
+  }
+}
+@media screen and (min-width: 768px) {
   .about__button {
     margin-top: 20px;
   }
@@ -1009,6 +1038,11 @@ body {
 
 .about__slide {
   margin-top: 88px;
+}
+@media screen and (min-width: 768px) {
+  .about__slide {
+    margin-top: 0;
+  }
 }
 
 .about__swiper {
@@ -1048,6 +1082,11 @@ body {
   padding-bottom: 37px;
   position: relative;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .enter {
+    padding-top: 123px;
+  }
 }
 
 .enter__decoration-map {
@@ -1146,8 +1185,14 @@ body {
           transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  background: url("../../img/icon_enter.svg");
+  background: url("../../img/icon_enter.svg") no-repeat center center/contain;
   z-index: 10;
+}
+@media screen and (min-width: 768px) {
+  .enter__title::before {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .enter__containaer {
@@ -1202,6 +1247,7 @@ body {
         -ms-flex-align: start;
             align-items: start;
     margin-top: 40px;
+    gap: 32px;
   }
 }
 
@@ -1261,6 +1307,12 @@ body {
   transition: transform 0.8s;
   transition: transform 0.8s, -webkit-transform 0.8s;
 }
+@media screen and (min-width: 768px) {
+  .enter__card-img {
+    width: 280px;
+    height: auto;
+  }
+}
 
 @media screen and (min-width: 769px) {
   .p-card:hover > a > figure > img {
@@ -1287,11 +1339,21 @@ body {
   font-weight: 700;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .enter__card-title {
+    font-size: 20px;
+  }
+}
 
 .enter__card-text {
   font-size: 12px;
   text-align: center;
   margin-top: 14px;
+}
+@media screen and (min-width: 768px) {
+  .enter__card-text {
+    font-size: 16px;
+  }
 }
 
 .enter__card-button {
@@ -1324,11 +1386,14 @@ body {
   background: url("../../img/icon_instagram.svg") no-repeat;
   z-index: 10;
 }
-
 @media screen and (min-width: 768px) {
-  .enter__button {
-    width: 357px;
+  .link-button {
+    font-size: 16px;
   }
+}
+
+.enter__button {
+  margin-inline: auto;
 }
 .enter__button button {
   padding: 6px 3px;
