@@ -22,7 +22,7 @@ body {
   margin-inline: auto;
   padding-inline: config.$paddingSide-sp;
   @include mixin.mq(pc) {
-    max-width: calc(config.$width-inner-pc + config.$paddingSide-pc);
+    max-width: calc(config.$width-inner-pc + config.$paddingSide-pc * 2);
     padding-inline: config.$paddingSide-pc;
   }
 }

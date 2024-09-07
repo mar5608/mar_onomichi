@@ -136,7 +136,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .inner {
-    max-width: 1064px;
+    max-width: 1104px;
     padding-inline: 40px;
   }
 }
@@ -1986,44 +1986,45 @@ body {
 }
 @media screen and (min-width: 768px) {
   .requirement__contents {
-    padding-inline: 56px;
-    padding-block: 40px;
+    padding-inline: 46px;
+    padding-block: 32px;
   }
 }
 
-.requirement__list {
-  margin-top: 35px;
+.requirement__table {
+  margin-top: 42px;
+}
+@media screen and (min-width: 768px) {
+  .requirement__table {
+    margin-top: 45px;
+  }
 }
 
-.requirement-list__item {
-  margin-top: 12px;
+.requirement-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.requirement__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   color: #4a3636;
   border-bottom: 1px solid #cccccc;
 }
-.requirement-list__item:last-child {
+.requirement__row:last-child {
   border-bottom: none;
 }
-.requirement-list__item p {
-  margin-top: 8px;
-  margin-bottom: 14px;
-  font-size: 12px;
-}
 @media screen and (min-width: 768px) {
-  .requirement-list__item p {
-    font-size: 16px;
-  }
-}
-.requirement-list__item::before {
-  content: ""; /* カスタムのリストスタイルを設定 */
-  background-color: #9ed0e0; /* 色を青に設定 */
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  display: inline-block; /* インラインブロックにして位置を調整 */
-  margin-right: 5px;
-}
-@media screen and (min-width: 768px) {
-  .requirement-list__item {
+  .requirement__row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2034,21 +2035,53 @@ body {
   }
 }
 
-.requirement-list__head {
+.requirement__head {
   font-size: 14px;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
-  .requirement-list__head {
+  .requirement__head {
     font-size: 16px;
-    width: 240px;
-    padding-right: 16px;
+    width: 26%;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+.requirement__head::before {
+  content: ""; /* カスタムのリストスタイルを設定 */
+  background-color: #9ed0e0; /* 色を青に設定 */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block; /* インラインブロックにして位置を調整 */
+  margin-right: 5px;
+}
+@media screen and (min-width: 768px) {
+  .requirement__head::before {
+    margin-left: 16px;
+    margin-right: 10px;
+  }
+}
+
+.requirement__value {
+  font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .requirement__value {
+    font-size: 16px;
+    width: 74%;
+    text-align: left;
+    vertical-align: top;
   }
 }
 
 .requirement-list__item-notes {
-  margin-top: 8px;
-  line-height: 1.585;
+  margin-top: 6px;
+}
+@media screen and (min-width: 768px) {
+  .requirement-list__item-notes {
+    margin-top: 0;
+  }
 }
 
 .requirement-list__item-note {
@@ -2072,6 +2105,11 @@ body {
 .requirement__bg {
   display: inline-block;
   margin-top: 33px;
+}
+@media screen and (min-width: 768px) {
+  .requirement__bg {
+    margin-top: 126px;
+  }
 }
 
 /*----------------------------------
