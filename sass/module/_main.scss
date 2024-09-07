@@ -502,12 +502,12 @@
 .about__button {
   margin-inline: auto;
   margin-top: 8px;
-  .button {
-    padding: calc(7px - 3px) calc(24px - 3px);
-    @include mixin.mq(pc) {
-      padding: 4px 40px;
-    }
-  }
+  // .button {
+  //   padding: calc(7px - 3px) calc(24px - 3px);
+  //   @include mixin.mq(pc) {
+  //     padding: 4px 40px;
+  //   }
+  // }
   @include mixin.mq(pc) {
     margin-top: 20px;
   }
@@ -577,6 +577,13 @@
   left: 0px;
   width: 149px;
   height: 223px;
+  @include mixin.mq(pc) {
+    top: 66px;
+    left: 0px;
+    // width: 100%;
+    width: 460px;
+    aspect-ratio: 460/689;
+  }
 }
 
 .enter__cat3 {
@@ -586,6 +593,8 @@
   width: 105px;
   height: 63px;
   @include mixin.mq(pc) {
+    top: 105px;
+    right: 294px;
     width: 149px;
     height: 223px;
   }
@@ -597,6 +606,12 @@
   right: -30px;
   width: 94px;
   height: 80px;
+  @include mixin.mq(pc) {
+    top: 105px;
+    right: 159px;
+    width: 149px;
+    height: 223px;
+  }
 }
 
 .enter__decoration-pawpads {
@@ -609,9 +624,9 @@
   /* 画像を反転する */
   transform: scale(-1, 1);
   @include mixin.mq(pc) {
-    top: 100px;
+    top: 271px;
     //   left: 600px;
-    right: 160px;
+    right: 37px;
     width: 100px;
     height: 220px;
   }
@@ -627,9 +642,9 @@
   /* 画像を反転する */
   transform: scale(1, -1);
   @include mixin.mq(pc) {
-    top: 300px;
-    //   left: 600px;
-    right: 160px;
+    top: 700px;
+    left: 36px;
+    // right: 160px;
     width: 100px;
     height: 220px;
   }
@@ -645,11 +660,12 @@
   /* 画像を反転する */
   transform: scale(-1, -1);
   @include mixin.mq(pc) {
-    top: 300px;
+    // top: 300px;
     //   left: 600px;
-    right: 160px;
-    width: 100px;
-    height: 220px;
+    // right: 160px;
+    // width: 100px;
+    // height: 220px;
+    display: none;
   }
 }
 
@@ -822,16 +838,22 @@
 
 .enter__button {
   margin-inline: auto;
-    // margin-top: 2px;
 
-  button {
-    padding: 6px 3px;
-    @include mixin.mq(pc) {
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 700;
-    }
+  @include mixin.mq(pc) {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
   }
+  // margin-top: 2px;
+
+  // button {
+  //   padding: 6px 3px;
+  //   @include mixin.mq(pc) {
+  //     font-size: 20px;
+  //     font-style: normal;
+  //     font-weight: 700;
+  //   }
+  // }
 }
 
 /*----------------------------------
@@ -841,8 +863,33 @@
 .prize {
   background: color.$l-blue;
   // padding-top: 30px;
+  @include mixin.mq(pc) {
+    padding-top: 97px;
+    position: relative;
+  }
 }
 
+.prize__bg-triangle-left,
+.prize__bg-triangle-right {
+  display: none;
+  @include mixin.mq(pc) {
+    display: block;
+    position: absolute;
+    top: 22px;
+  }
+}
+
+.prize__bg-triangle-left {
+  @include mixin.mq(pc) {
+    left: 22px;
+  }
+}
+
+.prize__bg-triangle-right {
+  @include mixin.mq(pc) {
+    right: 22px;
+  }
+}
 .prize__contents {
   position: relative;
   padding: 10px 20px 36px 20px;
@@ -858,11 +905,18 @@
     background: url(../../img/deco_prizes1_sp.svg) no-repeat center center /
       cover;
     z-index: 2;
+    @include mixin.mq(pc) {
+      width: 378px;
+      height: 150px;
+      background: url(../../img/deco_prizes1_pc.svg) no-repeat center center /
+        contain;
+    }
   }
 
   &::after {
     content: "";
     position: absolute; /* 擬似要素の位置を決めるために追加 */
+    // bottom: -60px;
     bottom: 0;
     left: 0;
     border-radius: 24px;
@@ -871,6 +925,9 @@
     width: 100%;
     height: calc(100% - 83px);
     z-index: 2;
+    @include mixin.mq(pc) {
+      bottom: -64px;
+    }
   }
 }
 
@@ -889,7 +946,13 @@
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: url("../../img/icon_prize.svg");
+    background: url("../../img/icon_prize.svg") no-repeat center center /
+      contain;
+    z-index: 10;
+    @include mixin.mq(pc) {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
@@ -906,6 +969,10 @@
   // line-height: 1.6;
   text-align: center;
   // letter-spacing: -0.1em;
+  @include mixin.mq(pc) {
+    margin-top: 58px;
+    font-size: 16px;
+  }
 }
 
 .prize__cards {
@@ -915,6 +982,11 @@
   row-gap: 39px;
   column-gap: 15px;
   justify-content: center;
+  @include mixin.mq(pc) {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 .prize__card {
@@ -941,6 +1013,22 @@
     background: linear-gradient(-45deg, color.$d-blue 50%, transparent 50%);
     border-bottom-right-radius: 10px;
   }
+
+  &:nth-of-type(1) {
+    grid-area: 1/1/2/4;
+  }
+  &:nth-of-type(2) {
+    grid-area: 1/4/2/7;
+  }
+  &:nth-of-type(3) {
+    grid-area: 2/1/3/3;
+  }
+  &:nth-of-type(4) {
+    grid-area: 2/3/3/5;
+  }
+  &:nth-of-type(5) {
+    grid-area: 2/5/3/7;
+  }
 }
 
 .prize__card-number {
@@ -961,6 +1049,10 @@
   img {
     width: 100%;
   }
+  @include mixin.mq(pc) {
+    width: 440px;
+    height: 340px;
+  }
 }
 
 .prize__card-body {
@@ -975,6 +1067,15 @@
   font-size: 12px;
   font-weight: 700;
   min-height: 60px;
+  @include mixin.mq(pc) {
+    font-size: 16px;
+  }
+}
+
+.prize__card-title-lg {
+  @include mixin.mq(pc) {
+    font-size: 20px;
+  }
 }
 
 .prize__card-icon {
@@ -1005,6 +1106,10 @@
 .prize__button {
   z-index: 20;
   margin-top: 18px;
+  @include mixin.mq(pc) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*----------------------------------
@@ -1341,8 +1446,13 @@
     transform: translateX(-50%);
     width: 40px;
     height: 40px;
-    background: url("../../img/icon_requirement.svg");
+    background: url("../../img/icon_requirement.svg") no-repeat center center /
+      contain;
     z-index: 10;
+    @include mixin.mq(pc) {
+      width: 48px;
+      height: 48px;
+    }
   }
 }
 
@@ -1353,6 +1463,10 @@
   // padding-block: 10px;
   padding-top: 15px;
   padding-bottom: 30px;
+  @include mixin.mq(pc) {
+    padding-inline: 56px;
+    padding-block: 40px;
+  }
 }
 
 .requirement__list {
@@ -1376,6 +1490,10 @@
     margin-top: 8px;
     margin-bottom: 14px;
     font-size: 12px;
+
+    @include mixin.mq(pc) {
+      font-size: 16px;
+    }
   }
   &::before {
     content: ""; /* カスタムのリストスタイルを設定 */
@@ -1388,12 +1506,24 @@
     // width: 1em; /* 左側のマージンを確保 */
     // margin-left: -1em; /* 左にずらして位置を調整 */
     margin-right: 5px;
+    @include mixin.mq(pc) {
+      // margin-right: 5px;
+    }
+  }
+  @include mixin.mq(pc) {
+    display: flex;
+    flex-direction: row;
   }
 }
 
 .requirement-list__head {
   font-size: 14px;
   font-weight: 700;
+  @include mixin.mq(pc) {
+    font-size: 16px;
+    width: 240px;
+    padding-right: 16px;
+  }
 }
 
 .requirement-list__item-notes {
@@ -1413,6 +1543,9 @@
     position: absolute;
     top: 0;
     left: 2px;
+  }
+  @include mixin.mq(pc) {
+    font-size: 16px;
   }
 }
 

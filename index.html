@@ -74,7 +74,7 @@
         <a href="#qa" class="drawer-content__link">参加要項</a>
         <a href="#contact" class="drawer-content__link">お問い合わせ</a>
         <div class="drawer-contact__button">
-          <a href="#contact" class="button">応募してみる</a>
+          <a href="#contact" class="button button-sm">応募してみる</a>
         </div>
       </nav>
     </div>
@@ -224,7 +224,7 @@
               <span>尾道のギフトを100名様にプレゼント！</span>
             </div>
             <div class="about__button">
-              <a href="" class="button button-lg">参加の仕方はこちら</a>
+              <a href="" class="button">参加の仕方はこちら</a>
             </div>
           </div>
         </div>
@@ -466,6 +466,12 @@
     <section id="prize" class="prize">
       <div class="inner prize__inner">
         <div class="prize__contents">
+          <span class="prize__bg-triangle-left">
+            <img src="./img/img_bg_triangle-left.svg" alt="三角形のパターン模様" />
+          </span>
+          <span class="prize__bg-triangle-right">
+            <img src="./img/img_bg_triangle-right.svg" alt="三角形のパターン模様" />
+          </span>
           <div class="title prize__title">
             <!-- <div class="title-image">
               <svg
@@ -507,6 +513,10 @@
                   loading="lazy"
                   decoding="async"
                 />
+                <picture class="">
+                  <source media="(min-width: 768px)" srcset="/img/img_prize1.png">
+                  <img src="/img/img_prize1_pc.png" alt="" decoding="async">
+                </picture>
                 <!-- </figure> -->
                 <div class="prize__card-body">
                   <h3 class="prize__card-title">
@@ -557,8 +567,8 @@
                 />
                 <!-- </figure> -->
                 <div class="prize__card-body">
-                  <h3 class="prize__card-title">
-                    ねこねこ<br />
+                  <h3 class="prize__card-title prize__card-title-lg">
+                    ねこねこ<br class="pc-hidden"/>
                     グッズセット
                   </h3>
                   <div class="prize__card-icon">
@@ -648,6 +658,7 @@
                   loading="lazy"
                   decoding="async"
                 />
+
                 <!-- </figure> -->
                 <div class="prize__card-body">
                   <h3 class="prize__card-title">

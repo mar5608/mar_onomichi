@@ -62,18 +62,18 @@ body {
   border: 2px solid color.$brown;
   background: color.$white;
   box-shadow: 0px 4px 0px 0px #4a3636;
-  height: 40px;
-  // width: 100%;
-  padding: 6px 10px;
-  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
   white-space: nowrap; /* 文字を改行させない */
   width: auto;
+  height: calc(26px + 6px + 8px - 2px * 2);
+  padding: 6px 24px 8px;
+  font-size: 16px;
   @include mixin.mq(pc) {
-    // width: 132px;
-    padding: 6px 16px 6px 16px;
+    font-size: 20px;
+    border: 3px solid color.$brown;
+    padding: 20px 40px 24px;
   }
 
   &:hover {
@@ -82,23 +82,24 @@ body {
 }
 
 .button-sm {
-  height: calc(-3px * 2 + 10px * 2 + 32px);
+  height: calc(-2px * 2 + 6px + 8px + 18px);
   font-size: 14px;
   @include mixin.mq(pc) {
-    // height: calc(-3px * 2 + 10px * 2 + 14px);
-    height: 37px;
+    height: calc(26px + 6px + 8px - 2px * 2);
+    padding: 6px 22px 8px;
+    font-size: 14px;
   }
 }
 
 .button-lg {
-  height: calc(-3px * 2 + 10px * 2 + 56px);
-  font-size: 20px;
-  @include mixin.mq(pc) {
-    height: calc(-3px * 2 + 56px);
-    // width: calc(-3px * 2 + 40px * 2 + 182px);
+  // height: calc(-3px * 2 + 10px * 2 + 56px);
+  // font-size: 20px;
+  // @include mixin.mq(pc) {
+  //   height: calc(-3px * 2 + 56px);
+  //   // width: calc(-3px * 2 + 40px * 2 + 182px);
 
-    // padding: 4px 36px;
-  }
+  //   // padding: 4px 36px;
+  // }
 }
 
 .title {
