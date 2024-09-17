@@ -1103,7 +1103,7 @@ body {
     top: 105px;
     right: 294px;
     width: 149px;
-    height: 223px;
+    height: auto;
   }
 }
 
@@ -1200,28 +1200,6 @@ body {
   position: relative;
 }
 
-.enter__card-line1,
-.enter__card-line2 {
-  position: absolute;
-  width: 34px;
-  height: 7px;
-  left: 54%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-.enter__card-line1 img,
-.enter__card-line2 img {
-  width: 100%;
-}
-
-.enter__card-line1 {
-  top: 410px;
-}
-
-.enter__card-line2 {
-  top: 804px;
-}
-
 .enter__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1284,6 +1262,15 @@ body {
     margin-top: 69px;
   }
 }
+.enter__card:nth-child(2) ::after {
+  content: "";
+  position: absolute; /* 擬似要素の位置を決めるために追加 */
+  top: 150px;
+  left: -100px;
+  width: 113px;
+  height: 24px;
+  background: url("../../img/img_step_line_pc.svg") no-repeat center center/contain;
+}
 .enter__card:nth-child(3) {
   margin-top: 20px;
 }
@@ -1291,6 +1278,15 @@ body {
   .enter__card:nth-child(3) {
     margin-top: 0;
   }
+}
+.enter__card:nth-child(3) ::after {
+  content: "";
+  position: absolute; /* 擬似要素の位置を決めるために追加 */
+  top: 220px;
+  left: -88px;
+  width: 113px;
+  height: 24px;
+  background: url("../../img/img_step_line_pc.svg") no-repeat center center/contain;
 }
 
 .enter__card-img {
@@ -1548,9 +1544,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .prize__cards {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(6, 1fr);
+    display: grid; /*親要素の表示モード*/
+    grid-template-rows: repeat(2, auto); /*行*/
+    grid-template-columns: repeat(6, 1fr); /*列*/
   }
 }
 
@@ -1575,20 +1571,25 @@ body {
   background: linear-gradient(-45deg, #67b0c7 50%, transparent 50%);
   border-bottom-right-radius: 10px;
 }
-.prize__card:nth-of-type(1) {
-  grid-area: 1/1/2/4;
-}
-.prize__card:nth-of-type(2) {
-  grid-area: 1/4/2/7;
-}
-.prize__card:nth-of-type(3) {
-  grid-area: 2/1/3/3;
-}
-.prize__card:nth-of-type(4) {
-  grid-area: 2/3/3/5;
-}
-.prize__card:nth-of-type(5) {
-  grid-area: 2/5/3/7;
+@media screen and (min-width: 768px) {
+  .prize__card {
+    width: 100%;
+  }
+  .prize__card:nth-of-type(1) {
+    grid-area: 1/1/2/4;
+  }
+  .prize__card:nth-of-type(2) {
+    grid-area: 1/4/2/7;
+  }
+  .prize__card:nth-of-type(3) {
+    grid-area: 2/1/3/3;
+  }
+  .prize__card:nth-of-type(4) {
+    grid-area: 2/3/3/5;
+  }
+  .prize__card:nth-of-type(5) {
+    grid-area: 2/5/3/7;
+  }
 }
 
 .prize__card-number {
@@ -1600,8 +1601,19 @@ body {
   width: 48px;
   height: 48px;
 }
+@media screen and (min-width: 768px) {
+  .prize__card-number:nth-of-type(1), .prize__card-number:nth-of-type(2) {
+    width: 100px;
+    height: 100px;
+  }
+  .prize__card-number:nth-of-type(3), .prize__card-number:nth-of-type(4), .prize__card-number:nth-of-type(5) {
+    width: 80px;
+    height: 80px;
+  }
+}
 
 .prize__card-img {
+  display: block;
   width: 160px;
   height: 140px;
   border-radius: 10px 10px 0px 0px;
@@ -1827,6 +1839,18 @@ body {
 .spot__button {
   z-index: 20;
   margin-top: 24px;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .spot__button {
+    margin-top: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /*----------------------------------
