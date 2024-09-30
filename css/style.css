@@ -1417,6 +1417,15 @@ body {
   }
 }
 
+.prize__inner {
+  padding-inline: 0;
+}
+@media screen and (min-width: 768px) {
+  .prize__inner {
+    padding-inline: 40px;
+  }
+}
+
 .prize__bg-triangle-left,
 .prize__bg-triangle-right {
   display: none;
@@ -1432,13 +1441,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .prize__bg-triangle-left {
-    left: 22px;
+    left: 2px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .prize__bg-triangle-right {
-    right: 22px;
+    right: 2px;
   }
 }
 
@@ -1543,7 +1552,7 @@ body {
     display: grid; /*親要素の表示モード*/
     grid-template-rows: repeat(2, auto); /*行*/
     grid-template-columns: repeat(6, 1fr); /*列*/
-    row-gap: 80px;
+    row-gap: 77px;
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
             column-gap: 32px;
@@ -1584,15 +1593,18 @@ body {
   .prize__card:nth-of-type(1) .prize__card-number {
     width: 100px;
     height: 100px;
+    top: -10%;
+    height: 600px;
   }
   .prize__card:nth-of-type(1) .prize__card-img {
     max-height: 340px;
   }
   .prize__card:nth-of-type(1) .prize__card-body {
-    height: 120px;
+    height: 90px;
   }
   .prize__card:nth-of-type(1) .prize__card-title {
     font-size: 20px;
+    margin-top: 28px;
   }
   .prize__card:nth-of-type(1) .prize__card-icon {
     width: 32px;
@@ -1609,15 +1621,21 @@ body {
   .prize__card:nth-of-type(2) .prize__card-number {
     width: 100px;
     height: 100px;
+    top: -10%;
   }
   .prize__card:nth-of-type(2) .prize__card-img {
     max-height: 340px;
   }
   .prize__card:nth-of-type(2) .prize__card-body {
-    height: 120px;
+    height: 90px;
   }
   .prize__card:nth-of-type(2) .prize__card-title {
     font-size: 20px;
+    margin-top: 30px;
+  }
+  .prize__card:nth-of-type(2) .prize__card-icon {
+    width: 32px;
+    height: 32px;
   }
   .prize__card:nth-of-type(2)::after {
     width: 100px;
@@ -1635,10 +1653,11 @@ body {
     max-height: 240px;
   }
   .prize__card:nth-of-type(3) .prize__card-body {
-    height: 80px;
+    height: 70px;
   }
   .prize__card:nth-of-type(3) .prize__card-title {
     font-size: 16px;
+    margin-top: 15px;
   }
   .prize__card:nth-of-type(3) .prize__card-icon {
     width: 20.48px;
@@ -1660,10 +1679,15 @@ body {
     max-height: 240px;
   }
   .prize__card:nth-of-type(4) .prize__card-body {
-    height: 80px;
+    height: 70px;
   }
   .prize__card:nth-of-type(4) .prize__card-title {
     font-size: 16px;
+    margin-top: 11px;
+  }
+  .prize__card:nth-of-type(4) .prize__card-icon {
+    width: 20.48px;
+    height: 20.48px;
   }
   .prize__card:nth-of-type(4)::after {
     width: 64px;
@@ -1681,10 +1705,15 @@ body {
     max-height: 240px;
   }
   .prize__card:nth-of-type(5) .prize__card-body {
-    height: 80px;
+    height: 70px;
   }
   .prize__card:nth-of-type(5) .prize__card-title {
     font-size: 16px;
+    margin-top: 14px;
+  }
+  .prize__card:nth-of-type(5) .prize__card-icon {
+    width: 20.48px;
+    height: 20.48px;
   }
   .prize__card:nth-of-type(5)::after {
     width: 64px;
@@ -1764,7 +1793,7 @@ body {
 
 .prize__button {
   z-index: 20;
-  margin-top: 18px;
+  margin-top: 40px;
 }
 @media screen and (min-width: 768px) {
   .prize__button {

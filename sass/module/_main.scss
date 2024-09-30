@@ -890,6 +890,13 @@
   }
 }
 
+.prize__inner {
+  padding-inline: 0;
+  @include mixin.mq(pc) {
+    padding-inline: 40px;
+  }
+}
+
 .prize__bg-triangle-left,
 .prize__bg-triangle-right {
   display: none;
@@ -902,13 +909,13 @@
 
 .prize__bg-triangle-left {
   @include mixin.mq(pc) {
-    left: 22px;
+    left: 2px;
   }
 }
 
 .prize__bg-triangle-right {
   @include mixin.mq(pc) {
-    right: 22px;
+    right: 2px;
   }
 }
 .prize__contents {
@@ -1003,7 +1010,7 @@
     display: grid; /*親要素の表示モード*/
     grid-template-rows: repeat(2, auto); /*行*/
     grid-template-columns: repeat(6, 1fr); /*列*/
-    row-gap: 80px;
+    row-gap: 77px;
     column-gap: 32px;
     padding-inline: 36px;
   }
@@ -1032,11 +1039,6 @@
     bottom: 0px;
     background: linear-gradient(-45deg, color.$d-blue 50%, transparent 50%);
     border-bottom-right-radius: 10px;
-    // @include mixin.mq(pc) {
-    //   width: 100px;
-    //   height: 100px;
-    //   border-bottom-right-radius: 26px;
-    // }
   }
 
   @include mixin.mq(pc) {
@@ -1048,15 +1050,18 @@
       .prize__card-number {
         width: 100px;
         height: 100px;
+        top: -10%;
+        height: 600px;
       }
       .prize__card-img {
         max-height: 340px;
       }
       .prize__card-body {
-        height: 120px;
+        height: 90px;
       }
       .prize__card-title {
         font-size: 20px;
+        margin-top: 28px;
       }
       .prize__card-icon {
         width: 32px;
@@ -1073,15 +1078,21 @@
       .prize__card-number {
         width: 100px;
         height: 100px;
+        top: -10%;
       }
       .prize__card-img {
         max-height: 340px;
       }
       .prize__card-body {
-        height: 120px;
+        height: 90px;
       }
       .prize__card-title {
         font-size: 20px;
+        margin-top: 30px;
+      }
+      .prize__card-icon {
+        width: 32px;
+        height: 32px;
       }
       &::after {
         width: 100px;
@@ -1099,10 +1110,11 @@
         max-height: 240px;
       }
       .prize__card-body {
-        height: 80px;
+        height: 70px;
       }
       .prize__card-title {
         font-size: 16px;
+        margin-top: 15px;
       }
       .prize__card-icon {
         width: 20.48px;
@@ -1124,10 +1136,15 @@
         max-height: 240px;
       }
       .prize__card-body {
-        height: 80px;
+        height: 70px;
       }
       .prize__card-title {
         font-size: 16px;
+        margin-top: 11px;
+      }
+      .prize__card-icon {
+        width: 20.48px;
+        height: 20.48px;
       }
       &::after {
         width: 64px;
@@ -1145,10 +1162,15 @@
         max-height: 240px;
       }
       .prize__card-body {
-        height: 80px;
+        height: 70px;
       }
       .prize__card-title {
         font-size: 16px;
+        margin-top: 14px;
+      }
+      .prize__card-icon {
+        width: 20.48px;
+        height: 20.48px;
       }
       &::after {
         width: 64px;
@@ -1198,40 +1220,18 @@
   min-height: 60px;
 }
 
-// .prize__card-title-lg {
-//   @include mixin.mq(pc) {
-//     font-size: 20px;
-//   }
-// }
-
 .prize__card-icon {
   position: absolute;
   bottom: 0;
   right: 6px;
   z-index: 99;
-  // @include mixin.mq(pc) {
-  //   width: 20.48px;
-  //   height: 20.48px;
-  // }
 }
 
-
-
-
-
-
 .prize_bg_photo {
-  // position: absolute;
-  // bottom: 0;
-  // left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: -43px;
-
-  // width: 580px;
-  // height: 260px;
-  // margin-left: -104px;
   overflow: hidden;
   img {
     min-width: 580px;
@@ -1240,7 +1240,7 @@
 
 .prize__button {
   z-index: 20;
-  margin-top: 18px;
+  margin-top: 40px;
   @include mixin.mq(pc) {
     display: flex;
     justify-content: center;
