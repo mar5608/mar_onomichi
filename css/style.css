@@ -1487,7 +1487,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .prize__contents::after {
-    bottom: -64px;
+    bottom: -23px;
   }
 }
 
@@ -1606,7 +1606,7 @@ body {
     font-size: 20px;
     margin-top: 28px;
   }
-  .prize__card:nth-of-type(1) .prize__card-icon {
+  .prize__card:nth-of-type(1) .prize__card-icon svg {
     width: 32px;
     height: 32px;
   }
@@ -1633,7 +1633,7 @@ body {
     font-size: 20px;
     margin-top: 30px;
   }
-  .prize__card:nth-of-type(2) .prize__card-icon {
+  .prize__card:nth-of-type(2) .prize__card-icon svg {
     width: 32px;
     height: 32px;
   }
@@ -1659,7 +1659,7 @@ body {
     font-size: 16px;
     margin-top: 15px;
   }
-  .prize__card:nth-of-type(3) .prize__card-icon {
+  .prize__card:nth-of-type(3) .prize__card-icon svg {
     width: 20.48px;
     height: 20.48px;
   }
@@ -1685,7 +1685,7 @@ body {
     font-size: 16px;
     margin-top: 11px;
   }
-  .prize__card:nth-of-type(4) .prize__card-icon {
+  .prize__card:nth-of-type(4) .prize__card-icon svg {
     width: 20.48px;
     height: 20.48px;
   }
@@ -1711,7 +1711,7 @@ body {
     font-size: 16px;
     margin-top: 14px;
   }
-  .prize__card:nth-of-type(5) .prize__card-icon {
+  .prize__card:nth-of-type(5) .prize__card-icon svg {
     width: 20.48px;
     height: 20.48px;
   }
@@ -1790,6 +1790,11 @@ body {
 .prize_bg_photo img {
   min-width: 580px;
 }
+@media screen and (min-width: 768px) {
+  .prize_bg_photo img {
+    width: auto;
+  }
+}
 
 .prize__button {
   z-index: 20;
@@ -1829,6 +1834,15 @@ body {
 .spot::after {
   bottom: -43px;
   background: url("../../img/img_bg_wave-bottom.png") transparent repeat-x left -3px center/contain;
+}
+
+.spot__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10;
+     -moz-column-gap: 10;
+          column-gap: 10;
 }
 
 .spot__head {
@@ -1932,9 +1946,57 @@ body {
   /* 画像のサイズ調整 */
 }
 
+.spot__prev,
+.spot__next {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (min-width: 768px) {
+  .spot__prev,
+  .spot__next {
+    width: 50px;
+    height: 50px;
+  }
+}
+.spot__prev::after,
+.spot__next::after {
+  display: none;
+}
+
+.spot__prev {
+  bottom: 0;
+  left: 0;
+  background: url("../../img/icon_arrow-left.svg") no-repeat center center/contain;
+}
+@media screen and (min-width: 768px) {
+  .spot__prev {
+    margin-top: -60px;
+    left: 10;
+  }
+}
+
+.spot__next {
+  bottom: 0;
+  right: 0;
+  background: url("../../img/icon_arrow-right.svg") no-repeat center center/contain;
+}
+@media screen and (min-width: 768px) {
+  .spot__next {
+    margin-top: -60px;
+    right: 10;
+  }
+}
+
 .spot__content {
   position: relative;
   z-index: 10;
+}
+@media screen and (min-width: 768px) {
+  .spot__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .spot__content-img {
@@ -1945,12 +2007,22 @@ body {
 .spot__content-img img {
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .spot__content-img {
+    width: 495px;
+  }
+}
 
 .spot__text {
   margin-top: 16px;
   color: #ffffff;
   text-align: center;
   font-size: 11.5px;
+}
+@media screen and (min-width: 768px) {
+  .spot__text {
+    font-size: 16px;
+  }
 }
 
 .spot__button {

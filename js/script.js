@@ -74,6 +74,16 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
   autoplay: {
     delay: 0, // 途切れなくループ
   },
+  // If we need pagination
+  // pagination: {
+  //   el: "#js-spot-pagination",
+  // },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: "#js-spot-next",
+    prevEl: "#js-spot-prev",
+  },
 });
 
 /** qa js-accordion */
