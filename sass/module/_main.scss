@@ -1283,7 +1283,7 @@
   }
 
   &::before {
-    top: -46px;
+    top: -45px;
     background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px
       center / contain;
   }
@@ -1297,9 +1297,11 @@
 }
 
 .spot__wrapper {
-  display: flex;
-  column-gap: 10;
-  // flex-direction: column;
+  @include mixin.mq(pc) {
+    display: flex;
+    column-gap: 10;
+    // padding-left: max(30px, 50% - 512px);
+  }
 }
 
 .spot__head {
@@ -1308,6 +1310,10 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  @include mixin.mq(pc) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .spot__head-img {
@@ -1449,6 +1455,9 @@
   z-index: 10;
   @include mixin.mq(pc) {
     display: flex;
+    @include mixin.mq(pc) {
+      margin-top: 30px;
+    }
   }
 }
 

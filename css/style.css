@@ -1828,7 +1828,7 @@ body {
   height: 46px;
 }
 .spot::before {
-  top: -46px;
+  top: -45px;
   background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px center/contain;
 }
 .spot::after {
@@ -1836,13 +1836,15 @@ body {
   background: url("../../img/img_bg_wave-bottom.png") transparent repeat-x left -3px center/contain;
 }
 
-.spot__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 10;
-     -moz-column-gap: 10;
-          column-gap: 10;
+@media screen and (min-width: 768px) {
+  .spot__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 10;
+       -moz-column-gap: 10;
+            column-gap: 10;
+  }
 }
 
 .spot__head {
@@ -1860,6 +1862,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .spot__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .spot__head-img {
@@ -1996,6 +2009,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .spot__content {
+    margin-top: 30px;
   }
 }
 

@@ -59,14 +59,17 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
     // スライドの表示枚数：768px以上の場合
     768: {
       slidesPerView: 1,
+      loop: true, //無限再生
     },
     // // スライドの表示枚数：1024px以上の場合
     1024: {
       slidesPerView: 2,
+      // loop: false, //無限再生
     },
     // スライドの表示枚数：1440px以上の場合
     1440: {
       slidesPerView: 3,
+      // loop: false, //無限再生
     },
   },
   speed: 6000, // ループの時間
