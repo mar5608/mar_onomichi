@@ -1841,9 +1841,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-column-gap: 10;
-       -moz-column-gap: 10;
-            column-gap: 10;
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
   }
 }
 
@@ -1945,6 +1945,15 @@ body {
   font-size: 12px;
 }
 
+.spot__slide {
+  /* 画像のサイズ調整 */
+}
+@media screen and (min-width: 768px) {
+  .spot__slide {
+    width: calc(100% - 252px);
+  }
+}
+
 .spot__swiper {
   margin-top: 24px;
   z-index: 99;
@@ -1953,10 +1962,6 @@ body {
   .spot__swiper {
     margin-top: 80px;
   }
-}
-
-.spot__slide {
-  /* 画像のサイズ調整 */
 }
 
 .spot__prev,

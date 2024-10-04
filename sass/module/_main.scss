@@ -1299,7 +1299,7 @@
 .spot__wrapper {
   @include mixin.mq(pc) {
     display: flex;
-    column-gap: 10;
+    column-gap: 10px;
     // padding-left: max(30px, 50% - 512px);
   }
 }
@@ -1391,6 +1391,17 @@
   font-size: 12px;
 }
 
+.spot__slide {
+  /* 画像のサイズ調整 */
+  // img {
+  //   height: auto;
+  //   width: 100%;
+  // }
+  @include mixin.mq(pc) {
+    width: calc(100% - 252px);
+  }
+}
+
 .spot__swiper {
   margin-top: 24px;
   z-index: 99;
@@ -1400,14 +1411,6 @@
   }
 }
 
-.spot__slide {
-  /* 画像のサイズ調整 */
-  // img {
-  //   height: auto;
-  //   width: 100%;
-  // }
-}
-
 .spot__slide-card {
   // width: 100px;
   // height: 100px;
@@ -1415,6 +1418,7 @@
   //   // width: 200px;
   //   // height: 200px;
   // }
+  // width: 240px;
 }
 
 .spot__prev,

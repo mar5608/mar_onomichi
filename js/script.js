@@ -52,13 +52,13 @@ const swiperAbout = new Swiper("#js-about-swiper", {
 const swiperSpot = new Swiper("#js-spot-swiper", {
   // Optional parameters
   // direction: "vertical",
-  loop: true, //無限再生
+  loop: false, //無限再生
   slidesPerView: 1, // 一度に表示する枚数
   spaceBetween: 10, //横のカードとの間
   breakpoints: {
     // スライドの表示枚数：768px以上の場合
     768: {
-      slidesPerView: 1,
+      slidesPerView: 2,
       loop: true, //無限再生
     },
     // // スライドの表示枚数：1024px以上の場合
@@ -72,11 +72,11 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
       // loop: false, //無限再生
     },
   },
-  speed: 6000, // ループの時間
-  allowTouchMove: false, // スワイプ無効
-  autoplay: {
-    delay: 0, // 途切れなくループ
-  },
+  // speed: 6000, // ループの時間
+  allowTouchMove: true, // スワイプ無効
+  // autoplay: {
+  //   delay: 0, // 途切れなくループ
+  // },
   // If we need pagination
   // pagination: {
   //   el: "#js-spot-pagination",
