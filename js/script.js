@@ -26,8 +26,8 @@ const swiperAbout = new Swiper("#js-about-swiper", {
   // Optional parameters
   // direction: "vertical",
   loop: true, //無限再生
-  slidesPerView: 3, // 一度に表示する枚数
-  // spaceBetween: 16, //横のカードとの間
+  // slidesPerView: 3, // 一度に表示する枚数
+  spaceBetween: 0, //横のカードとの間
   breakpoints: {
     // スライドの表示枚数：768px以上の場合
     // 768: {
@@ -38,37 +38,37 @@ const swiperAbout = new Swiper("#js-about-swiper", {
     //   slidesPerView: 5,
     // },
     // スライドの表示枚数：1440px以上の場合
-    1440: {
-      slidesPerView: 6,
-    },
+    // 1440: {
+    //   slidesPerView: 6,
+    // },
   },
-  speed: 6000, // ループの時間
+  // speed: 6000, // ループの時間
   allowTouchMove: false, // スワイプ無効
   autoplay: {
-    delay: 0, // 途切れなくループ
+    // delay: 0, // 途切れなくループ
   },
 });
 
 const swiperSpot = new Swiper("#js-spot-swiper", {
   // Optional parameters
   // direction: "vertical",
-  loop: false, //無限再生
+  loop: true, //無限再生
   slidesPerView: 1, // 一度に表示する枚数
   spaceBetween: 10, //横のカードとの間
   breakpoints: {
     // スライドの表示枚数：768px以上の場合
     768: {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       loop: true, //無限再生
     },
     // // スライドの表示枚数：1024px以上の場合
     1024: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       // loop: false, //無限再生
     },
     // スライドの表示枚数：1440px以上の場合
     1440: {
-      slidesPerView: 3,
+      slidesPerView: 3.24,
       // loop: false, //無限再生
     },
   },
