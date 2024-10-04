@@ -1844,6 +1844,7 @@ body {
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
+    padding-left: max(29px, 50% - 512px);
   }
 }
 
@@ -1874,13 +1875,21 @@ body {
             flex-direction: column;
   }
 }
-
-.spot__head-img {
+.spot__head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(29px, 50% - 512px);
   width: 28px;
   height: 28px;
+  background: url("../../img/icon_star.svg") no-repeat center center/contain;
 }
-.spot__head-img img {
-  width: 100%;
+@media screen and (min-width: 768px) {
+  .spot__head::before {
+    margin-top: 80px;
+    width: 56px;
+    height: 56px;
+  }
 }
 
 .spot__head-main {
@@ -1896,6 +1905,9 @@ body {
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
+    font-size: 40px;
+    letter-spacing: 0.25em;
+    margin-top: 111px;
   }
 }
 
@@ -1906,6 +1918,13 @@ body {
   border-radius: 12px;
   width: 240px;
   height: 402px;
+}
+@media screen and (min-width: 768px) {
+  .spot__card {
+    border-radius: 24px;
+    width: 344px;
+    height: 502px;
+  }
 }
 
 .spot__card-img {
@@ -1933,16 +1952,32 @@ body {
 .spot__card-body {
   padding-inline: 24px;
 }
+@media screen and (min-width: 768px) {
+  .spot__card-body {
+    padding-inline: 32px;
+  }
+}
 
 .spot__card-title {
   margin-top: 16px;
   font-weight: 700;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .spot__card-title {
+    margin-top: 8px;
+    font-size: 20px;
+  }
+}
 
 .spot__card-text {
   margin-top: 16px;
   font-size: 12px;
+}
+@media screen and (min-width: 768px) {
+  .spot__card-text {
+    font-size: 16px;
+  }
 }
 
 .spot__slide {

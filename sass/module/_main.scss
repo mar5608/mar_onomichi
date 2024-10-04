@@ -1300,7 +1300,7 @@
   @include mixin.mq(pc) {
     display: flex;
     column-gap: 10px;
-    // padding-left: max(30px, 50% - 512px);
+    padding-left: max(29px, 50% - 512px);
   }
 }
 
@@ -1314,15 +1314,36 @@
     display: flex;
     flex-direction: column;
   }
-}
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    // left: 50%;
+    // transform: translateX(-50%);
+    left: max(29px, 50% - 512px);
+    width: 28px;
+    height: 28px;
+    background: url("../../img/icon_star.svg") no-repeat center center / contain;
 
-.spot__head-img {
-  width: 28px;
-  height: 28px;
-  img {
-    width: 100%;
+    @include mixin.mq(pc) {
+      margin-top: 80px;
+      width: 56px;
+      height: 56px;
+    }
   }
 }
+
+// .spot__head-img {
+//   width: 28px;
+//   height: 28px;
+//   svg {
+//     width: 100%;
+//   }
+//   @include mixin.mq(pc) {
+//     width: 56px;
+//     height: 56px;
+//   }
+// }
 
 .spot__head-main {
   color: color.$white;
@@ -1333,6 +1354,9 @@
   line-height: 1.25; /* 35px */
   @include mixin.mq(pc) {
     writing-mode: vertical-rl;
+    font-size: 40px;
+    letter-spacing: 0.25em;
+    margin-top: 111px;
   }
 }
 
@@ -1343,6 +1367,11 @@
   border-radius: 12px;
   width: 240px;
   height: 402px;
+  @include mixin.mq(pc) {
+    border-radius: 24px;
+    width: 344px;
+    height: 502px;
+  }
 }
 
 .spot__card-img {
@@ -1378,17 +1407,27 @@
 
 .spot__card-body {
   padding-inline: 24px;
+  @include mixin.mq(pc) {
+    padding-inline: 32px;
+  }
 }
 
 .spot__card-title {
   margin-top: 16px;
   font-weight: 700;
   text-align: center;
+  @include mixin.mq(pc) {
+    margin-top: 8px;
+    font-size: 20px;
+  }
 }
 
 .spot__card-text {
   margin-top: 16px;
   font-size: 12px;
+  @include mixin.mq(pc) {
+    font-size: 16px;
+  }
 }
 
 .spot__slide {
