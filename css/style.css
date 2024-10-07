@@ -1820,6 +1820,11 @@ body {
   background: #67b0c7;
   z-index: 99;
 }
+@media screen and (min-width: 768px) {
+  .spot {
+    padding-bottom: 78px;
+  }
+}
 .spot::before, .spot::after {
   content: "";
   position: absolute;
@@ -1849,8 +1854,9 @@ body {
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
-    padding-left: max(30px, 50% - 488px);
+    padding-left: max(30px, 50% - 510px);
     overflow: hidden;
+    position: relative;
   }
 }
 
@@ -1885,7 +1891,7 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: max(30px, 50% - 488px);
+  left: max(30px, 50% - 510px);
   width: 28px;
   height: 28px;
   background: url("../../img/icon_star.svg") no-repeat center center/contain;
@@ -1913,7 +1919,7 @@ body {
             writing-mode: vertical-rl;
     font-size: 40px;
     letter-spacing: 0.25em;
-    margin-top: 111px;
+    margin-top: 78px;
   }
 }
 
@@ -2017,19 +2023,14 @@ body {
   width: 900px;
   position: relative;
   margin-inline: auto;
-  z-index: 90;
 }
 
-.spot__prev,
-.spot__next {
-  width: 40px;
-  height: 40px;
-}
 @media screen and (min-width: 768px) {
   .spot__prev,
   .spot__next {
     width: 80px;
     height: 80px;
+    z-index: 99;
   }
 }
 .spot__prev::after,
@@ -2040,8 +2041,8 @@ body {
 @media screen and (min-width: 768px) {
   .spot__prev {
     position: absolute;
-    bottom: -50px;
-    left: 10px;
+    top: 587px;
+    left: 285px;
     background: url("../../img/icon_arrow-left.svg") no-repeat center center/contain;
   }
 }
@@ -2049,10 +2050,15 @@ body {
 @media screen and (min-width: 768px) {
   .spot__next {
     position: absolute;
-    bottom: 300px;
-    right: 10px;
+    top: 587px;
+    right: 282px;
     background: url("../../img/icon_arrow-right.svg") no-repeat center center/contain;
   }
+}
+
+.spot__inner {
+  padding-inline: 0;
+  max-width: 1084px;
 }
 
 .spot__content {
@@ -2095,6 +2101,7 @@ body {
 @media screen and (min-width: 768px) {
   .spot__text {
     font-size: 16px;
+    margin-top: 0;
   }
 }
 
@@ -2109,9 +2116,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 

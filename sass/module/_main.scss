@@ -1272,6 +1272,9 @@
   padding-bottom: 24px;
   // padding-bottom: 64px;
   background: color.$d-blue;
+  @include mixin.mq(pc) {
+    padding-bottom: 78px;
+  }
 
   &::before,
   &::after {
@@ -1303,8 +1306,9 @@
   @include mixin.mq(pc) {
     display: flex;
     column-gap: 10px;
-    padding-left: max(30px, 50% - 488px);
+    padding-left: max(30px, 50% - 510px);
     overflow: hidden;
+    position: relative; //next_button用
   }
 }
 
@@ -1324,7 +1328,7 @@
     top: 0;
     // left: 50%;
     // transform: translateX(-50%);
-    left: max(30px, 50% - 488px);
+    left: max(30px, 50% - 510px);
     width: 28px;
     height: 28px;
     background: url("../../img/icon_star.svg") no-repeat center center / contain;
@@ -1360,7 +1364,7 @@
     writing-mode: vertical-rl;
     font-size: 40px;
     letter-spacing: 0.25em;
-    margin-top: 111px;
+    margin-top: 78px;
   }
 }
 
@@ -1475,16 +1479,14 @@
   width: 900px;
   position: relative;
   margin-inline: auto;
-  z-index: 90;
 }
 
 .spot__prev,
 .spot__next {
-  width: 40px;
-  height: 40px;
   @include mixin.mq(pc) {
     width: 80px;
     height: 80px;
+    z-index: 99;
   }
   &::after {
     display: none;
@@ -1493,8 +1495,8 @@
 .spot__prev {
   @include mixin.mq(pc) {
     position: absolute;
-    bottom: -50px;
-    left: 10px;
+    top: 587px;
+    left: 285px;
     background: url("../../img/icon_arrow-left.svg") no-repeat center center /
       contain;
   }
@@ -1502,11 +1504,16 @@
 .spot__next {
   @include mixin.mq(pc) {
     position: absolute;
-    bottom: 300px;
-    right: 10px;
+    top: 587px;
+    right: 282px;
     background: url("../../img/icon_arrow-right.svg") no-repeat center center /
       contain;
   }
+}
+
+.spot__inner {
+  padding-inline: 0;
+  max-width: 1084px;
 }
 
 .spot__content {
@@ -1540,6 +1547,7 @@
   // white-space: nowrap; /* 文字を改行させない */
   @include mixin.mq(pc) {
     font-size: 16px;
+    margin-top: 0;
   }
 }
 
@@ -1551,7 +1559,7 @@
   @include mixin.mq(pc) {
     margin-top: 35px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
   }
 }
 

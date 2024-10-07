@@ -52,7 +52,7 @@ const swiperAbout = new Swiper("#js-about-swiper", {
 const swiperSpot = new Swiper("#js-spot-swiper", {
   // Optional parameters
   // direction: "vertical",
-  loop: true, //無限再生
+  loop: false, //無限再生
   slidesPerView: 1, // 一度に表示する枚数
   spaceBetween: 10, //横のカードとの間
   breakpoints: {
@@ -68,7 +68,7 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
     },
     // スライドの表示枚数：1440px以上の場合
     1440: {
-      slidesPerView: 3.24,
+      slidesPerView: 3.37,
       // loop: false, //無限再生
     },
   },
