@@ -1513,7 +1513,7 @@
 
 .spot__inner {
   padding-inline: 0;
-  max-width: 1084px;
+  max-width: 1024px;
 }
 
 .spot__content {
@@ -1521,21 +1521,32 @@
   z-index: 10;
   @include mixin.mq(pc) {
     display: flex;
-    @include mixin.mq(pc) {
-      margin-top: 64px;
-    }
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 64px;
   }
 }
 
 .spot__content-img {
   width: 255px;
   height: 55px;
-  margin-inline: auto;
+
   img {
     width: 100%;
   }
   @include mixin.mq(pc) {
     width: 495px;
+  }
+}
+
+.spot__contents {
+  @include mixin.mq(pc) {
+    // margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-end;
+    gap: 27px;
+
   }
 }
 
@@ -1553,13 +1564,13 @@
 
 .spot__button {
   z-index: 20;
-  margin-top: 24px;
-  margin-inline: auto;
+  // margin-top: 24px;
+  // margin-inline: auto;
 
   @include mixin.mq(pc) {
-    margin-top: 35px;
+    // margin-top: 35px;
     display: flex;
-    // justify-content: center;
+    justify-content: center;
   }
 }
 

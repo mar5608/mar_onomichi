@@ -2058,7 +2058,7 @@ body {
 
 .spot__inner {
   padding-inline: 0;
-  max-width: 1084px;
+  max-width: 1024px;
 }
 
 .spot__content {
@@ -2070,10 +2070,10 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  .spot__content {
+    gap: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 64px;
   }
 }
@@ -2081,7 +2081,6 @@ body {
 .spot__content-img {
   width: 255px;
   height: 55px;
-  margin-inline: auto;
 }
 .spot__content-img img {
   width: 100%;
@@ -2089,6 +2088,19 @@ body {
 @media screen and (min-width: 768px) {
   .spot__content-img {
     width: 495px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .spot__contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 27px;
   }
 }
 
@@ -2107,15 +2119,15 @@ body {
 
 .spot__button {
   z-index: 20;
-  margin-top: 24px;
-  margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
   .spot__button {
-    margin-top: 35px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
