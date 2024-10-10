@@ -1583,6 +1583,7 @@
   background: color.$l-blue;
   position: relative;
   @include mixin.mq(pc) {
+    padding-top: 158px;
     padding-bottom: 0;
   }
 }
