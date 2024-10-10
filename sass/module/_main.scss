@@ -1289,9 +1289,9 @@
   }
 
   &::before {
-    top: -45px;
-    background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px
-      center / contain;
+    top: -38px;
+    background: url("../../img/img_bg_wave-top.png") transparent repeat-x left
+      5px center / contain;
   }
 
   &::after {
@@ -1546,7 +1546,6 @@
     flex-direction: column;
     // align-items: flex-end;
     gap: 27px;
-
   }
 }
 
