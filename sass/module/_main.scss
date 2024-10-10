@@ -2548,6 +2548,9 @@
     align-items: center; /* 中央揃え */
     // margin-bottom: 10px; /* 行間の設定 */
     padding-bottom: 8px;
+    @include mixin.mq(pc) {
+      padding-bottom: 12px;
+    }
   }
   dt {
     width: 30%; /* 用語の幅 */
@@ -2569,7 +2572,7 @@
     }
   }
   dd {
-    width: 75%; /* 定義の幅 */
+    width: 70%; /* 定義の幅 */
     margin: 0;
     padding-left: 3px;
     // padding: 0 10px;
@@ -2643,6 +2646,9 @@
   align-self: stretch;
   margin-top: 69px;
   position: relative;
+  @include mixin.mq(pc) {
+    height: 54px;
+  }
 
   &::before {
     content: "";
@@ -2653,5 +2659,9 @@
     top: -46px;
     background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px
       center / contain;
+    @include mixin.mq(pc) {
+      height: 120px;
+      top: -62px;
+    }
   }
 }

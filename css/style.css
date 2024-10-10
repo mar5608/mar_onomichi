@@ -3151,6 +3151,12 @@ body {
           align-items: center; /* 中央揃え */
   padding-bottom: 8px;
 }
+@media screen and (min-width: 768px) {
+  .footer-table dt,
+  .footer-table dd {
+    padding-bottom: 12px;
+  }
+}
 .footer-table dt {
   width: 30%; /* 用語の幅 */
   font-weight: 700;
@@ -3165,7 +3171,7 @@ body {
   margin-right: 8px;
 }
 .footer-table dd {
-  width: 75%; /* 定義の幅 */
+  width: 70%; /* 定義の幅 */
   margin: 0;
   padding-left: 3px;
 }
@@ -3208,6 +3214,11 @@ body {
   margin-top: 69px;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .copyright {
+    height: 54px;
+  }
+}
 .copyright::before {
   content: "";
   position: absolute;
@@ -3216,4 +3227,10 @@ body {
   height: 46px;
   top: -46px;
   background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px center/contain;
+}
+@media screen and (min-width: 768px) {
+  .copyright::before {
+    height: 120px;
+    top: -62px;
+  }
 }
