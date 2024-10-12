@@ -2506,7 +2506,7 @@
   @include mixin.mq(pc) {
     margin-top: 0;
     padding-top: 102px;
-    padding-bottom: 92px;
+    padding-bottom: 78px;
     padding-inline: 60px;
     width: 50%;
   }
@@ -2626,30 +2626,19 @@
   // margin-block: 24px;
   margin-top: 22px;
   margin-inline: auto;
+  z-index: 90;
   img {
     max-width: 100%;
   }
+  @include mixin.mq(pc) {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+  }
 }
 
-.copyright {
-  display: block;
-  height: 41px;
-  width: 100%;
-  padding-bottom: 24px;
-  background: color.$d-blue;
-  color: color.$white;
-  font-size: 10px;
-  line-height: 1.6; /* 16px */
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  align-self: stretch;
-  margin-top: 69px;
+.footer__bottom {
   position: relative;
-  @include mixin.mq(pc) {
-    height: 54px;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -2660,8 +2649,38 @@
     background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px
       center / contain;
     @include mixin.mq(pc) {
+      padding-top: 120px;
       height: 120px;
-      top: -62px;
+      // top: 50px;
+      // margin-top: 45px;
+      // padding-top: 45px;
     }
+  }
+  @include mixin.mq(pc) {
+  }
+}
+
+.copyright {
+  display: block;
+  height: 41px;
+  width: 100%;
+  // padding-bottom: 24px;
+  background: color.$d-blue;
+  color: color.$white;
+  font-size: 10px;
+  line-height: 1.6; /* 16px */
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  margin-top: 69px;
+  position: relative;
+  padding-bottom: 32px;
+  @include mixin.mq(pc) {
+    height: 54px;
+    margin-top: 165px;
+    padding-top: 68px;
+    padding-bottom: 60px;
+    font-size: 14px;
   }
 }

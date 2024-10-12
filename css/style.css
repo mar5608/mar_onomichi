@@ -3102,7 +3102,7 @@ body {
   .footer__info-body {
     margin-top: 0;
     padding-top: 102px;
-    padding-bottom: 92px;
+    padding-bottom: 78px;
     padding-inline: 60px;
     width: 50%;
   }
@@ -3187,16 +3187,41 @@ body {
   height: 78px;
   margin-top: 22px;
   margin-inline: auto;
+  z-index: 90;
 }
 .footer__pagetop img {
   max-width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .footer__pagetop {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+  }
+}
 
+.footer__bottom {
+  position: relative;
+}
+.footer__bottom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 46px;
+  top: -46px;
+  background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px center/contain;
+}
+@media screen and (min-width: 768px) {
+  .footer__bottom::before {
+    padding-top: 120px;
+    height: 120px;
+  }
+}
 .copyright {
   display: block;
   height: 41px;
   width: 100%;
-  padding-bottom: 24px;
   background: #67b0c7;
   color: #ffffff;
   font-size: 10px;
@@ -3213,24 +3238,14 @@ body {
       align-self: stretch;
   margin-top: 69px;
   position: relative;
+  padding-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .copyright {
     height: 54px;
-  }
-}
-.copyright::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 46px;
-  top: -46px;
-  background: url("../../img/img_bg_wave-top.png") transparent repeat-x left -3px center/contain;
-}
-@media screen and (min-width: 768px) {
-  .copyright::before {
-    height: 120px;
-    top: -62px;
+    margin-top: 165px;
+    padding-top: 68px;
+    padding-bottom: 60px;
+    font-size: 14px;
   }
 }
