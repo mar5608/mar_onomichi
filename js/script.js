@@ -1,27 +1,18 @@
-// alert("おはよう");
-
 /* jQuery */
-/*js-drawer*/
+
+/* ****************************************
+js-drawer
+**************************************** */
 jQuery("#js-drawer-icon").on("click", function (e) {
   e.preventDefault();
   jQuery("#js-drawer-icon").toggleClass("is-checked");
   jQuery("#js-drawer-content").toggleClass("is-checked");
 });
 
-// jQuery(".js-accordion").on("click", function (e) {
-//   e.preventDefault();
-
-//   if (jQuery(this).parent().hasClass("is-open")) {
-//     // thisで押した要素を取得する
-//     jQuery(this).parent().removeClass("is-open");
-//     // スライドしながら戻る
-//     jQuery(this).next().slideUp();
-//   } else {
-//     jQuery(this).parent().addClass("is-open");
-//     jQuery(this).next().slideDown();
-//   }
-// });
-
+/* ****************************************
+ABOUT
+swiper
+**************************************** */
 const swiperAbout = new Swiper("#js-about-swiper", {
   // Optional parameters
   // direction: "vertical",
@@ -49,27 +40,34 @@ const swiperAbout = new Swiper("#js-about-swiper", {
   },
 });
 
+/* ****************************************
+SPOT
+swiper
+**************************************** */
 const swiperSpot = new Swiper("#js-spot-swiper", {
   // Optional parameters
   // direction: "vertical",
   loop: true, //無限再生
-  // slidesPerView: 1, // 一度に表示する枚数
-  spaceBetween: 3, //横のカードとの間
+
+  centeredSlides: true, // 中央寄せにする
+  slidesPerView: 1.53, // 一度に表示する枚数
+  spaceBetween: 14, //横のカードとの間（margin-right:*pxになる）
   breakpoints: {
     // スライドの表示枚数：768px以上の場合
     768: {
-      slidesPerView: 2.5,
-      // loop: true, //無限再生
+      centeredSlides: true, // 中央寄せにする
+      slidesPerView: 1.5, // 一度に表示する枚数
+      spaceBetween: 10, //横のカードとの間（margin-right:*pxになる）
     },
     // // スライドの表示枚数：1024px以上の場合
     1024: {
+      centeredSlides: false, // 中央寄せにしない
       slidesPerView: 3,
-      // loop: false, //無限再生
     },
     // スライドの表示枚数：1440px以上の場合
     1440: {
+      centeredSlides: false, // 中央寄せにしない
       slidesPerView: 3.37,
-      // loop: false, //無限再生
     },
   },
   // speed: 6000, // ループの時間
@@ -89,7 +87,10 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
   },
 });
 
-/** qa js-accordion */
+/* ****************************************
+QA
+js-accordion
+**************************************** */
 jQuery(".js-accordion").on("click", function (e) {
   e.preventDefault();
 

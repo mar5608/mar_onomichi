@@ -1970,6 +1970,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .spot__slide {
+    padding-left: 14px;
+  }
+}
+
 .spot__card {
   position: relative;
   color: #4a3636;
@@ -2007,6 +2013,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover; /* 画像の表示方法を設定 */
   border-radius: 12px 12px 0 0;
+  aspect-ratio: 480/360;
 }
 @media screen and (min-width: 768px) {
   .spot__card-img img {
@@ -2044,15 +2051,6 @@ body {
   .spot__card-text {
     font-size: 16px;
     margin-top: 22px;
-  }
-}
-
-.spot__slide {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .spot__slide {
-    padding-left: 14px;
   }
 }
 
