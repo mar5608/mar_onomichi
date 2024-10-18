@@ -168,6 +168,7 @@ body {
 .button {
   display: inline-block;
   color: #4a3636;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.6;
   border-radius: 40px;
@@ -187,8 +188,7 @@ body {
   white-space: nowrap; /* 文字を改行させない */
   width: auto;
   height: 36px;
-  padding: 6px 24px 8px;
-  font-size: 16px;
+  padding: 8px 24px 8px;
 }
 @media screen and (min-width: 768px) {
   .button {
@@ -207,7 +207,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .button-sm {
-    height: 36px;
+    height: 38px;
     padding: 6px 22px 8px;
     font-size: 14px;
   }
@@ -244,7 +244,7 @@ body {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.25; /* 25px */
-  margin-top: 8px;
+  margin-top: 7px;
 }
 @media screen and (min-width: 768px) {
   .title-main {
@@ -644,6 +644,15 @@ body {
   }
 }
 
+.fv__button {
+  position: absolute;
+  top: 518px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99;
+}
+
 /*----------------------------------
     about
 -----------------------------------*/
@@ -1008,7 +1017,7 @@ body {
 
 .about__button {
   margin-inline: auto;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .about__button {
@@ -1023,7 +1032,7 @@ body {
 }
 
 .about__slide {
-  margin-top: 88px;
+  margin-top: 90px;
 }
 @media screen and (min-width: 768px) {
   .about__slide {
@@ -1265,11 +1274,23 @@ body {
 .enter__card:nth-child(2) ::after {
   content: "";
   position: absolute; /* 擬似要素の位置を決めるために追加 */
-  top: 150px;
-  left: -100px;
-  width: 113px;
-  height: 24px;
+  top: -8px;
+  left: 44%;
+  width: 34px;
+  height: 7px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); /* 図形を90度右に回転 */
+  -webkit-transform-origin: center;
+          transform-origin: center;
   background: url("../../img/img_step_line_pc.svg") no-repeat center center/contain;
+}
+@media screen and (min-width: 768px) {
+  .enter__card:nth-child(2) ::after {
+    top: 150px;
+    left: -100px;
+    width: 113px;
+    height: 24px;
+  }
 }
 .enter__card:nth-child(3) {
   margin-top: 20px;
@@ -1282,11 +1303,23 @@ body {
 .enter__card:nth-child(3) ::after {
   content: "";
   position: absolute; /* 擬似要素の位置を決めるために追加 */
-  top: 220px;
-  left: -88px;
-  width: 113px;
-  height: 24px;
+  top: -8px;
+  left: 44%;
+  width: 34px;
+  height: 7px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); /* 図形を90度右に回転 */
+  -webkit-transform-origin: center;
+          transform-origin: center;
   background: url("../../img/img_step_line_pc.svg") no-repeat center center/contain;
+}
+@media screen and (min-width: 768px) {
+  .enter__card:nth-child(3) ::after {
+    top: 220px;
+    left: -88px;
+    width: 113px;
+    height: 24px;
+  }
 }
 
 .enter__card-img {
@@ -1391,6 +1424,7 @@ body {
 
 .enter__button {
   margin-inline: auto;
+  margin-top: 1px;
 }
 @media screen and (min-width: 768px) {
   .enter__button {
@@ -1520,7 +1554,7 @@ body {
 }
 
 .prize__heading {
-  margin-top: 26px;
+  margin-top: 30px;
   font-size: 12px;
   color: #4a3636;
   text-align: center;
@@ -1533,7 +1567,7 @@ body {
 }
 
 .prize__cards {
-  margin-top: 83px;
+  margin-top: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1791,6 +1825,9 @@ body {
   min-width: 580px;
 }
 @media screen and (min-width: 768px) {
+  .prize_bg_photo {
+    margin-top: 18px;
+  }
   .prize_bg_photo img {
     width: auto;
   }
@@ -1798,7 +1835,7 @@ body {
 
 .prize__button {
   z-index: 20;
-  margin-top: 40px;
+  margin-top: 22px;
 }
 @media screen and (min-width: 768px) {
   .prize__button {
@@ -1838,11 +1875,16 @@ body {
   }
 }
 .spot::before {
-  top: -38px;
+  top: -45px;
   background: url("../../img/img_bg_wave-top.png") transparent repeat-x left 5px center/contain;
 }
+@media screen and (min-width: 768px) {
+  .spot::before {
+    top: -120px;
+  }
+}
 .spot::after {
-  bottom: -43px;
+  bottom: -46px;
   background: url("../../img/img_bg_wave-bottom.png") transparent repeat-x left -3px center/contain;
 }
 
@@ -1890,15 +1932,19 @@ body {
 .spot__head::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: max(30px, 50% - 510px);
+  top: 5px;
+  left: 15%;
   width: 28px;
   height: 28px;
   background: url("../../img/icon_star.svg") no-repeat center center/contain;
 }
 @media screen and (min-width: 768px) {
   .spot__head::before {
-    margin-top: 80px;
+    top: 0;
+    left: max(30px, 50% - 510px);
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
     width: 56px;
     height: 56px;
   }
@@ -1911,6 +1957,7 @@ body {
   font-size: 28px;
   font-weight: 500;
   line-height: 1.25; /* 35px */
+  padding-left: 35px;
 }
 @media screen and (min-width: 768px) {
   .spot__head-main {
@@ -1919,7 +1966,7 @@ body {
             writing-mode: vertical-rl;
     font-size: 40px;
     letter-spacing: 0.25em;
-    margin-top: 78px;
+    margin-top: 2px;
   }
 }
 
@@ -1978,6 +2025,7 @@ body {
 
 .spot__card-title {
   margin-top: 16px;
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
 }
@@ -2000,7 +2048,6 @@ body {
 }
 
 .spot__slide {
-  /* 画像のサイズ調整 */
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -2015,7 +2062,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .spot__swiper {
-    margin-top: 80px;
+    margin-top: 3px;
   }
 }
 
@@ -2041,7 +2088,7 @@ body {
 @media screen and (min-width: 768px) {
   .spot__prev {
     position: absolute;
-    top: 587px;
+    top: 510px;
     left: 285px;
     background: url("../../img/icon_arrow-left.svg") no-repeat center center/contain;
   }
@@ -2050,7 +2097,7 @@ body {
 @media screen and (min-width: 768px) {
   .spot__next {
     position: absolute;
-    top: 587px;
+    top: 510px;
     right: 282px;
     background: url("../../img/icon_arrow-right.svg") no-repeat center center/contain;
   }
@@ -2081,6 +2128,7 @@ body {
 .spot__content-img {
   width: 255px;
   height: 55px;
+  margin-inline: auto;
 }
 .spot__content-img img {
   width: 100%;
@@ -2091,6 +2139,17 @@ body {
   }
 }
 
+.spot__contents {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 @media screen and (min-width: 768px) {
   .spot__contents {
     display: -webkit-box;
@@ -2101,17 +2160,18 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 27px;
+    margin-top: 3px;
   }
 }
 
 .spot__text {
-  margin-top: 16px;
   color: #ffffff;
   text-align: center;
   font-size: 11.5px;
 }
 @media screen and (min-width: 768px) {
   .spot__text {
+    margin-top: 16px;
     font-size: 16px;
     margin-top: 0;
   }
@@ -2119,6 +2179,7 @@ body {
 
 .spot__button {
   z-index: 20;
+  margin-top: 22px;
 }
 @media screen and (min-width: 768px) {
   .spot__button {
@@ -2135,7 +2196,7 @@ body {
     qa
 -----------------------------------*/
 .qa {
-  padding-top: 80px;
+  padding-top: 85px;
   padding-bottom: 30px;
   background: #e9f6f8;
   position: relative;
@@ -2167,7 +2228,7 @@ body {
 }
 
 .qa__boxes {
-  margin-top: 34px;
+  margin-top: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2358,7 +2419,7 @@ body {
   background: rgba(255, 255, 255, 0.5);
   padding-inline: 16px;
   padding-top: 15px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .requirement__contents {
@@ -2368,7 +2429,7 @@ body {
 }
 
 .requirement__table {
-  margin-top: 42px;
+  margin-top: 24px;
 }
 @media screen and (min-width: 768px) {
   .requirement__table {
@@ -2390,7 +2451,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
-  gap: 0px;
+  gap: 1px;
   padding-top: 12px;
   padding-bottom: 12px;
   color: #4a3636;
@@ -2430,7 +2491,7 @@ body {
   height: 8px;
   border-radius: 50%;
   display: inline-block; /* インラインブロックにして位置を調整 */
-  margin-right: 5px;
+  margin-right: 8px;
 }
 @media screen and (min-width: 768px) {
   .requirement__head::before {
@@ -2441,6 +2502,7 @@ body {
 
 .requirement__value {
   font-size: 12px;
+  padding-top: 9px;
 }
 @media screen and (min-width: 768px) {
   .requirement__value {
@@ -2452,7 +2514,7 @@ body {
 }
 
 .requirement-list__item-notes {
-  margin-top: 6px;
+  line-height: 1.58;
 }
 @media screen and (min-width: 768px) {
   .requirement-list__item-notes {
@@ -2499,8 +2561,8 @@ body {
     contact
 -----------------------------------*/
 .contact {
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 39px;
+  padding-bottom: 48px;
   background: #ffffff;
   position: relative;
 }
@@ -2552,7 +2614,7 @@ body {
 }
 
 .contact__contents {
-  margin-top: 30px;
+  margin-top: 26px;
 }
 @media screen and (min-width: 768px) {
   .contact__contents {
@@ -2576,11 +2638,15 @@ body {
   }
 }
 
-.contact__field:nth-child(4) {
-  margin-top: 15px;
+@media screen and (min-width: 768px) {
+  .contact__field:nth-child(4) {
+    margin-top: 15px;
+  }
 }
-.contact__field:nth-child(5) {
-  margin-top: 15px;
+@media screen and (min-width: 768px) {
+  .contact__field:nth-child(5) {
+    margin-top: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2903,6 +2969,13 @@ body {
 }
 
 .contact__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   margin-inline: auto;
   margin-top: 24px;
 }
@@ -2912,6 +2985,10 @@ body {
   }
 }
 
+.button-submit {
+  padding-top: 8px;
+  height: 38px;
+}
 @media screen and (min-width: 768px) {
   .button-submit {
     margin-inline: auto;
