@@ -3160,7 +3160,7 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 16px 16px 0 0;
-  aspect-ratio: 512/400;
+  aspect-ratio: 335/271;
   vertical-align: top;
 }
 @media screen and (min-width: 768px) {
@@ -3235,7 +3235,7 @@ body {
   }
 }
 .footer-table dt {
-  width: 30%; /* 用語の幅 */
+  width: 25%; /* 用語の幅 */
   font-weight: 700;
 }
 .footer-table dt::before {
@@ -3247,13 +3247,19 @@ body {
   display: inline-block; /* インラインブロックにして位置を調整 */
   margin-right: 8px;
 }
+@media screen and (min-width: 768px) {
+  .footer-table dt {
+    width: 30%; /* 用語の幅 */
+  }
+}
 .footer-table dd {
-  width: 70%; /* 定義の幅 */
+  width: 75%; /* 定義の幅 */
   margin: 0;
   padding-left: 3px;
 }
 @media screen and (min-width: 768px) {
   .footer-table {
+    width: 70%; /* 定義の幅 */
     font-size: 16px;
     padding-left: 0;
   }
