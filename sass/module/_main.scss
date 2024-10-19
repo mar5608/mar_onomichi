@@ -179,7 +179,7 @@
   top: 518px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
+  z-index: 49;
 }
 /*----------------------------------
     about
@@ -2595,23 +2595,6 @@
   }
 }
 
-.footer__pagetop {
-  width: 75px;
-  height: 78px;
-  // margin-block: 24px;
-  margin-top: 22px;
-  margin-inline: auto;
-  z-index: 90;
-  img {
-    max-width: 100%;
-  }
-  @include mixin.mq(pc) {
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-  }
-}
-
 .footer__bottom {
   position: relative;
   &::before {
@@ -2657,5 +2640,51 @@
     padding-top: 68px;
     padding-bottom: 60px;
     font-size: 14px;
+  }
+}
+
+// .pagetop {
+//   position: fixed;
+//   right: 10px;
+//   bottom: 10px;
+//   // width: calc(50 / 375 * 100%);
+//   width: min(calc(50 / 375 * 100%), 50px); /*最大50pxまで*/
+//   visibility: hidden;
+//   transition: opacity 0.3s, visibility 0.3s;
+
+//   @include mixin.mq(pc) {
+//     // width: 76px;
+//     // right: 16px;
+//     // bottom: 30px;
+//   }
+
+//   &.is-show {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+//   img {
+//   }
+// }
+
+.footer__pagetop {
+  display: block;
+  visibility: hidden;
+  width: 75px;
+  height: 78px;
+  // margin-block: 24px;
+  margin-top: 22px;
+  margin-inline: auto;
+  z-index: 90;
+  img {
+    width: 100%;
+  }
+  @include mixin.mq(pc) {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+  }
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
   }
 }

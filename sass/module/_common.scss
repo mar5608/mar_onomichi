@@ -82,9 +82,19 @@ body {
   }
 }
 
-.button-sm {
+.button-xsm {
   height: calc(-2px * 2 + 6px + 8px + 18px);
   font-size: 14px;
+  @include mixin.mq(pc) {
+    height: calc(26px + 6px + 8px - 2px * 2 + 2px);
+    padding: 6px 22px 8px;
+    font-size: 14px;
+  }
+}
+
+.button-sm {
+  height: calc(-2px * 2 + 6px + 8px + 18px + 10px);
+  font-size: 16px;
   @include mixin.mq(pc) {
     height: calc(26px + 6px + 8px - 2px * 2 + 2px);
     padding: 6px 22px 8px;

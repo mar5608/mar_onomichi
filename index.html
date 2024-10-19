@@ -36,26 +36,27 @@
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="" class="header__link">キャンペーンについて</a>
+              <a href="#about" class="header__link">キャンペーンについて</a>
             </li>
             <li class="header__nav-item">
-              <a href="" class="header__link">特典</a>
+              <a href="#prize" class="header__link">特典</a>
             </li>
             <li class="header__nav-item">
-              <a href="" class="header__link">おすすめスポット</a>
+              <a href="#spot" class="header__link">おすすめスポット</a>
             </li>
             <li class="header__nav-item">
-              <a href="" class="header__link">よくある質問</a>
+              <a href="#qa" class="header__link">よくある質問</a>
             </li>
             <li class="header__nav-item">
-              <a href="" class="header__link">参加要項</a>
+              <a href="#requirement" class="header__link">参加要項</a>
             </li>
           </ul>
           <div class="header__button">
-            <a href="" class="button button-sm">応募してみる</a>
+            <a href="#enter" class="button button-sm">応募してみる</a>
           </div>
         </nav>
-        <button js-drawer-icon class="drawer-icon pc-hidden">
+        <!-- ハンバーガーメニュー -->
+        <button id="js-drawer-icon" class="drawer-icon pc-hidden">
           <span class="drawer-icon__bar">
             <span class="drawer-icon__dot"></span>
           </span>
@@ -68,13 +69,13 @@
     <div id="js-drawer-content" class="drawer-content">
       <nav class="drawer-content__menu">
         <a href="#about" class="drawer-content__link">キャンペーンについて</a>
-        <a href="#features" class="drawer-content__link">キャンペーン特典</a>
-        <a href="#case" class="drawer-content__link">おすすめスポット</a>
-        <a href="#price" class="drawer-content__link">よくある質問</a>
-        <a href="#qa" class="drawer-content__link">参加要項</a>
+        <a href="#prize" class="drawer-content__link">キャンペーン特典</a>
+        <a href="#spot" class="drawer-content__link">おすすめスポット</a>
+        <a href="#qa" class="drawer-content__link">よくある質問</a>
+        <a href="#requirement" class="drawer-content__link">参加要項</a>
         <a href="#contact" class="drawer-content__link">お問い合わせ</a>
         <div class="drawer-contact__button">
-          <a href="#contact" class="button button-sm">応募してみる</a>
+          <a href="#enter" class="button button-sm">応募してみる</a>
         </div>
       </nav>
     </div>
@@ -136,7 +137,7 @@
           </div>
         </div>
         <div class="fv__button">
-          <a href="#contact" class="button button-sm">応募してみる</a>
+          <a href="#contact" class="button button-xsm">応募してみる</a>
         </div>
       </div>
     </div>
@@ -692,7 +693,10 @@
               </div>
             </div>
             <div class="prize__button">
-              <a href="https://www.instagram.com/?locale=ja_JP" target="_blank" class="button"
+              <a
+                href="https://www.instagram.com/?locale=ja_JP"
+                target="_blank"
+                class="button"
                 >#見つけて尾道レトロ の最新投稿を見る</a
               >
             </div>
@@ -896,7 +900,10 @@
               レトロな景色に出会える人気の撮影スポットをピックアップ！
             </div>
             <div class="spot__button">
-              <a href="https://www.instagram.com/?locale=ja_JP" target="_blank" class="button"
+              <a
+                href="https://www.instagram.com/?locale=ja_JP"
+                target="_blank"
+                class="button"
                 >#見つけて尾道レトロ の最新投稿を見る</a
               >
             </div>
@@ -905,7 +912,7 @@
       </div>
     </section>
     <!-- qa -->
-    <section class="qa">
+    <section id="qa" class="qa">
       <div class="inner qa__inner">
         <div class="qa__contents">
           <div class="title qa__title">
@@ -987,7 +994,7 @@
       </div>
     </section>
     <!-- Entry Requirements -->
-    <section class="requirement">
+    <section id="requirement" class="requirement">
       <div class="inner requirement__inner">
         <div class="requirement__contents">
           <div class="title requirement__title">
@@ -1326,9 +1333,9 @@
             </div>
           </div>
         </div>
-        <div class="footer__pagetop">
+        <a href="" id="js-pagetop" class="footer__pagetop">
           <img src="./img/img_pagetop.png" alt="PAGE TOP 肉球のアイコン" />
-        </div>
+        </a>
       </div>
       <div class="footer__bottom">
         <small class="copyright"
