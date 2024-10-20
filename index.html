@@ -466,15 +466,16 @@
                     <source media="(min-width: 768px)" srcset="">
                     <img src="/img/img_prize1.png" alt="スイーツセット" decoding="async">
                   </picture> -->
-                <img
-                  class="prize__card-img"
-                  src="/img/img_prize1.png"
-                  alt=""
-                  width="160px"
-                  height="140px"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="prize__card-img">
+                  <img
+                    src="/img/img_prize1.png"
+                    alt=""
+                    width="160px"
+                    height="140px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div class="prize__card-body">
                   <h3 class="prize__card-title">
                     海街洋菓子店<br />
@@ -512,15 +513,16 @@
                 <div class="prize__card-number">
                   <img src="./img/img_prizes2_icon.png" alt="特典2" />
                 </div>
-                <img
-                  class="prize__card-img"
-                  src="/img/img_prize2.png"
-                  alt=""
-                  width="160px"
-                  height="140px"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="prize__card-img">
+                  <img
+                    src="/img/img_prize2.png"
+                    alt=""
+                    width="160px"
+                    height="140px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div class="prize__card-body">
                   <h3 class="prize__card-title">
                     ねこねこ<br class="pc-hidden" />
@@ -558,15 +560,16 @@
                 <div class="prize__card-number">
                   <img src="./img/img_prizes3_icon.png" alt="特典3" />
                 </div>
-                <img
-                  class="prize__card-img"
-                  src="/img/img_prize3.png"
-                  alt=""
-                  width="160px"
-                  height="140px"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="prize__card-img">
+                  <img
+                    src="/img/img_prize3.png"
+                    alt=""
+                    width="160px"
+                    height="140px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <!-- </figure> -->
                 <div class="prize__card-body">
                   <h3 class="prize__card-title">尾道ラーメンセット</h3>
@@ -602,15 +605,16 @@
                 <div class="prize__card-number">
                   <img src="./img/img_prizes4_icon.png" alt="特典4" />
                 </div>
-                <img
-                  class="prize__card-img"
-                  src="/img/img_prize4.png"
-                  alt=""
-                  width="160px"
-                  height="140px"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="prize__card-img">
+                  <img
+                    src="/img/img_prize4.png"
+                    alt=""
+                    width="160px"
+                    height="140px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div class="prize__card-body">
                   <h3 class="prize__card-title">
                     おうちで<br />
@@ -648,15 +652,16 @@
                 <div class="prize__card-number">
                   <img src="./img/img_prizes5_icon.png" alt="特典5" />
                 </div>
-                <img
-                  class="prize__card-img"
-                  src="/img/img_prize5.png"
-                  alt=""
-                  width="160px"
-                  height="140px"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div class="prize__card-img">
+                  <img
+                    src="/img/img_prize5.png"
+                    alt=""
+                    width="160px"
+                    height="140px"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <!-- </figure> -->
                 <div class="prize__card-body">
                   <h3 class="prize__card-title">
@@ -1102,7 +1107,7 @@
             以下のフォームからお願いします。
           </div>
           <div class="contact__contents">
-            <form class="contact__form">
+            <form id="js-form" class="contact__form">
               <div class="contact__fields">
                 <!-- お名前 -->
                 <div class="contact__field">
@@ -1115,7 +1120,7 @@
                     </div>
                     <div class="form-field__item">
                       <input
-                        class="form-text"
+                        class="form-text js-form-input"
                         type="text"
                         name=""
                         id="your-name"
@@ -1135,7 +1140,7 @@
                     </div>
                     <div class="form-field__item">
                       <input
-                        class="form-text"
+                        class="form-text js-form-input"
                         type="email"
                         name=""
                         id="your-email"
@@ -1154,7 +1159,11 @@
                       <span class="form-field__tag is-option">必須</span>
                     </div>
                     <div class="form-field__item">
-                      <select name="" id="your-age" class="form-select">
+                      <select
+                        name=""
+                        id="your-age"
+                        class="form-select js-form-input"
+                      >
                         <option value="">選択してください</option>
                         <option value="">応募について</option>
                         <option value="">特典について</option>
@@ -1207,7 +1216,7 @@
                       <textarea
                         name=""
                         id="your-message"
-                        class="form-textarea"
+                        class="form-textarea js-form-input"
                         cols="30"
                         rows="10"
                         placeholder="このキャンペーンに関するお問い合わせがある方は、こちらにご相談内容をご入力ください。3営業日以内にご返信いたします。"
@@ -1219,7 +1228,7 @@
               <div class="contact__privacy">
                 <label class="form-checkbox">
                   <input
-                    class="form-checkbox__input"
+                    class="form-checkbox__input js-form-input"
                     type="checkbox"
                     name=""
                     id=""
@@ -1230,7 +1239,7 @@
                   >
                 </label>
               </div>
-              <div class="contact__button">
+              <div id="is-form-submit" class="contact__button">
                 <input
                   type="submit"
                   value="上記の内容を送信する"

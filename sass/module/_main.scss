@@ -1040,7 +1040,7 @@
 }
 
 .prize__card {
-  // overflow: hidden;
+  // overflow: hidden; /* はみ出した部分を非表示にする */
   position: relative;
   background: color.$gray;
   // border-radius: 8px 8px 0 0;//上だけ
@@ -1212,6 +1212,21 @@
       }
     }
   }
+
+  &:hover {
+    border: 1px color.$blue solid;
+    background-color: color.$l-blue;
+    outline: 0;
+
+    &:hover {
+      .prize__card-img {
+        img {
+          transform: scale(1.2);
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
 }
 
 .prize__card-number {
@@ -1228,7 +1243,8 @@
   width: 160px;
   height: 140px;
   border-radius: 10px 10px 0px 0px; //左上、右上、右下、左下
-  overflow: hidden;
+  overflow: hidden; /* はみ出した部分を非表示にする */
+  z-index: 50;
   img {
     width: 100%;
   }
@@ -1926,7 +1942,7 @@
 
 .contact {
   padding-top: 39px;
-  padding-bottom: 48px;
+  padding-bottom: 44px;
   background: color.$white;
   position: relative;
   @include mixin.mq(pc) {
@@ -2058,11 +2074,13 @@
   width: 100%;
   border-radius: 8px;
   background: color.$gray;
-  border: none;
-  padding: calc(19px - 3px) calc(19px - 3px) calc(19px - 3px);
+  border: 1px color.$gray solid;
+  padding: calc(19px - 5px) calc(19px - 4px) calc(19px - 4px);
   transition: border-color 0.3s;
-  @include mixin.mq(pc) {
-    font-size: 16px;
+
+  & .is-error {
+    background-color: color.$pink;
+    border-color: color.$red;
   }
 
   &::placeholder {
@@ -2071,8 +2089,10 @@
 
   &:hover,
   &:focus {
-    border-color: color.$l-blue;
-    outline: none; /* デフォルトの青いラインを消す */
+    border: 2px color.$blue solid;
+    background-color: color.$l-blue;
+    outline: 0;
+    transition: border 0.3s, background-color 0.3s;
   }
   @include mixin.mq(pc) {
     padding: 14px 15px;
@@ -2089,7 +2109,7 @@
   font-size: 14px;
   border-radius: 8px;
   background: color.$gray;
-  border: none;
+  border: 1px color.$gray solid;
   // font-weight: 700;
   // padding: 15px 46px 14px 16px;
   padding: calc(19px - 3px) calc(46px - 3px) calc(19px - 3px) calc(19px - 3px);
@@ -2100,12 +2120,13 @@
   @include mixin.mq(pc) {
     font-size: 16px;
   }
-  transition: border-color 0.3s;
+  // transition: border-color 0.3s;
 
   &:hover,
   &:focus {
-    border-color: color.$l-blue;
-    outline: none; /* デフォルトの青いラインを消す */
+    border: 1px color.$blue solid;
+    background-color: color.$l-blue;
+    outline: 0;
   }
 }
 
@@ -2129,7 +2150,10 @@
     .form-radio__text {
       &::before {
         /*切り替わるところ*/
-        border-color: color.$l-blue;
+        // border-color: color.$l-blue;
+        border: 1px color.$blue solid;
+        background-color: color.$l-blue;
+        outline: 0;
       }
     }
   }
@@ -2146,7 +2170,7 @@
     width: 52px;
     height: 55px;
     padding: 16px 1px 16px 0px;
-    background: var(--LP-Blue, #9ed0e0);
+    background: color.$blue;
   }
 
   //radioボタンにチェックがついた時にafterの透過度を0->1にする
@@ -2163,7 +2187,10 @@
     + .form-radio__text {
       &::before {
         /*切り替わるところ*/
-        border-color: color.$l-blue;
+        // border-color: color.$l-blue;
+        border: 1px color.$blue solid;
+        background-color: color.$l-blue;
+        outline: 0;
       }
     }
   }
@@ -2213,7 +2240,8 @@
   height: 160px;
   border-radius: 8px;
   background: color.$gray;
-  border: none;
+  // border: none;
+  border: 1px color.$gray solid;
   padding: calc(16px - 3px) calc(18px - 3px);
   transition: border-color 0.3s;
   @include mixin.mq(pc) {
@@ -2226,8 +2254,9 @@
 
   &:hover,
   &:focus {
-    border-color: color.$l-blue;
-    outline: none; /* デフォルトの青いラインを消す */
+    border: 1px color.$blue solid;
+    background-color: color.$l-blue;
+    outline: 0;
   }
 }
 
@@ -2287,6 +2316,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 170%; /* 23.8px */
+
   @include mixin.mq(pc) {
     font-size: 16px;
   }
@@ -2314,8 +2344,8 @@
     width: 20px;
     height: 20px;
     border-radius: 1px;
-    border: 1px solid #111;
-
+    background-color: color.$gray;
+    border: 1px color.$gray solid;
     transition: border-color 0.3s;
   }
 
@@ -2346,7 +2376,7 @@
 
 .button-submit {
   padding-top: 8px;
-  height: calc(26px + 6px + 8px - 2px * 2 + 2px);
+  height: calc(26px + 6px + 8px - 2px * 2 + 6px);
   @include mixin.mq(pc) {
     margin-inline: auto;
     font-style: normal;

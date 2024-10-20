@@ -1780,6 +1780,19 @@ body {
     border-bottom-right-radius: 26px;
   }
 }
+.prize__card:hover {
+  border: 1px #9ed0e0 solid;
+  background-color: #e9f6f8;
+  outline: 0;
+}
+.prize__card:hover:hover .prize__card-img img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
 
 .prize__card-number {
   position: absolute;
@@ -1796,7 +1809,8 @@ body {
   width: 160px;
   height: 140px;
   border-radius: 10px 10px 0px 0px;
-  overflow: hidden;
+  overflow: hidden; /* はみ出した部分を非表示にする */
+  z-index: 50;
 }
 .prize__card-img img {
   width: 100%;
@@ -2585,7 +2599,7 @@ body {
 -----------------------------------*/
 .contact {
   padding-top: 39px;
-  padding-bottom: 48px;
+  padding-bottom: 44px;
   background: #ffffff;
   position: relative;
 }
@@ -2737,15 +2751,14 @@ body {
   width: 100%;
   border-radius: 8px;
   background: #f5f5f5;
-  border: none;
-  padding: 16px 16px 16px;
+  border: 1px #f5f5f5 solid;
+  padding: 14px 15px 15px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
-@media screen and (min-width: 768px) {
-  .form-text {
-    font-size: 16px;
-  }
+.form-text .is-error {
+  background-color: #fff0f7;
+  border-color: #ce2073;
 }
 .form-text::-webkit-input-placeholder {
   color: #cccccc;
@@ -2763,8 +2776,11 @@ body {
   color: #cccccc;
 }
 .form-text:hover, .form-text:focus {
-  border-color: #e9f6f8;
-  outline: none; /* デフォルトの青いラインを消す */
+  border: 2px #9ed0e0 solid;
+  background-color: #e9f6f8;
+  outline: 0;
+  -webkit-transition: border 0.3s, background-color 0.3s;
+  transition: border 0.3s, background-color 0.3s;
 }
 @media screen and (min-width: 768px) {
   .form-text {
@@ -2781,10 +2797,8 @@ body {
   font-size: 14px;
   border-radius: 8px;
   background: #f5f5f5;
-  border: none;
+  border: 1px #f5f5f5 solid;
   padding: 16px 43px 16px 16px;
-  -webkit-transition: border-color 0.3s;
-  transition: border-color 0.3s;
 }
 @media screen and (min-width: 768px) {
   .form-select {
@@ -2792,8 +2806,9 @@ body {
   }
 }
 .form-select:hover, .form-select:focus {
-  border-color: #e9f6f8;
-  outline: none; /* デフォルトの青いラインを消す */
+  border: 1px #9ed0e0 solid;
+  background-color: #e9f6f8;
+  outline: 0;
 }
 
 .form-field__radio {
@@ -2811,7 +2826,9 @@ body {
 }
 .form-radio:hover .form-radio__text::before {
   /*切り替わるところ*/
-  border-color: #e9f6f8;
+  border: 1px #9ed0e0 solid;
+  background-color: #e9f6f8;
+  outline: 0;
 }
 
 .form-radio__input {
@@ -2825,14 +2842,16 @@ body {
   width: 52px;
   height: 55px;
   padding: 16px 1px 16px 0px;
-  background: var(--LP-Blue, #9ed0e0);
+  background: #9ed0e0;
 }
 .form-radio__input:checked + .form-radio__text::after {
   opacity: 1;
 }
 .form-radio__input:focus + .form-radio__text::before {
   /*切り替わるところ*/
-  border-color: #e9f6f8;
+  border: 1px #9ed0e0 solid;
+  background-color: #e9f6f8;
+  outline: 0;
 }
 
 .form-radio__text {
@@ -2874,7 +2893,7 @@ body {
   height: 160px;
   border-radius: 8px;
   background: #f5f5f5;
-  border: none;
+  border: 1px #f5f5f5 solid;
   padding: 13px 15px;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
@@ -2900,8 +2919,9 @@ body {
   color: #cccccc;
 }
 .form-textarea:hover, .form-textarea:focus {
-  border-color: #e9f6f8;
-  outline: none; /* デフォルトの青いラインを消す */
+  border: 1px #9ed0e0 solid;
+  background-color: #e9f6f8;
+  outline: 0;
 }
 
 .form-field-top {
@@ -2973,7 +2993,8 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 1px;
-  border: 1px solid #111;
+  background-color: #f5f5f5;
+  border: 1px #f5f5f5 solid;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
 }
@@ -3010,7 +3031,7 @@ body {
 
 .button-submit {
   padding-top: 8px;
-  height: 38px;
+  height: 42px;
 }
 @media screen and (min-width: 768px) {
   .button-submit {
