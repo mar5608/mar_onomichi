@@ -1051,6 +1051,76 @@
   figure {
     display: block;
   }
+  &:nth-of-type(1) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 48px;
+      background: url(../../img/img_prizes1_icon.png) no-repeat center center /
+        contain; //contain:縦横比保ったまま
+      z-index: 99;
+    }
+  }
+  &:nth-of-type(2) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 48px;
+      background: url(../../img/img_prizes2_icon.png) no-repeat center center /
+        contain; //contain:縦横比保ったまま
+      z-index: 99;
+    }
+  }
+  &:nth-of-type(3) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 48px;
+      background: url(../../img/img_prizes3_icon.png) no-repeat center center /
+        contain; //contain:縦横比保ったまま
+      z-index: 99;
+    }
+  }
+  &:nth-of-type(4) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 48px;
+      background: url(../../img/img_prizes4_icon.png) no-repeat center center /
+        contain; //contain:縦横比保ったまま
+      z-index: 99;
+    }
+  }
+  &:nth-of-type(5) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 48px;
+      height: 48px;
+      background: url(../../img/img_prizes5_icon.png) no-repeat center center /
+        contain; //contain:縦横比保ったまま
+      z-index: 99;
+    }
+  }
 
   &::after {
     content: "";
@@ -1269,12 +1339,12 @@
   min-height: 60px;
 }
 
-.prize__card-icon {
-  position: absolute;
-  bottom: 0;
-  right: 6px;
-  z-index: 99;
-}
+// .prize__card-icon {
+//   position: absolute;
+//   bottom: 0;
+//   right: 6px;
+//   z-index: 99;
+// }
 
 .prize_bg_photo {
   display: flex;

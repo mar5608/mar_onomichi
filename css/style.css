@@ -1629,6 +1629,66 @@ body {
 .prize__card figure {
   display: block;
 }
+.prize__card:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  top: -11%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background: url(../../img/img_prizes1_icon.png) no-repeat center center/contain;
+  z-index: 99;
+}
+.prize__card:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  top: -11%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background: url(../../img/img_prizes2_icon.png) no-repeat center center/contain;
+  z-index: 99;
+}
+.prize__card:nth-of-type(3)::before {
+  content: "";
+  position: absolute;
+  top: -11%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background: url(../../img/img_prizes3_icon.png) no-repeat center center/contain;
+  z-index: 99;
+}
+.prize__card:nth-of-type(4)::before {
+  content: "";
+  position: absolute;
+  top: -11%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background: url(../../img/img_prizes4_icon.png) no-repeat center center/contain;
+  z-index: 99;
+}
+.prize__card:nth-of-type(5)::before {
+  content: "";
+  position: absolute;
+  top: -11%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+  background: url(../../img/img_prizes5_icon.png) no-repeat center center/contain;
+  z-index: 99;
+}
 .prize__card::after {
   content: "";
   display: block;
@@ -1838,13 +1898,6 @@ body {
   font-size: 12px;
   font-weight: 700;
   min-height: 60px;
-}
-
-.prize__card-icon {
-  position: absolute;
-  bottom: 0;
-  right: 6px;
-  z-index: 99;
 }
 
 .prize_bg_photo {
