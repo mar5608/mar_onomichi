@@ -1526,7 +1526,7 @@
   // width: 100%;
   @include mixin.mq(pc) {
     padding-left: 14px;
-    width: calc(100% - 56px -32px);
+    width: calc(100% - 56px - 32px);
   }
 }
 
@@ -1743,6 +1743,79 @@
       padding-bottom: 28px;
       padding-inline: 30px;
     }
+  }
+}
+
+/* modal */
+
+.prize__modal {
+  position: fixed;
+  inset: 0;
+  margin: auto; //浮かせて真ん中寄せ（fixed/insetと一緒に使う）
+  max-width: calc(100% - 15px * 2);
+  max-height: calc(100% - 20px * 2);
+  overflow: auto;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  // padding: 16px 15px 64px;
+  z-index: 10;
+  overscroll-behavior-y: none; //垂直方向のスクロールを制御
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
+  @include mixin.mq(pc) {
+    width: 480px;
+    height: 650px;
+    padding-bottom: 106px;
+  }
+
+  //js:showModalで使える擬似要素
+  &::backdrop {
+    opacity: 0.2;
+    background: #000;
+  }
+}
+
+.prize__modal-img {
+  height: 300px;
+  img {
+    width: 100%;
+  }
+}
+
+.prize__modal-body {
+  text-align: center;
+  color: color.$brown;
+  margin-top: 12px;
+  margin-inline: 20px;
+  @include mixin.mq(pc) {
+    margin-top: 49px;
+  }
+  p {
+    font-size: 14px;
+    @include mixin.mq(pc) {
+      font-size: 16px;
+    }
+    &:nth-child(n + 2) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.prize__modal-title {
+  @include mixin.mq(pc) {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.prize__modal-close {
+  // text-align: center;
+  margin-inline: auto;
+  @include mixin.mq(pc) {
+    margin-top: 30px;
   }
 }
 
