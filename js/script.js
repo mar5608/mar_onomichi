@@ -50,17 +50,17 @@ const swiperAbout = new Swiper("#js-about-swiper", {
   spaceBetween: 0, //横のカードとの間
   breakpoints: {
     // スライドの表示枚数：768px以上の場合
-    // 768: {
-    //   slidesPerView: 4,
-    // },
-    // // // スライドの表示枚数：1024px以上の場合
-    // 1024: {
-    //   slidesPerView: 5,
-    // },
+    768: {
+      slidesPerView: 5,
+    },
+    // // スライドの表示枚数：1024px以上の場合
+    1024: {
+      slidesPerView: 6,
+    },
     // スライドの表示枚数：1440px以上の場合
-    // 1440: {
-    //   slidesPerView: 6,
-    // },
+    1440: {
+      slidesPerView: 7,
+    },
   },
   speed: 6000, // ループの時間
   allowTouchMove: false, // スワイプ無効
@@ -80,7 +80,7 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
 
   centeredSlides: true, // 中央寄せにする
   slidesPerView: 1.53, // 一度に表示する枚数
-  spaceBetween: 14, //横のカードとの間（margin-right:*pxになる）
+  spaceBetween: 0, //横のカードとの間（margin-right:*pxになる）
   breakpoints: {
     // スライドの表示枚数：768px以上の場合
     768: {
@@ -96,10 +96,10 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
     // スライドの表示枚数：1440px以上の場合
     1440: {
       centeredSlides: false, // 中央寄せにしない
-      slidesPerView: 3.37,
+      // slidesPerView: 3.37,
+      slidesPerView: 6.8,
     },
   },
-  // speed: 6000, // ループの時間
   allowTouchMove: true, // スワイプ無効
   // autoplay: {
   //   delay: 0, // 途切れなくループ
@@ -162,7 +162,6 @@ CONTACT
 //     }
 //   });
 // });
-
 
 const form = jQuery("#js-form");
 const inputElements = form.find(".js-form-input");

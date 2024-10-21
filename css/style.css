@@ -208,7 +208,7 @@ body {
 @media screen and (min-width: 768px) {
   .button-xsm {
     height: 38px;
-    padding: 6px 22px 8px;
+    padding: 6px 40px 8px;
     font-size: 14px;
   }
 }
@@ -288,7 +288,7 @@ body {
   left: 0;
   width: 100%;
   height: 64px;
-  z-index: 99;
+  z-index: 999;
   background-color: #ffffff;
 }
 @media screen and (min-width: 768px) {
@@ -676,6 +676,11 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 49;
+}
+@media screen and (min-width: 768px) {
+  .fv__button {
+    top: 590px;
+  }
 }
 
 /*----------------------------------
@@ -1315,6 +1320,8 @@ body {
     left: -100px;
     width: 113px;
     height: 24px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); /* 図形を90度右に回転 */
   }
 }
 .enter__card:nth-child(3) {
@@ -1344,6 +1351,8 @@ body {
     left: -88px;
     width: 113px;
     height: 24px;
+    -webkit-transform: rotate(0);
+            transform: rotate(0); /* 図形を90度右に回転 */
   }
 }
 
@@ -1547,6 +1556,7 @@ body {
 @media screen and (min-width: 768px) {
   .prize__contents::after {
     bottom: -23px;
+    height: calc(100% - 126px);
   }
 }
 
@@ -1616,6 +1626,7 @@ body {
        -moz-column-gap: 32px;
             column-gap: 32px;
     padding-inline: 36px;
+    margin-top: 83px;
   }
 }
 
@@ -1641,6 +1652,12 @@ body {
   background: url(../../img/img_prizes1_icon.png) no-repeat center center/contain;
   z-index: 99;
 }
+@media screen and (min-width: 768px) {
+  .prize__card:nth-of-type(1)::before {
+    width: 100px;
+    height: 100px;
+  }
+}
 .prize__card:nth-of-type(2)::before {
   content: "";
   position: absolute;
@@ -1652,6 +1669,12 @@ body {
   height: 48px;
   background: url(../../img/img_prizes2_icon.png) no-repeat center center/contain;
   z-index: 99;
+}
+@media screen and (min-width: 768px) {
+  .prize__card:nth-of-type(2)::before {
+    width: 100px;
+    height: 100px;
+  }
 }
 .prize__card:nth-of-type(3)::before {
   content: "";
@@ -1665,6 +1688,12 @@ body {
   background: url(../../img/img_prizes3_icon.png) no-repeat center center/contain;
   z-index: 99;
 }
+@media screen and (min-width: 768px) {
+  .prize__card:nth-of-type(3)::before {
+    width: 100px;
+    height: 100px;
+  }
+}
 .prize__card:nth-of-type(4)::before {
   content: "";
   position: absolute;
@@ -1677,6 +1706,12 @@ body {
   background: url(../../img/img_prizes4_icon.png) no-repeat center center/contain;
   z-index: 99;
 }
+@media screen and (min-width: 768px) {
+  .prize__card:nth-of-type(4)::before {
+    width: 100px;
+    height: 100px;
+  }
+}
 .prize__card:nth-of-type(5)::before {
   content: "";
   position: absolute;
@@ -1688,6 +1723,12 @@ body {
   height: 48px;
   background: url(../../img/img_prizes5_icon.png) no-repeat center center/contain;
   z-index: 99;
+}
+@media screen and (min-width: 768px) {
+  .prize__card:nth-of-type(5)::before {
+    width: 100px;
+    height: 100px;
+  }
 }
 .prize__card::after {
   content: "";
@@ -1842,10 +1883,9 @@ body {
 }
 .prize__card:hover {
   border: 1px #9ed0e0 solid;
-  background-color: #e9f6f8;
   outline: 0;
 }
-.prize__card:hover:hover .prize__card-img img {
+.prize__card:hover .prize__card-img img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: -webkit-transform 0.3s;
@@ -1937,6 +1977,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 43px;
   }
 }
 
@@ -2059,6 +2100,7 @@ body {
     font-size: 40px;
     letter-spacing: 0.25em;
     margin-top: 2px;
+    padding-left: 0;
   }
 }
 
@@ -2110,6 +2152,8 @@ body {
 @media screen and (min-width: 768px) {
   .spot__card-img img {
     border-radius: 24px 24px 0 0;
+    aspect-ratio: 240/180;
+    height: 240px;
   }
 }
 
@@ -2198,6 +2242,21 @@ body {
   max-width: 1024px;
 }
 
+@media screen and (min-width: 768px) {
+  .spot__decoration-pawpads {
+    position: absolute;
+    top: 500px;
+    left: 6%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100px;
+    height: 220px;
+  }
+  .spot__decoration-pawpads img {
+    max-width: 100%;
+  }
+}
+
 .spot__content {
   position: relative;
   z-index: 10;
@@ -2226,6 +2285,7 @@ body {
 @media screen and (min-width: 768px) {
   .spot__content-img {
     width: 495px;
+    margin-inline: 0;
   }
 }
 
@@ -2249,8 +2309,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 27px;
-    margin-top: 3px;
+    gap: 0px;
+    margin-top: 2px;
   }
 }
 
@@ -2272,13 +2332,10 @@ body {
   margin-top: 22px;
 }
 @media screen and (min-width: 768px) {
-  .spot__button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .spot__button .button {
+    padding-top: 21px;
+    padding-bottom: 28px;
+    padding-inline: 30px;
   }
 }
 
@@ -2293,7 +2350,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .qa {
-    padding-top: 158px;
+    padding-top: 162px;
     padding-bottom: 0;
   }
 }
@@ -2330,7 +2387,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .qa__boxes {
-    margin-top: 56px;
+    margin-top: 58px;
     gap: 24px;
   }
 }
@@ -2559,6 +2616,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-top: 11px;
   }
 }
 
@@ -2600,6 +2658,10 @@ body {
     width: 74%;
     text-align: left;
     vertical-align: top;
+    padding-top: 2px;
+  }
+  .requirement__value:last-child {
+    padding-top: 1px;
   }
 }
 
@@ -2615,7 +2677,7 @@ body {
 
 .requirement-list__item-note {
   list-style-type: none;
-  padding-left: 18px;
+  padding-left: 18px; /* インデント */
   font-size: 12px;
   position: relative;
 }
@@ -2658,8 +2720,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .contact {
-    padding-top: 116px;
-    padding-bottom: 124px;
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 
@@ -2688,7 +2750,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .contact__body {
-    margin-top: 48px;
+    margin-top: 52px;
     padding-inline: 90px;
   }
 }
@@ -2729,13 +2791,18 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .contact__field:nth-child(3) {
+    margin-top: -5px;
+  }
+}
+@media screen and (min-width: 768px) {
   .contact__field:nth-child(4) {
-    margin-top: 15px;
+    margin-top: 14px;
   }
 }
 @media screen and (min-width: 768px) {
   .contact__field:nth-child(5) {
-    margin-top: 15px;
+    margin-top: 14px;
   }
 }
 
@@ -3110,7 +3177,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    padding-top: 120px;
+    padding-top: 122px;
   }
 }
 
@@ -3211,6 +3278,21 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer__decoration-pawpads {
+    position: absolute;
+    top: 80px;
+    right: 2%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100px;
+    height: 220px;
+  }
+  .footer__decoration-pawpads img {
+    max-width: 100%;
+  }
+}
+
 .footer__info {
   margin-top: 45px;
   display: -webkit-box;
@@ -3277,7 +3359,7 @@ body {
     margin-top: 0;
     padding-top: 102px;
     padding-bottom: 78px;
-    padding-inline: 60px;
+    padding-left: 60px;
     width: 50%;
   }
 }
@@ -3302,6 +3384,11 @@ body {
 .footer__info-list {
   margin-top: 31px;
 }
+@media screen and (min-width: 768px) {
+  .footer__info-list {
+    margin-top: 28px;
+  }
+}
 
 .footer-table {
   display: -webkit-box;
@@ -3314,6 +3401,12 @@ body {
   color: #4a3636;
   font-size: 12px;
   line-height: 1.6; /* 19.2px */
+}
+@media screen and (min-width: 768px) {
+  .footer-table {
+    padding-left: 0;
+    font-size: 16px;
+  }
 }
 .footer-table dt,
 .footer-table dd {
@@ -3346,7 +3439,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer-table dt {
-    width: 30%; /* 用語の幅 */
+    width: 26%; /* 用語の幅 */
   }
 }
 .footer-table dd {
@@ -3355,10 +3448,8 @@ body {
   padding-left: 3px;
 }
 @media screen and (min-width: 768px) {
-  .footer-table {
-    width: 70%; /* 定義の幅 */
-    font-size: 16px;
-    padding-left: 0;
+  .footer-table dd {
+    width: 74%; /* 定義の幅 */
   }
 }
 
@@ -3378,6 +3469,7 @@ body {
   .footer__bottom::before {
     padding-top: 120px;
     height: 120px;
+    left: 4px;
   }
 }
 .copyright {
@@ -3406,7 +3498,7 @@ body {
   .copyright {
     height: 54px;
     margin-top: 165px;
-    padding-top: 68px;
+    padding-top: 76px;
     padding-bottom: 60px;
     font-size: 14px;
   }
@@ -3429,6 +3521,8 @@ body {
     position: fixed;
     right: 40px;
     bottom: 40px;
+    width: 100px;
+    height: 104px;
   }
 }
 .footer__pagetop.is-show {
