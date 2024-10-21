@@ -1780,6 +1780,10 @@
 
 .prize__modal-img {
   height: 300px;
+  width: 480px;
+  aspect-ratio: 300/480;
+  overflow: hidden;
+  // width: calc(100% + 80px);
   img {
     width: 100%;
   }

@@ -2420,6 +2420,9 @@ body {
 
 .prize__modal-img {
   height: 300px;
+  width: 480px;
+  aspect-ratio: 300/480;
+  overflow: hidden;
 }
 .prize__modal-img img {
   width: 100%;

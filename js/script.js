@@ -187,14 +187,14 @@ inputElements.on("input", function () {
 });
 
 /** modal */
-jQuery(".js-modal-open1").on("click", function (e) {
+jQuery(".js-modal-open").on("click", function (e) {
   e.preventDefault();
 
-  jQuery("#js-prize-modal1")[0].showModal();
+  jQuery("#js-prize-modal")[0].showModal();
 });
 
 jQuery(".js-modal-close").on("click", function (e) {
   e.preventDefault();
 
-  jQuery("#js-prize-modal1")[0].close();
+  jQuery("#js-prize-modal")[0].close();
 });
