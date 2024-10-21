@@ -80,7 +80,7 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
 
   centeredSlides: true, // 中央寄せにする
   slidesPerView: 1.53, // 一度に表示する枚数
-  spaceBetween: 0, //横のカードとの間（margin-right:*pxになる）
+  spaceBetween: 3, //横のカードとの間（margin-right:*pxになる）
   breakpoints: {
     // スライドの表示枚数：768px以上の場合
     768: {
@@ -96,8 +96,7 @@ const swiperSpot = new Swiper("#js-spot-swiper", {
     // スライドの表示枚数：1440px以上の場合
     1440: {
       centeredSlides: false, // 中央寄せにしない
-      // slidesPerView: 3.37,
-      slidesPerView: 6.8,
+      slidesPerView: 3.2,
     },
   },
   allowTouchMove: true, // スワイプ無効

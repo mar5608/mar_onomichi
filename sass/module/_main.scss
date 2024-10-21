@@ -1159,9 +1159,7 @@
     bottom: 0px;
     background: linear-gradient(-45deg, color.$d-blue 50%, transparent 50%);
     border-bottom-right-radius: 10px;
-    &:hover {
-      background-color: color.$blue;
-    }
+    z-index: 1; // アイコンの下に表示するために低めのz-indexを設定
   }
 
   @include mixin.mq(pc) {
@@ -1187,6 +1185,10 @@
         margin-top: 28px;
       }
       .prize__card-icon {
+        position: absolute; // アイコンを絶対配置
+        right: 11px; // after要素に重なるように位置を調整
+        bottom: 6px;
+        z-index: 2; // afterより上に表示するために高めのz-indexを設定
         svg {
           width: 32px;
           height: 32px;
@@ -1217,6 +1219,10 @@
         margin-top: 30px;
       }
       .prize__card-icon {
+        position: absolute; // アイコンを絶対配置
+        right: 11px; // after要素に重なるように位置を調整
+        bottom: 6px;
+        z-index: 2; // afterより上に表示するために高めのz-indexを設定
         svg {
           width: 32px;
           height: 32px;
@@ -1247,6 +1253,10 @@
         margin-top: 15px;
       }
       .prize__card-icon {
+        position: absolute; // アイコンを絶対配置
+        right: 11px; // after要素に重なるように位置を調整
+        bottom: 3px;
+        z-index: 2; // afterより上に表示するために高めのz-indexを設定
         svg {
           width: 20.48px;
           height: 20.48px;
@@ -1277,6 +1287,10 @@
         margin-top: 11px;
       }
       .prize__card-icon {
+        position: absolute; // アイコンを絶対配置
+        right: 11px; // after要素に重なるように位置を調整
+        bottom: 3px;
+        z-index: 2; // afterより上に表示するために高めのz-indexを設定
         svg {
           width: 20.48px;
           height: 20.48px;
@@ -1307,6 +1321,10 @@
         margin-top: 14px;
       }
       .prize__card-icon {
+        position: absolute; // アイコンを絶対配置
+        right: 11px; // after要素に重なるように位置を調整
+        bottom: 3px;
+        z-index: 2; // afterより上に表示するために高めのz-indexを設定
         svg {
           width: 20.48px;
           height: 20.48px;
@@ -1377,13 +1395,6 @@
   font-weight: 700;
   min-height: 60px;
 }
-
-// .prize__card-icon {
-//   position: absolute;
-//   bottom: 0;
-//   right: 6px;
-//   z-index: 99;
-// }
 
 .prize_bg_photo {
   display: flex;
@@ -1515,8 +1526,8 @@
   // width: 100%;
   @include mixin.mq(pc) {
     padding-left: 14px;
+    width: calc(100% - 56px -32px);
   }
-  // width: calc(100% - 252px);
 }
 
 .spot__card {
