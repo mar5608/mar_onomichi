@@ -1749,36 +1749,53 @@
 /* modal */
 
 .prize__modal {
-  position: fixed;
-  inset: 0;
-  margin: auto; //浮かせて真ん中寄せ（fixed/insetと一緒に使う）
-  max-width: calc(100% - 15px * 2);
-  max-height: calc(100% - 20px * 2);
-  overflow: auto;
-  border-radius: 20px;
+  // position: fixed;
+  // inset: 0;
+  // margin: auto; //浮かせて真ん中寄せ（fixed/insetと一緒に使う）
+  // max-width: calc(100% - 15px * 2);
+  // max-height: calc(100% - 20px * 2);
+  // overflow: auto;
+  // border-radius: 20px;
+  // background: #fff;
+  // border: none;
+  // // padding: 16px 15px 64px;
+  // z-index: 10;
+  // overscroll-behavior-y: none; //垂直方向のスクロールを制御
+  // display: flex;
+  // flex-direction: column;
+  // // align-items: center;
+  // z-index: 100;
+  // position: relative;
+  width: 336px;
+  max-width: calc(100% - 20px);
+  height: 480px;
+  max-height: calc(100% - 20px);
+  padding: 0;
+  padding-right: 20px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  text-align: center;
   background: #fff;
   border: none;
-  // padding: 16px 15px 64px;
-  z-index: 10;
-  overscroll-behavior-y: none; //垂直方向のスクロールを制御
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 99;
+  border-radius: 24px;
   @include mixin.mq(pc) {
     width: 480px;
     height: 650px;
-    padding-bottom: 106px;
   }
 
   //js:showModalで使える擬似要素
   &::backdrop {
-    opacity: 0.2;
+    opacity: 0.7;
     background: #000;
   }
 }
 
 .prize__modal-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
   height: 300px;
   width: 480px;
   aspect-ratio: 300/480;
@@ -1790,12 +1807,17 @@
 }
 
 .prize__modal-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   text-align: center;
   color: color.$brown;
-  margin-top: 12px;
-  margin-inline: 20px;
+  // margin-top: 12px;
+  padding-top: 30px;
+  margin-inline: 40px;
   @include mixin.mq(pc) {
     margin-top: 49px;
+    height: 350px;
   }
   p {
     font-size: 14px;
@@ -1815,11 +1837,16 @@
   }
 }
 
+.prize__modal-text {
+  color: #000;
+}
+
 .prize__modal-close {
   // text-align: center;
   margin-inline: auto;
   @include mixin.mq(pc) {
-    margin-top: 30px;
+    margin-top: 24px;
+    padding-inline: 24px;
   }
 }
 
