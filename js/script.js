@@ -186,15 +186,71 @@ inputElements.on("input", function () {
   }
 });
 
-/** modal */
-jQuery(".js-modal-open").on("click", function (e) {
+/* ****************************************
+CONTACT
+modal
+**************************************** */
+jQuery(".js-modal-open1").on("click", function (e) {
   e.preventDefault();
 
-  jQuery("#js-prize-modal")[0].showModal();
+  jQuery("#js-prize-modal1")[0].showModal();
 });
 
-jQuery(".js-modal-close").on("click", function (e) {
+jQuery(".js-modal-close1").on("click", function (e) {
   e.preventDefault();
 
-  jQuery("#js-prize-modal")[0].close();
+  jQuery("#js-prize-modal1")[0].close();
+});
+
+/**  */
+
+jQuery(".js-modal-open2").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal2")[0].showModal();
+});
+
+jQuery(".js-modal-close2").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal2")[0].close();
+});
+
+/**  */
+jQuery(".js-modal-open3").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal3")[0].showModal();
+});
+
+jQuery(".js-modal-close3").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal3")[0].close();
+});
+
+/**  */
+jQuery(".js-modal-open4").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal4")[0].showModal();
+});
+
+jQuery(".js-modal-close4").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal4")[0].close();
+});
+
+/**  */
+jQuery(".js-modal-open5").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal5")[0].showModal();
+});
+
+jQuery(".js-modal-close5").on("click", function (e) {
+  e.preventDefault();
+
+  jQuery("#js-prize-modal5")[0].close();
 });

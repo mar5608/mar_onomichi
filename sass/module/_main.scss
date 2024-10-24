@@ -1058,6 +1058,7 @@
   figure {
     display: block;
   }
+
   &:nth-of-type(1) {
     &::before {
       content: "";
@@ -1107,8 +1108,8 @@
         contain; //contain:縦横比保ったまま
       z-index: 99;
       @include mixin.mq(pc) {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
       }
     }
   }
@@ -1125,8 +1126,8 @@
         contain; //contain:縦横比保ったまま
       z-index: 99;
       @include mixin.mq(pc) {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
       }
     }
   }
@@ -1143,8 +1144,8 @@
         contain; //contain:縦横比保ったまま
       z-index: 99;
       @include mixin.mq(pc) {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
       }
     }
   }
@@ -1165,7 +1166,7 @@
   @include mixin.mq(pc) {
     width: 100%; /* カードをグリッドに収める */
     height: auto;
-    border-radius: 16px;
+    border-radius: 20px;
     &:nth-of-type(1) {
       grid-area: 1/1/2/4;
       .prize__card-number {
@@ -1198,7 +1199,7 @@
         width: 100px;
         height: 100px;
         // border-bottom-right-radius: 26px;
-        border-bottom-right-radius: 16px;
+        border-bottom-right-radius: 20px;
       }
     }
     &:nth-of-type(2) {
@@ -1232,7 +1233,7 @@
         width: 100px;
         height: 100px;
         // border-bottom-right-radius: 26px;
-        border-bottom-right-radius: 16px;
+        border-bottom-right-radius: 20px;
       }
     }
     &:nth-of-type(3) {
@@ -1266,7 +1267,7 @@
         width: 64px;
         height: 64px;
         // border-bottom-right-radius: 26px;
-        border-bottom-right-radius: 16px;
+        border-bottom-right-radius: 20px;
       }
     }
     &:nth-of-type(4) {
@@ -1300,7 +1301,7 @@
         width: 64px;
         height: 64px;
         // border-bottom-right-radius: 26px;
-        border-bottom-right-radius: 16px;
+        border-bottom-right-radius: 20px;
       }
     }
     &:nth-of-type(5) {
@@ -1334,7 +1335,7 @@
         width: 64px;
         height: 64px;
         // border-bottom-right-radius: 26px;
-        border-bottom-right-radius: 16px;
+        border-bottom-right-radius: 20px;
       }
     }
   }
@@ -1348,7 +1349,6 @@
         transition: transform 0.3s;
       }
     }
-    //対応中
     &::after {
       // hover時の背景色を#9ed0e0に変更
       background: linear-gradient(-45deg, #9ed0e0 50%, transparent 50%);
@@ -1378,7 +1378,7 @@
   @include mixin.mq(pc) {
     width: 440px;
     height: 340px;
-    border-radius: 26px 26px 0px 0px; //左上、右上、右下、左下
+    border-radius: 20px 20px 0px 0px; //左上、右上、右下、左下
   }
 }
 
@@ -1394,6 +1394,17 @@
   font-size: 12px;
   font-weight: 700;
   min-height: 60px;
+}
+
+.prize__card-icon {
+  position: absolute; // アイコンを絶対配置
+  right: 5px; // after要素に重なるように位置を調整
+  bottom: 0px;
+  z-index: 2; // afterより上に表示するために高めのz-indexを設定
+  svg {
+    width: 11.52px;
+    height: 11.52px;
+  }
 }
 
 .prize_bg_photo {
@@ -1420,6 +1431,124 @@
     display: flex;
     justify-content: center;
     margin-top: 43px;
+  }
+}
+
+/* modal */
+
+.prize__modal {
+  position: fixed;
+  // inset: 0;
+  // margin: auto; //浮かせて真ん中寄せ（fixed/insetと一緒に使う）
+  // max-width: calc(100% - 15px * 2);
+  // max-height: calc(100% - 20px * 2);
+  overflow: auto;
+  // border-radius: 20px;
+  // background: #fff;
+  // border: none;
+  // padding: 16px 15px 64px;
+  // z-index: 10;
+  // overscroll-behavior-y: none; //垂直方向のスクロールを制御
+  // display: flex;
+  // flex-direction: column;
+  // // align-items: center;
+  // z-index: 100;
+  // position: relative;
+  width: 336px;
+  max-width: calc(100% - 20px);
+  height: 480px;
+  max-height: calc(100% - 20px);
+  margin-inline: auto;
+  padding: 0;
+  padding-right: 20px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  text-align: center;
+  background: #fff;
+  border: none;
+  border-radius: 24px;
+  z-index: 99;
+  overscroll-behavior-y: none; //垂直方向のスクロールを制御
+  @include mixin.mq(pc) {
+    width: 480px;
+    height: 650px;
+  }
+
+  //js:showModalで使える擬似要素
+  &::backdrop {
+    opacity: 0.7;
+    background: #000;
+  }
+}
+
+.prize__modal-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 210px;
+  width: 336px;
+  aspect-ratio: 210/336;
+  overflow: hidden;
+  // width: calc(100% + 80px);
+  img {
+    width: 100%;
+  }
+  @include mixin.mq(pc) {
+    height: 300px;
+    width: 480px;
+    aspect-ratio: 300/480;
+  }
+}
+
+.prize__modal-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 336px;
+  text-align: center;
+  color: color.$brown;
+  // margin-top: 12px;
+  margin-inline: auto;
+  padding-top: 39px;
+  padding-inline: 20px;
+  height: 272px;
+  @include mixin.mq(pc) {
+    margin-top: 49px;
+    padding-inline: 40px;
+    height: 350px;
+    width: 480px;
+  }
+  p {
+    font-size: 12px;
+    @include mixin.mq(pc) {
+      font-size: 16px;
+    }
+    &:nth-child(n + 2) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.prize__modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  @include mixin.mq(pc) {
+    font-size: 20px;
+  }
+}
+
+.prize__modal-text {
+  color: #000;
+}
+
+.prize__modal-close {
+  // text-align: center;
+  margin-top: 16px;
+  margin-inline: auto;
+  @include mixin.mq(pc) {
+    margin-top: 24px;
+    padding-inline: 24px;
   }
 }
 
@@ -1743,110 +1872,6 @@
       padding-bottom: 28px;
       padding-inline: 30px;
     }
-  }
-}
-
-/* modal */
-
-.prize__modal {
-  // position: fixed;
-  // inset: 0;
-  // margin: auto; //浮かせて真ん中寄せ（fixed/insetと一緒に使う）
-  // max-width: calc(100% - 15px * 2);
-  // max-height: calc(100% - 20px * 2);
-  // overflow: auto;
-  // border-radius: 20px;
-  // background: #fff;
-  // border: none;
-  // // padding: 16px 15px 64px;
-  // z-index: 10;
-  // overscroll-behavior-y: none; //垂直方向のスクロールを制御
-  // display: flex;
-  // flex-direction: column;
-  // // align-items: center;
-  // z-index: 100;
-  // position: relative;
-  width: 336px;
-  max-width: calc(100% - 20px);
-  height: 480px;
-  max-height: calc(100% - 20px);
-  padding: 0;
-  padding-right: 20px;
-  padding-bottom: 19px;
-  padding-left: 20px;
-  text-align: center;
-  background: #fff;
-  border: none;
-  border-radius: 24px;
-  @include mixin.mq(pc) {
-    width: 480px;
-    height: 650px;
-  }
-
-  //js:showModalで使える擬似要素
-  &::backdrop {
-    opacity: 0.7;
-    background: #000;
-  }
-}
-
-.prize__modal-img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  overflow: hidden;
-  height: 300px;
-  width: 480px;
-  aspect-ratio: 300/480;
-  overflow: hidden;
-  // width: calc(100% + 80px);
-  img {
-    width: 100%;
-  }
-}
-
-.prize__modal-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  color: color.$brown;
-  // margin-top: 12px;
-  padding-top: 30px;
-  margin-inline: 40px;
-  @include mixin.mq(pc) {
-    margin-top: 49px;
-    height: 350px;
-  }
-  p {
-    font-size: 14px;
-    @include mixin.mq(pc) {
-      font-size: 16px;
-    }
-    &:nth-child(n + 2) {
-      margin-top: 20px;
-    }
-  }
-}
-
-.prize__modal-title {
-  @include mixin.mq(pc) {
-    font-size: 20px;
-    font-weight: 700;
-  }
-}
-
-.prize__modal-text {
-  color: #000;
-}
-
-.prize__modal-close {
-  // text-align: center;
-  margin-inline: auto;
-  @include mixin.mq(pc) {
-    margin-top: 24px;
-    padding-inline: 24px;
   }
 }
 
